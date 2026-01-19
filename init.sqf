@@ -45,7 +45,7 @@ if (hasInterface) then {
 };
 
 // Lancer l'introduction cinématique
-[] spawn Mission_fnc_task_intro;
+//[] spawn Mission_fnc_task_intro;
 
 // ============================================================
 // FONCTIONS DE LA MISSION

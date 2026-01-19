@@ -5,8 +5,8 @@
 
 if (!isServer) exitWith {}; // Only run on server to avoid duplicate sounds in MP
 
-// Wait between 5 seconds and 15 minutes (900s) after mission start
-sleep (5 + (random 900));
+// Wait between 250 seconds and 15 minutes (900s) after mission start
+sleep (250 + (random 900));
 
 while {true} do {
     // Play sound on minaret 1
