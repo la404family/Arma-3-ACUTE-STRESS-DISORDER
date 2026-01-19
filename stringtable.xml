@@ -1,0 +1,1391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Mission1-5">
+    <Package name="Markers">
+        <Key ID="STR_MARKER_ZONE_1">
+            <English>Weapons</English>
+            <French>Armes</French>
+            <German>Waffen</German>
+            <Spanish>Armas</Spanish>
+            <Italian>Armi</Italian>
+            <Russian>Оружие</Russian>
+            <Polish>Broń</Polish>
+            <Czech>Zbraně</Czech>
+            <Turkish>Silahlar</Turkish>
+            <Chinese>武器</Chinese>
+            <Chinesesimp>武器</Chinesesimp>
+            <Japanese>武器</Japanese>
+            <Portuguese>Armas</Portuguese>
+            <Korean>무기</Korean>
+        </Key>
+        <Key ID="STR_MARKER_ZONE_3">
+            <English>Brothers in Arms</English>
+            <French>Frères d&apos;armes</French>
+            <German>Waffenbrüder</German>
+            <Spanish>Hermanos de armas</Spanish>
+            <Italian>Fratelli d&apos;armi</Italian>
+            <Russian>Братья по оружию</Russian>
+            <Polish>Towarzysze broni</Polish>
+            <Czech>Bratři ve zbrani</Czech>
+            <Turkish>Silah arkadaşları</Turkish>
+            <Chinese>戰友</Chinese>
+            <Chinesesimp>战友</Chinesesimp>
+            <Japanese>戦友</Japanese>
+            <Portuguese>Irmãos de Armas</Portuguese>
+            <Korean>전우</Korean>
+        </Key>
+        <Key ID="STR_MARKER_ZONE_4">
+            <English>Vehicles</English>
+            <French>Véhicules</French>
+            <German>Fahrzeuge</German>
+            <Spanish>Vehículos</Spanish>
+            <Italian>Veicoli</Italian>
+            <Russian>Техника</Russian>
+            <Polish>Pojazdy</Polish>
+            <Czech>Vozidla</Czech>
+            <Turkish>Araçlar</Turkish>
+            <Chinese>載具</Chinese>
+            <Chinesesimp>载具</Chinesesimp>
+            <Japanese>車両</Japanese>
+            <Portuguese>Veículos</Portuguese>
+            <Korean>차량</Korean>
+        </Key>
+        <Key ID="STR_MARKER_ZONE_5">
+            <English>Weather and Time</English>
+            <French>Temps et heure</French>
+            <German>Wetter und Uhrzeit</German>
+            <Spanish>Clima y hora</Spanish>
+            <Italian>Tempo e ora</Italian>
+            <Russian>Погода и время</Russian>
+            <Polish>Wiatr i godzina</Polish>
+            <Czech>Procházka a čas</Czech>
+            <Turkish>Hava durumu ve saat</Turkish>
+            <Chinese>天氣和時間</Chinese>
+            <Chinesesimp>天气和时间</Chinesesimp>
+            <Japanese>天候と時間</Japanese>
+            <Portuguese>Clima e Hora</Portuguese>
+            <Korean>날씨와 시간</Korean>
+        </Key>
+        <Key ID="STR_ACTION_ARSENAL">
+            <English>Virtual Arsenal</English>
+            <French>Arsenal Virtuel</French>
+            <German>Virtual Arsenal</German>
+            <Spanish>Arsenal Virtual</Spanish>
+            <Italian>Arsenale Virtuale</Italian>
+            <Russian>Виртуальный Арсенал</Russian>
+            <Polish>Wirtualny Arsenał</Polish>
+            <Czech>Virtuální Arzenál</Czech>
+            <Turkish>Sanal Cephanelik</Turkish>
+            <Chinese>虛擬軍火庫</Chinese>
+            <Chinesesimp>虚拟军火库</Chinesesimp>
+            <Japanese>バーチャルアーセナル</Japanese>
+            <Portuguese>Arsenal Virtual</Portuguese>
+            <Korean>가상 무기고</Korean>
+        </Key>
+        <Key ID="STR_ADD_BROTHER">
+            <English>Add a brother in arms</English>
+            <French>Ajouter un frère d&apos;arme</French>
+            <German>Waffenbruder hinzufügen</German>
+            <Spanish>Añadir un hermano de armas</Spanish>
+            <Italian>Aggiungi un fratello d&apos;armi</Italian>
+            <Russian>Добавить брата по оружию</Russian>
+            <Polish>Dodaj towarzysza broni</Polish>
+            <Czech>Přidat bratra ve zbrani</Czech>
+            <Turkish>Silah arkadaşı ekle</Turkish>
+            <Chinese>添加戰友</Chinese>
+            <Chinesesimp>添加战友</Chinesesimp>
+            <Japanese>戦友を追加</Japanese>
+            <Portuguese>Adicionar Irmão de Armas</Portuguese>
+            <Korean>전우 추가</Korean>
+        </Key>
+        <Key ID="STR_BROTHERS_LIKE_ME">
+            <English>A soldier like me!</English>
+            <French>Un soldat comme moi !</French>
+            <German>Ein Soldat wie ich!</German>
+            <Spanish>¡Un soldado como yo!</Spanish>
+            <Italian>Un soldato come me!</Italian>
+            <Russian>Солдат, как я!</Russian>
+            <Polish>Żołnierz taki jak ja!</Polish>
+            <Czech>Voják jako já!</Czech>
+            <Turkish>Benim gibi bir asker!</Turkish>
+            <Chinese>像我这样的士兵！</Chinese>
+            <Chinesesimp>像我这样的士兵！</Chinesesimp>
+            <Japanese>私のような兵士！</Japanese>
+            <Portuguese>Um soldado como eu!</Portuguese>
+            <Korean>나 같은 군인!</Korean>
+        </Key>
+        <Key ID="STR_RECRUIT_TITLE">
+            <English>Recruit Unit</English>
+            <French>Recruter une unité</French>
+            <German>Einheit rekrutieren</German>
+            <Spanish>Reclutar unidad</Spanish>
+            <Italian>Recluta unità</Italian>
+            <Russian>Рекрутировать</Russian>
+            <Polish>Rekrutuj jednostkę</Polish>
+            <Czech>Zverbovat jednotku</Czech>
+            <Turkish>Birim kirala</Turkish>
+            <Chinese>招募單位</Chinese>
+            <Chinesesimp>招募单位</Chinesesimp>
+            <Japanese>ユニットを雇用</Japanese>
+            <Portuguese>Recrutar Unidade</Portuguese>
+            <Korean>유닛 모집</Korean>
+        </Key>
+        <Key ID="STR_RECRUIT_BUTTON">
+            <English>Recruit</English>
+            <French>Recruter</French>
+            <German>Rekrutieren</German>
+            <Spanish>Reclutar</Spanish>
+            <Italian>Recluta</Italian>
+            <Russian>Нанять</Russian>
+            <Polish>Rekrutuj</Polish>
+            <Czech>Zverbovat</Czech>
+            <Turkish>Kirala</Turkish>
+            <Chinese>招募</Chinese>
+            <Chinesesimp>招募</Chinesesimp>
+            <Japanese>雇用</Japanese>
+            <Portuguese>Recrutar</Portuguese>
+            <Korean>모집</Korean>
+        </Key>
+        <Key ID="STR_BTN_RESET">
+            <English>Reset</English>
+            <French>Réinitialiser</French>
+            <German>Zurücksetzen</German>
+            <Spanish>Reiniciar</Spanish>
+            <Italian>Resetta</Italian>
+            <Russian>Сбросить</Russian>
+            <Polish>Resetuj</Polish>
+            <Czech>Resetovat</Czech>
+            <Turkish>Sıfırla</Turkish>
+            <Chinese>重置</Chinese>
+            <Chinesesimp>重置</Chinesesimp>
+            <Japanese>リセット</Japanese>
+            <Portuguese>Redefinir</Portuguese>
+            <Korean>초기화</Korean>
+        </Key>
+        <Key ID="STR_CLOSE">
+            <English>Close</English>
+            <French>Fermer</French>
+            <German>Schließen</German>
+            <Spanish>Cerrar</Spanish>
+            <Italian>Chiudi</Italian>
+            <Russian>Закрыть</Russian>
+            <Polish>Zamknij</Polish>
+            <Czech>Zavřít</Czech>
+            <Turkish>Kapat</Turkish>
+            <Chinese>關閉</Chinese>
+            <Chinesesimp>关闭</Chinesesimp>
+            <Japanese>閉じる</Japanese>
+            <Portuguese>Fechar</Portuguese>
+            <Korean>닫기</Korean>
+        </Key>
+        <Key ID="STR_ACTION_GARAGE">
+            <English>Garage</English>
+            <French>Garage</French>
+            <German>Garage</German>
+            <Spanish>Garaje</Spanish>
+            <Italian>Garage</Italian>
+            <Russian>Гараж</Russian>
+            <Polish>Garaż</Polish>
+            <Czech>Garáž</Czech>
+            <Turkish>Garaj</Turkish>
+            <Chinese>車庫</Chinese>
+            <Chinesesimp>车库</Chinesesimp>
+            <Japanese>ガレージ</Japanese>
+            <Portuguese>Garagem</Portuguese>
+            <Korean>차고</Korean>
+        </Key>
+        <Key ID="STR_GARAGE_TITLE">
+            <English>Garage</English>
+            <French>Garage</French>
+            <German>Garage</German>
+            <Spanish>Garaje</Spanish>
+            <Italian>Garage</Italian>
+            <Russian>Гараж</Russian>
+            <Polish>Garaż</Polish>
+            <Czech>Garáž</Czech>
+            <Turkish>Garaj</Turkish>
+            <Chinese>車庫</Chinese>
+            <Chinesesimp>车库</Chinesesimp>
+            <Japanese>ガレージ</Japanese>
+            <Portuguese>Garagem</Portuguese>
+            <Korean>차고</Korean>
+        </Key>
+        <Key ID="STR_GARAGE_TAKE_OUT">
+            <English>Spawn</English>
+            <French>Déployer</French>
+            <German>Spawnen</German>
+            <Spanish>Generar</Spanish>
+            <Italian>Genera</Italian>
+            <Russian>Создать</Russian>
+            <Polish>Stwórz</Polish>
+            <Czech>Vytvořit</Czech>
+            <Turkish>Oluştur</Turkish>
+            <Chinese>生成</Chinese>
+            <Chinesesimp>生成</Chinesesimp>
+            <Japanese>出現</Japanese>
+            <Portuguese>Spawn</Portuguese>
+            <Korean>소환</Korean>
+        </Key>
+        <Key ID="STR_ERR_NO_UNIT_SELECTED">
+            <English>Error: No unit selected.</English>
+            <French>Erreur : Aucune unité sélectionnée.</French>
+            <German>Fehler: Keine Einheit ausgewählt.</German>
+            <Spanish>Error: Ninguna unidad seleccionada.</Spanish>
+            <Italian>Errore: Nessuna unità selezionata.</Italian>
+            <Russian>Ошибка: Юнит не выбран.</Russian>
+            <Polish>Błąd: Nie wybrano jednostki.</Polish>
+            <Czech>Chyba: Nebyla vybrána žádná jednotka.</Czech>
+            <Turkish>Hata: Birim seçilmedi.</Turkish>
+            <Chinese>錯誤：未選擇單位。</Chinese>
+            <Chinesesimp>错误：未选择单位。</Chinesesimp>
+            <Japanese>エラー：ユニットが選択されていません。</Japanese>
+            <Portuguese>Erro: Nenhuma unidade selecionada.</Portuguese>
+            <Korean>오류: 유닛이 선택되지 않았습니다.</Korean>
+        </Key>
+        <Key ID="STR_ERR_NO_VEHICLE_SELECTED">
+            <English>Error: No vehicle selected.</English>
+            <French>Erreur : Aucun véhicule sélectionné.</French>
+            <German>Fehler: Kein Fahrzeug ausgewählt.</German>
+            <Spanish>Error: Ningún vehículo seleccionado.</Spanish>
+            <Italian>Errore: Nessun veicolo selezionato.</Italian>
+            <Russian>Ошибка: Техника не выбрана.</Russian>
+            <Polish>Błąd: Nie wybrano pojazdu.</Polish>
+            <Czech>Chyba: Nebylo vybráno žádné vozidlo.</Czech>
+            <Turkish>Hata: Araç seçilmedi.</Turkish>
+            <Chinese>錯誤：未選擇載具。</Chinese>
+            <Chinesesimp>错误：未选择载具。</Chinesesimp>
+            <Japanese>エラー：車両が選択されていません。</Japanese>
+            <Portuguese>Erro: Nenhum veículo selecionado.</Portuguese>
+            <Korean>오류: 차량이 선택되지 않았습니다.</Korean>
+        </Key>
+        <Key ID="STR_UNIT_ARRIVING">
+            <English>%1 is arriving...</English>
+            <French>%1 arrive sur zone...</French>
+            <German>%1 trifft ein...</German>
+            <Spanish>%1 está llegando...</Spanish>
+            <Italian>%1 sta arrivando...</Italian>
+            <Russian>%1 прибывает...</Russian>
+            <Polish>%1 przybywa...</Polish>
+            <Czech>%1 přijíždí...</Czech>
+            <Turkish>%1 geliyor...</Turkish>
+            <Chinese>%1 正在抵達...</Chinese>
+            <Chinesesimp>%1 正在抵达...</Chinesesimp>
+            <Japanese>%1 が到着しています...</Japanese>
+            <Portuguese>%1 está chegando...</Portuguese>
+            <Korean>%1 이(가) 도착하고 있습니다...</Korean>
+        </Key>
+        <Key ID="STR_UNIT_JOINED">
+            <English>%1 has joined your squad.</English>
+            <French>%1 a rejoint votre escouade.</French>
+            <German>%1 ist Ihrem Trupp beigetreten.</German>
+            <Spanish>%1 se ha unido a tu escuadra.</Spanish>
+            <Italian>%1 si è unito alla tua squadra.</Italian>
+            <Russian>%1 присоединился к вашему отряду.</Russian>
+            <Polish>%1 dołączył do twojego oddziału.</Polish>
+            <Czech>%1 se připojil k vaší jednotce.</Czech>
+            <Turkish>%1 takımınıza katıldı.</Turkish>
+            <Chinese>%1 加入了你的小隊。</Chinese>
+            <Chinesesimp>%1 加入了你的小队。</Chinesesimp>
+            <Japanese>%1 が分隊に参加しました。</Japanese>
+            <Portuguese>%1 juntou-se ao seu esquadrão.</Portuguese>
+            <Korean>%1 이(가) 분대에 합류했습니다.</Korean>
+        </Key>
+        <Key ID="STR_AI_RESET_COUNT">
+            <English>%1 AI unit(s) removed from your squad.</English>
+            <French>%1 unité(s) I.A. supprimée(s) de votre escouade.</French>
+            <German>%1 KI-Einheit(en) aus Ihrem Trupp entfernt.</German>
+            <Spanish>%1 unidad(es) IA eliminada(s) de tu escuadra.</Spanish>
+            <Italian>%1 unità IA rimossa/e dalla tua squadra.</Italian>
+            <Russian>%1 единиц(а) ИИ удалено из вашего отряда.</Russian>
+            <Polish>%1 jednostek AI usunięto z twojego oddziału.</Polish>
+            <Czech>%1 AI jednotek odstraněno z vaší jednotky.</Czech>
+            <Turkish>%1 yapay zeka birimi takımınızdan kaldırıldı.</Turkish>
+            <Chinese>已從你的小隊移除 %1 個AI單位。</Chinese>
+            <Chinesesimp>已从你的小队移除 %1 个AI单位。</Chinesesimp>
+            <Japanese>%1 AIユニットが分隊から削除されました。</Japanese>
+            <Portuguese>%1 unidade(s) de IA removida(s) do seu esquadrão.</Portuguese>
+            <Korean>%1 AI 유닛이 분대에서 제거되었습니다.</Korean>
+        </Key>
+        <Key ID="STR_AI_RESET_NONE">
+            <English>No AI units to remove.</English>
+            <French>Aucune unité I.A. à supprimer.</French>
+            <German>Keine KI-Einheiten zum Entfernen.</German>
+            <Spanish>No hay unidades IA para eliminar.</Spanish>
+            <Italian>Nessuna unità IA da rimuovere.</Italian>
+            <Russian>Нет единиц ИИ для удаления.</Russian>
+            <Polish>Brak jednostek AI do usunięcia.</Polish>
+            <Czech>Žádné AI jednotky k odstranění.</Czech>
+            <Turkish>Kaldırılacak yapay zeka birimi yok.</Turkish>
+            <Chinese>沒有AI單位可移除。</Chinese>
+            <Chinesesimp>没有AI单位可移除。</Chinesesimp>
+            <Japanese>削除するAIユニットはありません。</Japanese>
+            <Portuguese>Nenhuma unidade de IA para remover.</Portuguese>
+            <Korean>제거할 AI 유닛이 없습니다.</Korean>
+        </Key>
+        <Key ID="STR_BADGE_SYNCED">
+            <English>Team badge updated: %1</English>
+            <French>Badge d&apos;équipe mis à jour : %1</French>
+            <German>Team-Abzeichen aktualisiert: %1</German>
+            <Spanish>Insignia del equipo actualizada: %1</Spanish>
+            <Italian>Badge del team aggiornato: %1</Italian>
+            <Russian>Знак отряда обновлён: %1</Russian>
+            <Polish>Odznaka drużyny zaktualizowana: %1</Polish>
+            <Czech>Odznak týmu aktualizován: %1</Czech>
+            <Turkish>Takım rozeti güncellendi: %1</Turkish>
+            <Chinese>隊徽已更新：%1</Chinese>
+            <Chinesesimp>队徽已更新：%1</Chinesesimp>
+            <Japanese>チームバッジ更新：%1</Japanese>
+            <Portuguese>Distintivo da equipe atualizado: %1</Portuguese>
+            <Korean>팀 배지 업데이트됨: %1</Korean>
+        </Key>
+        <Key ID="STR_SELECTED_UNITS">
+            <English>Selected Units</English>
+            <French>Unités sélectionnées</French>
+            <German>Ausgewählte Einheiten</German>
+            <Spanish>Unidades seleccionadas</Spanish>
+            <Italian>Unità selezionate</Italian>
+            <Russian>Выбранные юниты</Russian>
+            <Polish>Wybrane jednostki</Polish>
+            <Czech>Vybrané jednotky</Czech>
+            <Turkish>Seçilen Birimler</Turkish>
+            <Chinese>已選擇的單位</Chinese>
+            <Chinesesimp>已选择的单位</Chinesesimp>
+            <Japanese>選択されたユニット</Japanese>
+            <Portuguese>Unidades Selecionadas</Portuguese>
+            <Korean>선택된 유닛</Korean>
+        </Key>
+        <Key ID="STR_AVAILABLE_UNITS">
+            <English>Available Units</English>
+            <French>Unités disponibles</French>
+            <German>Verfügbare Einheiten</German>
+            <Spanish>Unidades disponibles</Spanish>
+            <Italian>Unità disponibili</Italian>
+            <Russian>Доступные юниты</Russian>
+            <Polish>Dostępne jednostki</Polish>
+            <Czech>Dostupné jednotky</Czech>
+            <Turkish>Mevcut Birimler</Turkish>
+            <Chinese>可用單位</Chinese>
+            <Chinesesimp>可用单位</Chinesesimp>
+        </Key>
+        <Key ID="STR_BTN_ADD">
+            <English>Add Unit</English>
+            <French>Ajouter l&apos;unité</French>
+            <German>Einheit hinzufügen</German>
+            <Spanish>Añadir unidad</Spanish>
+            <Italian>Aggiungi unità</Italian>
+            <Russian>Добавить юнит</Russian>
+            <Polish>Dodaj jednostkę</Polish>
+            <Czech>Přidat jednotku</Czech>
+            <Turkish>Birim Ekle</Turkish>
+            <Chinese>添加單位</Chinese>
+            <Chinesesimp>添加单位</Chinesesimp>
+            <Japanese>ユニット追加</Japanese>
+            <Portuguese>Adicionar Unidade</Portuguese>
+            <Korean>유닛 추가</Korean>
+        </Key>
+        <Key ID="STR_BTN_VALIDATE">
+            <English>Validate</English>
+            <French>Valider</French>
+            <German>Bestätigen</German>
+            <Spanish>Validar</Spanish>
+            <Italian>Conferma</Italian>
+            <Russian>Подтвердить</Russian>
+            <Polish>Zatwierdź</Polish>
+            <Czech>Potvrdit</Czech>
+            <Turkish>Onayla</Turkish>
+            <Chinese>確認</Chinese>
+            <Chinesesimp>确认</Chinesesimp>
+        </Key>
+        <Key ID="STR_MAX_UNITS_REACHED">
+            <English>Maximum group size of 14 units reached!</English>
+            <French>Taille maximale du groupe de 14 unités atteinte !</French>
+            <German>Maximale Gruppengröße von 14 Einheiten erreicht!</German>
+            <Spanish>¡Tamaño máximo del grupo de 14 unidades alcanzado!</Spanish>
+            <Italian>Dimensione massima del gruppo di 14 unità raggiunta!</Italian>
+            <Russian>Достигнут максимальный размер группы в 14 юнитов!</Russian>
+            <Polish>Osiągnięto maksymalny rozmiar grupy 14 jednostek!</Polish>
+            <Czech>Dosažena maximální velikost skupiny 14 jednotek!</Czech>
+            <Turkish>Maksimum grup boyutu 14 birime ulaşıldı!</Turkish>
+            <Chinese>已達到14個單位的群組上限！</Chinese>
+            <Chinesesimp>已达到14个单位的群组上限！</Chinesesimp>
+            <Japanese>最大グループサイズ14ユニットに達しました！</Japanese>
+            <Portuguese>Tamanho máximo do grupo de 14 unidades alcançado!</Portuguese>
+            <Korean>최대 그룹 크기 14 유닛에 도달했습니다!</Korean>
+        </Key>
+        <Key ID="STR_NO_UNITS_SELECTED">
+            <English>No units selected!</English>
+            <French>Aucune unité sélectionnée !</French>
+            <German>Keine Einheiten ausgewählt!</German>
+            <Spanish>¡No hay unidades seleccionadas!</Spanish>
+            <Italian>Nessuna unità selezionata!</Italian>
+            <Russian>Юниты не выбраны!</Russian>
+            <Polish>Nie wybrano jednostek!</Polish>
+            <Czech>Nejsou vybrány žádné jednotky!</Czech>
+            <Turkish>Birim seçilmedi!</Turkish>
+            <Chinese>未選擇任何單位！</Chinese>
+            <Chinesesimp>未选择任何单位！</Chinesesimp>
+            <Japanese>ユニットが選択されていません！</Japanese>
+            <Portuguese>Nenhuma unidade selecionada!</Portuguese>
+            <Korean>유닛이 선택되지 않았습니다!</Korean>
+        </Key>
+        <Key ID="STR_SPAWNING_UNITS">
+            <English>Deploying %1 unit(s)...</English>
+            <French>Déploiement de %1 unité(s)...</French>
+            <German>Einsetzen von %1 Einheit(en)...</German>
+            <Spanish>Desplegando %1 unidad(es)...</Spanish>
+            <Italian>Dispiegamento di %1 unità...</Italian>
+            <Russian>Развертывание %1 юнит(ов)...</Russian>
+            <Polish>Wdrażanie %1 jednostek...</Polish>
+            <Czech>Nasazení %1 jednotek...</Czech>
+            <Turkish>%1 birim dağıtılıyor...</Turkish>
+            <Chinese>正在部署 %1 個單位...</Chinese>
+            <Chinesesimp>正在部署 %1 个单位...</Chinesesimp>
+            <Japanese>%1 ユニットを展開中...</Japanese>
+            <Portuguese>Implantando %1 unidade(s)...</Portuguese>
+            <Korean>%1 유닛 배치 중...</Korean>
+        </Key>
+        <Key ID="STR_ALL_UNITS_SPAWNED">
+            <English>%1 unit(s) deployed and ready!</English>
+            <French>%1 unité(s) déployée(s) et prêtes !</French>
+            <German>%1 Einheit(en) eingesetzt und bereit!</German>
+            <Spanish>¡%1 unidad(es) desplegada(s) y lista(s)!</Spanish>
+            <Italian>%1 unità dispiegata/e e pronta/e!</Italian>
+            <Russian>%1 юнит(ов) развернуто и готово!</Russian>
+            <Polish>%1 jednostek wdrożonych i gotowych!</Polish>
+            <Czech>%1 jednotek nasazeno a připraveno!</Czech>
+            <Turkish>%1 birim dağıtıldı ve hazır!</Turkish>
+            <Chinese>%1 個單位已部署並準備就緒！</Chinese>
+            <Chinesesimp>%1 个单位已部署并准备就绪！</Chinesesimp>
+            <Japanese>%1 ユニットが展開され、準備完了！</Japanese>
+            <Portuguese>%1 unidade(s) implantada(s) e pronta(s)!</Portuguese>
+            <Korean>%1 유닛 배치 및 준비 완료!</Korean>
+        </Key>
+        <Key ID="STR_VEHICLE_AVAILABLE">
+            <English>Vehicle %1 available.</English>
+            <French>Véhicule %1 disponible.</French>
+            <German>Fahrzeug %1 verfügbar.</German>
+            <Spanish>Vehículo %1 disponible.</Spanish>
+            <Italian>Veicolo %1 disponibile.</Italian>
+            <Russian>Техника %1 доступна.</Russian>
+            <Polish>Pojazd %1 dostępny.</Polish>
+            <Czech>Vozidlo %1 k dispozici.</Czech>
+            <Turkish>Araç %1 mevcut.</Turkish>
+            <Chinese>載具 %1 可用。</Chinese>
+            <Chinesesimp>载具 %1 可用。</Chinesesimp>
+            <Japanese>車両 %1 利用可能。</Japanese>
+            <Portuguese>Veículo %1 disponível.</Portuguese>
+            <Korean>차량 %1 사용 가능.</Korean>
+        </Key>
+        <Key ID="STR_DEBUG_NO_SPAWNER">
+            <English>DEBUG: vehicles_spawner not found, spawning on player.</English>
+            <French>DEBUG: vehicles_spawner introuvable, spawn sur le joueur.</French>
+            <German>DEBUG: vehicles_spawner nicht gefunden, spawne beim Spieler.</German>
+            <Spanish>DEBUG: vehicles_spawner no encontrado, generando en el jugador.</Spanish>
+            <Italian>DEBUG: vehicles_spawner non trovato, spawn sul giocatore.</Italian>
+            <Russian>DEBUG: vehicles_spawner не найден, спавн на игроке.</Russian>
+            <Polish>DEBUG: nie znaleziono vehicles_spawner, odradzanie na graczu.</Polish>
+            <Czech>DEBUG: vehicles_spawner nenalezen, spawnuji u hráče.</Czech>
+            <Turkish>DEBUG: vehicles_spawner bulunamadı, oyuncunun üzerinde oluşturuluyor.</Turkish>
+            <Chinese>DEBUG: 未找到 vehicles_spawner, 在玩家位置生成。</Chinese>
+            <Chinesesimp>DEBUG: 未找到 vehicles_spawner, 在玩家位置生成。</Chinesesimp>
+            <Japanese>DEBUG: vehicles_spawnerが見つかりません、プレイヤー上でスポーンします。</Japanese>
+            <Portuguese>DEBUG: vehicles_spawner não encontrado, spawning no jogador.</Portuguese>
+            <Korean>DEBUG: vehicles_spawner를 찾을 수 없음, 플레이어에서 소환.</Korean>
+        </Key>
+        <Key ID="STR_ACTION_ARSENAL">
+            <English>Virtual Arsenal</English>
+            <French>Arsenal Virtuel</French>
+            <German>Virtual Arsenal</German>
+            <Spanish>Arsenal Virtual</Spanish>
+            <Italian>Arsenale Virtuale</Italian>
+            <Russian>Виртуальный Арсенал</Russian>
+            <Polish>Wirtualny Arsenał</Polish>
+            <Czech>Virtuální Arzenál</Czech>
+            <Turkish>Sanal Cephanelik</Turkish>
+            <Chinese>虛擬軍火庫</Chinese>
+            <Chinesesimp>虚拟军火库</Chinesesimp>
+            <Japanese>バーチャルアーセナル</Japanese>
+            <Portuguese>Arsenal Virtual</Portuguese>
+            <Korean>가상 무기고</Korean>
+        </Key>
+        <Key ID="STR_ACTION_WEATHER">
+            <English>Modify time or weather</English>
+            <French>Modifier le temps ou la météo</French>
+            <German>Zeit oder Wetter ändern</German>
+            <Spanish>Modificar hora o clima</Spanish>
+            <Italian>Modifica tempo o meteo</Italian>
+            <Russian>Изменить время или погоду</Russian>
+            <Polish>Zmień czas lub pogodę</Polish>
+            <Czech>Změnit čas nebo počasí</Czech>
+            <Turkish>Zamanı veya hava durumunu değiştir</Turkish>
+            <Chinese>修改時間或天氣</Chinese>
+            <Chinesesimp>修改时间或天气</Chinesesimp>
+            <Japanese>時間または天候を変更</Japanese>
+            <Portuguese>Modificar hora ou clima</Portuguese>
+            <Korean>시간 또는 날씨 변경</Korean>
+        </Key>
+        <Key ID="STR_LABEL_TIME">
+            <English>Time</English>
+            <French>Heure</French>
+            <German>Zeit</German>
+            <Spanish>Hora</Spanish>
+            <Italian>Ora</Italian>
+            <Russian>Время</Russian>
+            <Polish>Czas</Polish>
+            <Czech>Čas</Czech>
+            <Turkish>Zaman</Turkish>
+            <Chinese>時間</Chinese>
+            <Chinesesimp>时间</Chinesesimp>
+            <Japanese>時間</Japanese>
+            <Portuguese>Hora</Portuguese>
+            <Korean>시간</Korean>
+        </Key>
+        <Key ID="STR_LABEL_CLOUDS">
+            <English>Cloud Cover</English>
+            <French>Couverture nuageuse</French>
+            <German>Bewölkung</German>
+            <Spanish>Nubosidad</Spanish>
+            <Italian>Copertura nuvolosa</Italian>
+            <Russian>Облачность</Russian>
+            <Polish>Zachmurzenie</Polish>
+            <Czech>Oblačnost</Czech>
+            <Turkish>Bulut Kaplaması</Turkish>
+            <Chinese>雲量</Chinese>
+            <Chinesesimp>云量</Chinesesimp>
+            <Japanese>雲量</Japanese>
+            <Portuguese>Cobertura de Nuvens</Portuguese>
+            <Korean>구름</Korean>
+        </Key>
+        <Key ID="STR_LABEL_FOG">
+            <English>Fog</English>
+            <French>Brouillard</French>
+            <German>Nebel</German>
+            <Spanish>Niebla</Spanish>
+            <Italian>Nebbia</Italian>
+            <Russian>Туман</Russian>
+            <Polish>Mgła</Polish>
+            <Czech>Mlha</Czech>
+            <Turkish>Sis</Turkish>
+            <Chinese>霧</Chinese>
+            <Chinesesimp>雾</Chinesesimp>
+            <Japanese>霧</Japanese>
+            <Portuguese>Neblina</Portuguese>
+            <Korean>안개</Korean>
+        </Key>
+        <Key ID="STR_BTN_MODIFY">
+            <English>Modify</English>
+            <French>Modifier</French>
+            <German>Ändern</German>
+            <Spanish>Modificar</Spanish>
+            <Italian>Modifica</Italian>
+            <Russian>Изменить</Russian>
+            <Polish>Zmień</Polish>
+            <Czech>Změnit</Czech>
+            <Turkish>Değiştir</Turkish>
+            <Chinese>修改</Chinese>
+            <Chinesesimp>修改</Chinesesimp>
+            <Japanese>変更</Japanese>
+            <Portuguese>Modificar</Portuguese>
+            <Korean>변경</Korean>
+        </Key>
+        <Key ID="STR_BTN_SELECT">
+            <English>Select</English>
+            <French>Sélectionner</French>
+            <German>Auswählen</German>
+            <Spanish>Seleccionar</Spanish>
+            <Italian>Seleziona</Italian>
+            <Russian>Выбрать</Russian>
+            <Polish>Wybierz</Polish>
+            <Czech>Vybrat</Czech>
+            <Turkish>Seç</Turkish>
+            <Chinese>選擇</Chinese>
+            <Chinesesimp>选择</Chinesesimp>
+            <Japanese>選択</Japanese>
+            <Portuguese>Selecionar</Portuguese>
+            <Korean>선택</Korean>
+        </Key>
+        <Key ID="STR_BTN_DESELECT">
+            <English>Deselect</English>
+            <French>Désélectionner</French>
+            <German>Abwählen</German>
+            <Spanish>Deseleccionar</Spanish>
+            <Italian>Deseleziona</Italian>
+            <Russian>Отменить выбор</Russian>
+            <Polish>Odznacz</Polish>
+            <Czech>Odznačit</Czech>
+            <Turkish>Seçimi Kaldır</Turkish>
+            <Chinese>取消選擇</Chinese>
+            <Chinesesimp>取消选择</Chinesesimp>
+            <Japanese>選択解除</Japanese>
+            <Portuguese>Desmarcar</Portuguese>
+            <Korean>선택 해제</Korean>
+        </Key>
+        <Key ID="STR_ZONE_RESERVED">
+            <English>RESERVED ZONE</English>
+            <French>ZONE RÉSERVÉE</French>
+            <German>RESERVIERTER BEREICH</German>
+            <Spanish>ZONA RESERVADA</Spanish>
+            <Italian>ZONA RISERVATA</Italian>
+            <Russian>ЗАРЕЗЕРВИРОВАННАЯ ЗОНА</Russian>
+            <Polish>STREFA ZAREZERWOWANA</Polish>
+            <Czech>REZERVOVANÁ ZÓNA</Czech>
+            <Turkish>REZERVE ALAN</Turkish>
+            <Chinese>預留區域</Chinese>
+            <Chinesesimp>预留区域</Chinesesimp>
+            <Japanese>予約エリア</Japanese>
+            <Portuguese>ZONA RESERVADA</Portuguese>
+            <Korean>예약 구역</Korean>
+        </Key>
+        <Key ID="STR_ACTION_HEAL_YOURSELVES">
+            <English>Heal yourselves!</English>
+            <French>Soignez vous !</French>
+            <German>Heilt euch!</German>
+            <Spanish>¡Curáos!</Spanish>
+            <Italian>Curatevi!</Italian>
+            <Russian>Лечитесь!</Russian>
+            <Polish>Leczcie się!</Polish>
+            <Czech>Vylečte se!</Czech>
+            <Turkish>Kendinizi iyileştirin!</Turkish>
+            <Chinese>治療自己！</Chinese>
+            <Chinesesimp>治疗自己！</Chinesesimp>
+            <Japanese>自分を治療しろ！</Japanese>
+            <Portuguese>Curem-se!</Portuguese>
+            <Korean>스스로 치료하십시오!</Korean>
+        </Key><!-- CIVIL PROTECTION TASK -->
+        <Key ID="STR_CIVIL_PROTECTION_TITLE">
+            <English>Civilian Protection</English>
+            <French>Protection Civile</French>
+            <German>Zivilschutz</German>
+            <Spanish>Protección Civil</Spanish>
+            <Italian>Protezione Civile</Italian>
+            <Russian>Защита гражданских</Russian>
+            <Polish>Ochrona Cywilów</Polish>
+            <Czech>Ochrana Civilistů</Czech>
+            <Turkish>Sivil Koruma</Turkish>
+            <Chinese>平民保護</Chinese>
+            <Chinesesimp>平民保护</Chinesesimp>
+            <Japanese>民間人保護</Japanese>
+            <Portuguese>Proteção Civil</Portuguese>
+            <Korean>민간인 보호</Korean>
+        </Key>
+        <Key ID="STR_CIVIL_PROTECTION_DESC">
+            <English>Your unit is deployed in the Sefrou Ramal AO for a peacekeeping operation. ROE: Protect civilian population at all costs. Collateral damage is strictly prohibited. Mission failure if civilian casualties exceed acceptable threshold. Stay vigilant, identify your targets.</English>
+            <French>Votre unité est déployée dans la ZO de Sefrou Ramal pour une opération de maintien de la paix. ROE : Protéger la population civile à tout prix. Les dommages collatéraux sont strictement interdits. Échec de mission si les pertes civiles dépassent le seuil acceptable. Restez vigilants, identifiez vos cibles.</French>
+            <German>Ihre Einheit ist im Einsatzgebiet Sefrou Ramal für eine Friedensmission stationiert. ROE: Schutz der Zivilbevölkerung um jeden Preis. Kollateralschäden sind streng verboten. Missionsfehler bei Überschreitung der akzeptablen Zivilopfer. Bleiben Sie wachsam, identifizieren Sie Ihre Ziele.</German>
+            <Spanish>Su unidad está desplegada en la ZO de Sefrou Ramal para una operación de mantenimiento de paz. ROE: Proteger a la población civil a toda costa. Los daños colaterales están estrictamente prohibidos. Fracaso de misión si las bajas civiles superan el umbral aceptable. Manténganse alerta, identifiquen sus objetivos.</Spanish>
+            <Italian>La vostra unità è schierata nella ZO di Sefrou Ramal per un&apos;operazione di peacekeeping. ROE: Proteggere la popolazione civile a tutti i costi. I danni collaterali sono severamente vietati. Fallimento missione se le vittime civili superano la soglia accettabile. Rimanete vigili, identificate i vostri bersagli.</Italian>
+            <Russian>Ваше подразделение развёрнуто в зоне операции Сефру Рамаль для миротворческой миссии. ПП: Защита гражданского населения любой ценой. Сопутствующий ущерб строго запрещён. Провал миссии при превышении допустимого порога потерь среди гражданских. Сохраняйте бдительность, идентифицируйте цели.</Russian>
+            <Polish>Wasza jednostka jest rozmieszczona w strefie operacyjnej Sefrou Ramal w ramach misji pokojowej. ROE: Chronić ludność cywilną za wszelką cenę. Straty uboczne są surowo zabronione. Niepowodzenie misji przy przekroczeniu dopuszczalnego progu ofiar cywilnych. Zachowajcie czujność, identyfikujcie cele.</Polish>
+            <Czech>Vaše jednotka je nasazena v operační zóně Sefrou Ramal pro mírovou operaci. ROE: Chránit civilní obyvatelstvo za každou cenu. Kolaterální škody jsou přísně zakázány. Selhání mise při překročení přijatelné hranice civilních obětí. Zůstaňte ostražití, identifikujte své cíle.</Czech>
+            <Turkish>Birliğiniz barışı koruma operasyonu için Sefrou Ramal harekât bölgesine konuşlandırıldı. ÇK: Sivil halkı ne pahasına olursa olsun koruyun. Yan hasarlar kesinlikle yasaktır. Sivil kayıplar kabul edilebilir eşiği aşarsa görev başarısız olur. Tetikte kalın, hedeflerinizi tanımlayın.</Turkish>
+            <Chinese>你的部隊已部署至塞夫魯拉馬爾作戰區域執行維和任務。交戰規則：不惜一切代價保護平民。嚴禁造成附帶損害。若平民傷亡超過可接受閾值則任務失敗。保持警惕，識別目標。</Chinese>
+            <Chinesesimp>你的部队已部署至塞夫鲁拉马尔作战区域执行维和任务。交战规则：不惜一切代价保护平民。严禁造成附带损害。若平民伤亡超过可接受阈值则任务失败。保持警惕，识别目标。</Chinesesimp>
+            <Japanese>あなたの部隊は平和維持活動のためセフル・ラマル作戦地域に展開しています。交戦規定：いかなる犠牲を払っても民間人を保護せよ。付随的被害は厳禁。民間人の犠牲が許容閾値を超えた場合、任務失敗。警戒を怠らず、目標を識別せよ。</Japanese>
+            <Portuguese>Sua unidade está implantada na ZO de Sefrou Ramal para uma operação de manutenção da paz. ROE: Proteger a população civil a todo custo. Danos colaterais são estritamente proibidos. Falha de missão se as baixas civis excederem o limite aceitável. Mantenham-se vigilantes, identifiquem seus alvos.</Portuguese>
+            <Korean>귀하의 부대는 평화유지 작전을 위해 세프루 라말 작전지역에 배치되었습니다. 교전규칙: 어떤 대가를 치르더라도 민간인을 보호하라. 부수적 피해는 엄격히 금지됩니다. 민간인 사상자가 허용 임계값을 초과하면 임무 실패. 경계를 유지하고 목표물을 식별하십시오.</Korean>
+        </Key><!-- BOMB DEFUSAL TASK -->
+        <Key ID="STR_BOMB_TASK_TITLE">
+            <English>IED Threat - Bomb Disposal</English>
+            <French>Menace IED - Désamorçage</French>
+            <German>IED-Bedrohung - Bombenentschärfung</German>
+            <Spanish>Amenaza IED - Desactivación de Bomba</Spanish>
+            <Italian>Minaccia IED - Disinnesco Bomba</Italian>
+            <Russian>Угроза СВУ - Обезвреживание</Russian>
+            <Polish>Zagrożenie IED - Rozbrajanie</Polish>
+            <Czech>Hrozba IED - Zneškodnění Bomby</Czech>
+            <Turkish>IED Tehdidi - Bomba İmhası</Turkish>
+            <Chinese>簡易爆炸裝置威脅 - 拆彈</Chinese>
+            <Chinesesimp>简易爆炸装置威胁 - 拆弹</Chinesesimp>
+            <Japanese>IED脅威 - 爆弾処理</Japanese>
+            <Portuguese>Ameaça IED - Desarmamento</Portuguese>
+            <Korean>IED 위협 - 폭탄 해체</Korean>
+        </Key>
+        <Key ID="STR_BOMB_TASK_DESC">
+            <English>FLASH TRAFFIC. Local civilians report discovery of suspected IED in the AO. Grid coordinates transmitted to your TAC. Proceed to location and neutralize the explosive device. Exercise extreme caution - timer status unknown. EOD protocols in effect. Time is critical. Out.</English>
+            <French>MESSAGE FLASH. Des civils locaux signalent la découverte d&apos;un IED suspecté dans la ZO. Coordonnées transmises à votre TAC. Rejoignez la position et neutralisez l&apos;engin explosif. Extrême prudence - statut du minuteur inconnu. Protocoles EOD en vigueur. Le temps presse. Terminé.</French>
+            <German>BLITZMELDUNG. Lokale Zivilisten melden Fund eines mutmaßlichen IED im Einsatzgebiet. Koordinaten an Ihren TAK übermittelt. Begeben Sie sich zum Standort und neutralisieren Sie den Sprengkörper. Äußerste Vorsicht - Timerstatus unbekannt. EOD-Protokolle aktiv. Zeit ist kritisch. Ende.</German>
+            <Spanish>MENSAJE FLASH. Civiles locales reportan descubrimiento de IED sospechoso en la ZO. Coordenadas transmitidas a su TAC. Diríjase a la ubicación y neutralice el artefacto explosivo. Extreme precaución - estado del temporizador desconocido. Protocolos EOD en efecto. El tiempo es crítico. Cambio.</Spanish>
+            <Italian>MESSAGGIO FLASH. Civili locali segnalano ritrovamento di sospetto IED nella ZO. Coordinate trasmesse al vostro TAC. Procedete alla posizione e neutralizzate l&apos;ordigno esplosivo. Massima cautela - stato del timer sconosciuto. Protocolli EOD attivi. Il tempo è critico. Passo.</Italian>
+            <Russian>СРОЧНОЕ СООБЩЕНИЕ. Местные жители сообщают об обнаружении подозрительного СВУ в зоне операции. Координаты переданы на ваш ТАК. Выдвигайтесь на позицию и нейтрализуйте взрывное устройство. Соблюдайте крайнюю осторожность - статус таймера неизвестен. Протоколы саперов активны. Время критично. Конец связи.</Russian>
+            <Polish>PILNA WIADOMOŚĆ. Miejscowi cywile zgłaszają odkrycie podejrzanego IED w strefie operacji. Współrzędne przekazane do waszego TAK. Udajcie się na miejsce i zneutralizujcie ładunek wybuchowy. Zachowajcie najwyższą ostrożność - status timera nieznany. Protokoły EOD aktywne. Czas jest krytyczny. Odbiór.</Polish>
+            <Czech>BLESKOVÉ HLÁŠENÍ. Místní civilisté hlásí nález podezřelého IED v operační zóně. Souřadnice předány vašemu TAK. Přesuňte se na místo a zneškodněte výbušné zařízení. Maximální opatrnost - stav časovače neznámý. EOD protokoly aktivní. Čas je kritický. Konec.</Czech>
+            <Turkish>ACİL MESAJ. Yerel siviller harekât bölgesinde şüpheli IED keşfini bildiriyor. Koordinatlar TAK&apos;ınıza iletildi. Konuma gidin ve patlayıcı cihazı etkisiz hale getirin. Son derece dikkatli olun - zamanlayıcı durumu bilinmiyor. EOD protokolleri yürürlükte. Zaman kritik. Tamam.</Turkish>
+            <Chinese>緊急通報。當地平民報告在作戰區發現疑似簡易爆炸裝置。座標已傳送至您的戰術指揮部。前往該位置並解除爆炸裝置。務必格外小心 - 計時器狀態未知。執行拆彈協議。時間緊迫。完畢。</Chinese>
+            <Chinesesimp>紧急通报。当地平民报告在作战区发现疑似简易爆炸装置。坐标已传送至您的战术指挥部。前往该位置并解除爆炸装置。务必格外小心 - 计时器状态未知。执行拆弹协议。时间紧迫。完毕。</Chinesesimp>
+            <Japanese>緊急通信。現地住民がAO内でIEDと思われる物体を発見したと報告。座標は貴殿のTACに送信済み。現場に急行し爆発物を無力化せよ。細心の注意を払え - タイマー状態不明。EODプロトコル発動中。時間的猶予なし。以上。</Japanese>
+            <Portuguese>MENSAGEM FLASH. Civis locais relatam descoberta de IED suspeito na ZO. Coordenadas transmitidas ao seu TAC. Prossiga até o local e neutralize o dispositivo explosivo. Extrema cautela - status do temporizador desconhecido. Protocolos EOD em vigor. Tempo é crítico. Câmbio.</Portuguese>
+            <Korean>긴급 통신. 현지 민간인들이 작전지역에서 의심되는 IED 발견을 보고함. 좌표가 TAC에 전송됨. 해당 위치로 이동하여 폭발물을 무력화하라. 극도의 주의 요망 - 타이머 상태 불명. EOD 프로토콜 적용 중. 시간이 촉박함. 이상.</Korean>
+        </Key>
+        <Key ID="STR_BOMB_MARKER">
+            <English>IED LOCATION</English>
+            <French>POSITION IED</French>
+            <German>IED-STANDORT</German>
+            <Spanish>UBICACIÓN IED</Spanish>
+            <Italian>POSIZIONE IED</Italian>
+            <Russian>МЕСТОПОЛОЖЕНИЕ СВУ</Russian>
+            <Polish>LOKALIZACJA IED</Polish>
+            <Czech>POZICE IED</Czech>
+            <Turkish>IED KONUMU</Turkish>
+            <Chinese>IED位置</Chinese>
+            <Chinesesimp>IED位置</Chinesesimp>
+            <Japanese>IED位置</Japanese>
+            <Portuguese>LOCALIZAÇÃO IED</Portuguese>
+            <Korean>IED 위치</Korean>
+        </Key>
+        <Key ID="STR_BOMB_DEFUSED">
+            <English>IED successfully neutralized. Good work. RTB when ready.</English>
+            <French>IED neutralisé avec succès. Bon travail. RTB quand prêt.</French>
+            <German>IED erfolgreich neutralisiert. Gute Arbeit. RTB wenn bereit.</German>
+            <Spanish>IED neutralizado con éxito. Buen trabajo. RTB cuando esté listo.</Spanish>
+            <Italian>IED neutralizzato con successo. Buon lavoro. RTB quando pronti.</Italian>
+            <Russian>СВУ успешно обезврежено. Хорошая работа. Возвращайтесь на базу.</Russian>
+            <Polish>IED zneutralizowane. Dobra robota. RTB gdy gotowi.</Polish>
+            <Czech>IED úspěšně zneškodněno. Dobrá práce. RTB až budete připraveni.</Czech>
+            <Turkish>IED başarıyla etkisiz hale getirildi. İyi iş. Hazır olduğunuzda RTB.</Turkish>
+            <Chinese>IED成功解除。幹得好。準備好後返回基地。</Chinese>
+            <Chinesesimp>IED成功解除。干得好。准备好后返回基地。</Chinesesimp>
+            <Japanese>IED無力化成功。よくやった。準備でき次第RTB。</Japanese>
+            <Portuguese>IED neutralizado com sucesso. Bom trabalho. RTB quando pronto.</Portuguese>
+            <Korean>IED 무력화 성공. 잘했다. 준비되면 RTB.</Korean>
+        </Key>
+        <Key ID="STR_BOMB_EXPLODED">
+            <English>DETONATION! IED has exploded. Mission failed. Multiple casualties expected.</English>
+            <French>DÉTONATION ! L&apos;IED a explosé. Mission échouée. Pertes multiples attendues.</French>
+            <German>DETONATION! IED ist explodiert. Mission fehlgeschlagen. Mehrere Opfer erwartet.</German>
+            <Spanish>¡DETONACIÓN! El IED ha explotado. Misión fallida. Se esperan múltiples bajas.</Spanish>
+            <Italian>DETONAZIONE! L&apos;IED è esploso. Missione fallita. Previste vittime multiple.</Italian>
+            <Russian>ДЕТОНАЦИЯ! СВУ взорвалось. Миссия провалена. Ожидаются множественные потери.</Russian>
+            <Polish>DETONACJA! IED eksplodowało. Misja nieudana. Oczekiwane liczne ofiary.</Polish>
+            <Czech>DETONACE! IED explodovalo. Mise selhala. Očekáváno více obětí.</Czech>
+            <Turkish>PATLAMA! IED patladı. Görev başarısız. Çok sayıda kayıp bekleniyor.</Turkish>
+            <Chinese>引爆！IED已爆炸。任務失敗。預計多人傷亡。</Chinese>
+            <Chinesesimp>引爆！IED已爆炸。任务失败。预计多人伤亡。</Chinesesimp>
+            <Japanese>爆発！IEDが爆発した。任務失敗。複数の死傷者が予想される。</Japanese>
+            <Portuguese>DETONAÇÃO! IED explodiu. Missão falhou. Múltiplas baixas esperadas.</Portuguese>
+            <Korean>폭발! IED가 폭발했다. 임무 실패. 다수의 사상자 예상.</Korean>
+        </Key>
+        <Key ID="STR_BOMB_DEFUSE_ACTION">
+            <English>Defuse IED (10 sec)</English>
+            <French>Désamorcer l&apos;IED (10 sec)</French>
+            <German>IED entschärfen (10 Sek)</German>
+            <Spanish>Desactivar IED (10 seg)</Spanish>
+            <Italian>Disinnescare IED (10 sec)</Italian>
+            <Russian>Обезвредить СВУ (10 сек)</Russian>
+            <Polish>Rozbrój IED (10 sek)</Polish>
+            <Czech>Zneškodnit IED (10 s)</Czech>
+            <Turkish>IED&apos;yi Etkisiz Hale Getir (10 sn)</Turkish>
+            <Chinese>拆除IED (10秒)</Chinese>
+            <Chinesesimp>拆除IED (10秒)</Chinesesimp>
+            <Japanese>IED解除 (10秒)</Japanese>
+            <Portuguese>Desarmar IED (10 seg)</Portuguese>
+            <Korean>IED 해체 (10초)</Korean>
+        </Key>
+        <Key ID="STR_BOMB_DEFUSING">
+            <English>Defusing IED... Do not move!</English>
+            <French>Désamorçage en cours... Ne bougez pas !</French>
+            <German>Entschärfe IED... Nicht bewegen!</German>
+            <Spanish>Desactivando IED... ¡No se mueva!</Spanish>
+            <Italian>Disinnesco in corso... Non muoverti!</Italian>
+            <Russian>Обезвреживание СВУ... Не двигайтесь!</Russian>
+            <Polish>Rozbrajanie IED... Nie ruszaj się!</Polish>
+            <Czech>Zneškodňuji IED... Nehýbej se!</Czech>
+            <Turkish>IED etkisiz hale getiriliyor... Hareket etmeyin!</Turkish>
+            <Chinese>正在拆除IED... 請勿移動！</Chinese>
+            <Chinesesimp>正在拆除IED... 请勿移动！</Chinesesimp>
+            <Japanese>IED解除中... 動くな！</Japanese>
+            <Portuguese>Desarmando IED... Não se mova!</Portuguese>
+            <Korean>IED 해체 중... 움직이지 마십시오!</Korean>
+        </Key>
+        <Key ID="STR_BOMB_DEFUSE_FAILED">
+            <English>Defusing interrupted! Get back to the IED.</English>
+            <French>Désamorçage interrompu ! Retournez à l&apos;IED.</French>
+            <German>Entschärfung unterbrochen! Zurück zum IED.</German>
+            <Spanish>¡Desactivación interrumpida! Vuelva al IED.</Spanish>
+            <Italian>Disinnesco interrotto! Torna all&apos;IED.</Italian>
+            <Russian>Обезвреживание прервано! Вернитесь к СВУ.</Russian>
+            <Polish>Rozbrajanie przerwane! Wróć do IED.</Polish>
+            <Czech>Zneškodnění přerušeno! Vraťte se k IED.</Czech>
+            <Turkish>Etkisiz hale getirme kesildi! IED&apos;ye geri dönün.</Turkish>
+            <Chinese>拆除中斷！返回IED位置。</Chinese>
+            <Chinesesimp>拆除中断！返回IED位置。</Chinesesimp>
+            <Japanese>解除中断！IEDに戻れ。</Japanese>
+            <Portuguese>Desarmamento interrompido! Volte ao IED.</Portuguese>
+            <Korean>해체 중단! IED로 돌아가십시오.</Korean>
+        </Key><!-- HOSTAGE RESCUE TASK -->
+        <Key ID="STR_HOSTAGE_TASK_TITLE">
+            <English>PERSONNEL RECOVERY - Hostage Rescue</English>
+            <French>RÉCUPÉRATION DE PERSONNEL - Sauvetage d&apos;Otage</French>
+            <German>PERSONALBERGUNG - Geiselbefreiung</German>
+            <Spanish>RECUPERACIÓN DE PERSONAL - Rescate de Rehén</Spanish>
+            <Italian>RECUPERO PERSONALE - Salvataggio Ostaggio</Italian>
+            <Russian>ЭВАКУАЦИЯ ПЕРСОНАЛА - Спасение заложника</Russian>
+            <Polish>ODZYSKANIE PERSONELU - Ratunek Zakładnika</Polish>
+            <Czech>ZÁCHRANA PERSONÁLU - Záchrana Rukojmí</Czech>
+            <Turkish>PERSONEL KURTARMA - Rehine Kurtarma</Turkish>
+            <Chinese>人員救援 - 人質營救</Chinese>
+            <Chinesesimp>人员救援 - 人质营救</Chinesesimp>
+            <Japanese>人員救出 - 人質救助</Japanese>
+            <Portuguese>RECUPERAÇÃO DE PESSOAL - Resgate de Refém</Portuguese>
+            <Korean>인원 구출 - 인질 구출</Korean>
+        </Key>
+        <Key ID="STR_HOSTAGE_TASK_DESC">
+            <English>PRIORITY MESSAGE. HUMINT indicates hostile elements have taken a civilian hostage in the AO. Armed insurgents confirmed on site. Locate, neutralize hostiles, and secure the hostage. Extraction via rotary-wing asset to nearest LZ. ROE: Weapons free on identified hostiles. Hostage safety is paramount. Execute immediately. Out.</English>
+            <French>MESSAGE PRIORITAIRE. HUMINT indique que des éléments hostiles détiennent un civil en otage dans la ZO. Insurgés armés confirmés sur site. Localisez, neutralisez les hostiles et sécurisez l&apos;otage. Extraction par voilure tournante vers la LZ la plus proche. ROE : Tir autorisé sur hostiles identifiés. La sécurité de l&apos;otage est primordiale. Exécution immédiate. Terminé.</French>
+            <German>PRIORITÄTSMELDUNG. HUMINT meldet feindliche Kräfte halten Zivilgeisel im Einsatzgebiet. Bewaffnete Aufständische vor Ort bestätigt. Lokalisieren, Feinde neutralisieren und Geisel sichern. Extraktion per Hubschrauber zur nächsten LZ. ROE: Feuerfreigabe auf identifizierte Feinde. Geiselsicherheit hat Priorität. Sofort ausführen. Ende.</German>
+            <Spanish>MENSAJE PRIORITARIO. HUMINT indica que elementos hostiles tienen un civil como rehén en la ZO. Insurgentes armados confirmados en el sitio. Localice, neutralice hostiles y asegure al rehén. Extracción por helicóptero a la LZ más cercana. ROE: Fuego libre sobre hostiles identificados. La seguridad del rehén es primordial. Ejecutar inmediatamente. Cambio.</Spanish>
+            <Italian>MESSAGGIO PRIORITARIO. HUMINT indica che elementi ostili detengono un civile in ostaggio nella ZO. Insorti armati confermati sul posto. Localizzate, neutralizzate i nemici e mettete in sicurezza l&apos;ostaggio. Estrazione via elicottero verso la LZ più vicina. ROE: Fuoco libero su ostili identificati. La sicurezza dell&apos;ostaggio è prioritaria. Eseguire immediatamente. Passo.</Italian>
+            <Russian>ПРИОРИТЕТНОЕ СООБЩЕНИЕ. HUMINT сообщает: враждебные элементы удерживают гражданского заложника в зоне операции. Подтверждено присутствие вооружённых боевиков. Обнаружить, нейтрализовать противника и обеспечить безопасность заложника. Эвакуация вертолётом на ближайшую ЛЗ. ПП: Огонь разрешён по опознанным целям. Безопасность заложника превыше всего. Немедленное исполнение. Конец связи.</Russian>
+            <Polish>WIADOMOŚĆ PRIORYTETOWA. HUMINT wskazuje, że wrogie elementy przetrzymują cywilnego zakładnika w strefie operacyjnej. Potwierdzono obecność uzbrojonych powstańców. Zlokalizuj, zneutralizuj wrogów i zabezpiecz zakładnika. Ekstrakcja śmigłowcem do najbliższej LZ. ROE: Ogień dozwolony do zidentyfikowanych wrogów. Bezpieczeństwo zakładnika jest priorytetem. Wykonać natychmiast. Odbiór.</Polish>
+            <Czech>PRIORITNÍ ZPRÁVA. HUMINT hlásí nepřátelské prvky drží civilního rukojmí v operační zóně. Potvrzeni ozbrojení povstalci na místě. Lokalizujte, zneškodněte nepřátele a zajistěte rukojmí. Extrakce vrtulníkem na nejbližší LZ. ROE: Palba povolena na identifikované nepřátele. Bezpečnost rukojmí je prioritou. Provést okamžitě. Konec.</Czech>
+            <Turkish>ÖNCELİKLİ MESAJ. HUMINT, düşman unsurların harekât bölgesinde bir sivili rehin tuttuğunu bildiriyor. Silahlı isyancılar sahada teyit edildi. Konumu belirleyin, düşmanları etkisiz hale getirin ve rehineyi güvenceye alın. En yakın LZ&apos;ye helikopterle çıkarma. ÇK: Tanımlanan düşmanlara ateş serbest. Rehine güvenliği önceliklidir. Derhal uygulayın. Tamam.</Turkish>
+            <Chinese>優先訊息。人力情報顯示敵對分子在作戰區劫持一名平民人質。現場確認有武裝叛亂分子。定位、消滅敵人並確保人質安全。由直升機撤離至最近的著陸區。交戰規則：對已確認敵人自由開火。人質安全至上。立即執行。完畢。</Chinese>
+            <Chinesesimp>优先讯息。人力情报显示敌对分子在作战区劫持一名平民人质。现场确认有武装叛乱分子。定位、消灭敌人并确保人质安全。由直升机撤离至最近的着陆区。交战规则：对已确认敌人自由开火。人质安全至上。立即执行。完毕。</Chinesesimp>
+            <Japanese>優先通信。HUMINTによると敵対勢力がAO内で民間人を人質に取っている。武装した反乱分子の存在を確認。敵を発見・無力化し人質を確保せよ。最寄りのLZへ回転翼機で脱出。交戦規定：識別された敵には射撃許可。人質の安全が最優先。直ちに実行せよ。以上。</Japanese>
+            <Portuguese>MENSAGEM PRIORITÁRIA. HUMINT indica que elementos hostis mantêm um civil refém na ZO. Insurgentes armados confirmados no local. Localize, neutralize hostis e proteja o refém. Extração via helicóptero para a LZ mais próxima. ROE: Fogo livre contra hostis identificados. Segurança do refém é primordial. Executar imediatamente. Câmbio.</Portuguese>
+            <Korean>우선 메시지. HUMINT에 따르면 적대 세력이 작전지역에서 민간인 인질을 억류 중. 현장에서 무장 반군 확인됨. 위치 파악, 적 무력화 및 인질 확보. 가장 가까운 LZ로 헬기 추출. 교전규칙: 식별된 적에게 사격 허용. 인질 안전이 최우선. 즉시 실행. 이상.</Korean>
+        </Key>
+        <Key ID="STR_HOSTAGE_MARKER">
+            <English>HOSTAGE LOCATION</English>
+            <French>POSITION OTAGE</French>
+            <German>GEISEL-STANDORT</German>
+            <Spanish>UBICACIÓN DEL REHÉN</Spanish>
+            <Italian>POSIZIONE OSTAGGIO</Italian>
+            <Russian>МЕСТОПОЛОЖЕНИЕ ЗАЛОЖНИКА</Russian>
+            <Polish>LOKALIZACJA ZAKŁADNIKA</Polish>
+            <Czech>POZICE RUKOJMÍ</Czech>
+            <Turkish>REHİNE KONUMU</Turkish>
+            <Chinese>人質位置</Chinese>
+            <Chinesesimp>人质位置</Chinesesimp>
+            <Japanese>人質位置</Japanese>
+            <Portuguese>LOCALIZAÇÃO DO REFÉM</Portuguese>
+            <Korean>인질 위치</Korean>
+        </Key>
+        <Key ID="STR_HOSTAGE_ACTION_FREE">
+            <English>Free hostage (8 sec)</English>
+            <French>Libérer l&apos;otage (8 sec)</French>
+            <German>Geisel befreien (8 Sek)</German>
+            <Spanish>Liberar rehén (8 seg)</Spanish>
+            <Italian>Liberare ostaggio (8 sec)</Italian>
+            <Russian>Освободить заложника (8 сек)</Russian>
+            <Polish>Uwolnij zakładnika (8 sek)</Polish>
+            <Czech>Osvobodit rukojmí (8 s)</Czech>
+            <Turkish>Rehineyi kurtar (8 sn)</Turkish>
+            <Chinese>解救人質 (8秒)</Chinese>
+            <Chinesesimp>解救人质 (8秒)</Chinesesimp>
+            <Japanese>人質解放 (8秒)</Japanese>
+            <Portuguese>Libertar refém (8 seg)</Portuguese>
+            <Korean>인질 해방 (8초)</Korean>
+        </Key>
+        <Key ID="STR_HOSTAGE_FREEING">
+            <English>Freeing hostage... Stay close!</English>
+            <French>Libération en cours... Restez proche !</French>
+            <German>Befreie Geisel... Bleiben Sie nah!</German>
+            <Spanish>Liberando rehén... ¡Permanezca cerca!</Spanish>
+            <Italian>Liberando ostaggio... Resta vicino!</Italian>
+            <Russian>Освобождаю заложника... Оставайтесь рядом!</Russian>
+            <Polish>Uwalnianie zakładnika... Zostań blisko!</Polish>
+            <Czech>Osvobozuji rukojmí... Zůstaňte blízko!</Czech>
+            <Turkish>Rehine kurtarılıyor... Yakın kal!</Turkish>
+            <Chinese>正在解救人質... 保持靠近！</Chinese>
+            <Chinesesimp>正在解救人质... 保持靠近！</Chinesesimp>
+            <Japanese>人質解放中... 近くにいろ！</Japanese>
+            <Portuguese>Libertando refém... Fique perto!</Portuguese>
+            <Korean>인질 해방 중... 가까이 있으십시오!</Korean>
+        </Key>
+        <Key ID="STR_HOSTAGE_FREED">
+            <English>Hostage secured! Escort to extraction point.</English>
+            <French>Otage sécurisé ! Escortez vers le point d&apos;extraction.</French>
+            <German>Geisel gesichert! Zur Extraktionspunkt eskortieren.</German>
+            <Spanish>¡Rehén asegurado! Escolte al punto de extracción.</Spanish>
+            <Italian>Ostaggio in sicurezza! Scortare al punto di estrazione.</Italian>
+            <Russian>Заложник освобождён! Сопроводите к точке эвакуации.</Russian>
+            <Polish>Zakładnik zabezpieczony! Eskortuj do punktu ekstrakcji.</Polish>
+            <Czech>Rukojmí zajištěn! Doprovoďte k bodu extrakce.</Czech>
+            <Turkish>Rehine güvende! Çıkarma noktasına eşlik edin.</Turkish>
+            <Chinese>人質已確保！護送至撤離點。</Chinese>
+            <Chinesesimp>人质已确保！护送至撤离点。</Chinesesimp>
+            <Japanese>人質確保！抽出地点へ護衛せよ。</Japanese>
+            <Portuguese>Refém assegurado! Escolte ao ponto de extração.</Portuguese>
+            <Korean>인질 확보! 추출 지점으로 호위하십시오.</Korean>
+        </Key>
+        <Key ID="STR_HOSTAGE_EXTRACTION_MARKER">
+            <English>EXTRACTION LZ</English>
+            <French>LZ D&apos;EXTRACTION</French>
+            <German>EXTRAKTIONS-LZ</German>
+            <Spanish>LZ DE EXTRACCIÓN</Spanish>
+            <Italian>LZ DI ESTRAZIONE</Italian>
+            <Russian>LZ ЭВАКУАЦИИ</Russian>
+            <Polish>LZ EKSTRAKCJI</Polish>
+            <Czech>EXTRAKČNÍ LZ</Czech>
+            <Turkish>ÇIKARMA LZ</Turkish>
+            <Chinese>撤離著陸區</Chinese>
+            <Chinesesimp>撤离着陆区</Chinesesimp>
+            <Japanese>抽出LZ</Japanese>
+            <Portuguese>LZ DE EXTRAÇÃO</Portuguese>
+            <Korean>추출 LZ</Korean>
+        </Key>
+        <Key ID="STR_HOSTAGE_HELI_INCOMING">
+            <English>DUSTOFF inbound to LZ. ETA 2 mikes. Prepare for extraction.</English>
+            <French>DUSTOFF en approche vers LZ. ETA 2 minutes. Préparez l&apos;extraction.</French>
+            <German>DUSTOFF im Anflug auf LZ. ETA 2 Minuten. Extraktion vorbereiten.</German>
+            <Spanish>DUSTOFF en camino a LZ. ETA 2 minutos. Preparen extracción.</Spanish>
+            <Italian>DUSTOFF in arrivo alla LZ. ETA 2 minuti. Preparate l&apos;estrazione.</Italian>
+            <Russian>DUSTOFF на подходе к LZ. Прибытие через 2 минуты. Готовьтесь к эвакуации.</Russian>
+            <Polish>DUSTOFF zbliża się do LZ. ETA 2 minuty. Przygotujcie ekstrakcję.</Polish>
+            <Czech>DUSTOFF přilétá na LZ. ETA 2 minuty. Připravte extrakci.</Czech>
+            <Turkish>DUSTOFF LZ&apos;ye yaklaşıyor. Varış 2 dakika. Çıkarmaya hazırlanın.</Turkish>
+            <Chinese>DUSTOFF正在飛往LZ。預計2分鐘抵達。準備撤離。</Chinese>
+            <Chinesesimp>DUSTOFF正在飞往LZ。预计2分钟抵达。准备撤离。</Chinesesimp>
+            <Japanese>DUSTOFFがLZに接近中。到着まで2分。抽出準備せよ。</Japanese>
+            <Portuguese>DUSTOFF a caminho da LZ. ETA 2 minutos. Prepare a extração.</Portuguese>
+            <Korean>DUSTOFF가 LZ로 접근 중. 도착 예정 2분. 추출 준비.</Korean>
+        </Key>
+        <Key ID="STR_HOSTAGE_EXTRACTED">
+            <English>PACKAGE SECURED. Hostage extracted successfully. Outstanding work. RTB. Out.</English>
+            <French>COLIS SÉCURISÉ. Otage extrait avec succès. Excellent travail. RTB. Terminé.</French>
+            <German>PAKET GESICHERT. Geisel erfolgreich extrahiert. Hervorragende Arbeit. RTB. Ende.</German>
+            <Spanish>PAQUETE ASEGURADO. Rehén extraído con éxito. Trabajo excepcional. RTB. Cambio.</Spanish>
+            <Italian>PACCHETTO ASSICURATO. Ostaggio estratto con successo. Lavoro eccellente. RTB. Passo.</Italian>
+            <Russian>ГРУЗ ЭВАКУИРОВАН. Заложник успешно извлечён. Отличная работа. Возвращайтесь на базу. Конец связи.</Russian>
+            <Polish>ŁADUNEK ZABEZPIECZONY. Zakładnik wyekstrahowany pomyślnie. Świetna robota. RTB. Odbiór.</Polish>
+            <Czech>ZÁSILKA ZAJIŠTĚNA. Rukojmí úspěšně extrahován. Vynikající práce. RTB. Konec.</Czech>
+            <Turkish>PAKET GÜVENLİ. Rehine başarıyla çıkarıldı. Mükemmel iş. RTB. Tamam.</Turkish>
+            <Chinese>人員已撤離。人質成功救出。出色的工作。返回基地。完畢。</Chinese>
+            <Chinesesimp>人员已撤离。人质成功救出。出色的工作。返回基地。完毕。</Chinesesimp>
+            <Japanese>パッケージ確保。人質抽出成功。見事な仕事だ。RTB。以上。</Japanese>
+            <Portuguese>PACOTE SEGURO. Refém extraído com sucesso. Trabalho excelente. RTB. Câmbio.</Portuguese>
+            <Korean>패키지 확보. 인질 추출 성공. 훌륭한 작업. RTB. 이상.</Korean>
+        </Key>
+        <Key ID="STR_HOSTAGE_FAILED">
+            <English>MISSION FAILED. Hostage lost. Debrief upon RTB.</English>
+            <French>MISSION ÉCHOUÉE. Otage perdu. Débriefing au retour.</French>
+            <German>MISSION FEHLGESCHLAGEN. Geisel verloren. Nachbesprechung nach RTB.</German>
+            <Spanish>MISIÓN FALLIDA. Rehén perdido. Informe al regresar.</Spanish>
+            <Italian>MISSIONE FALLITA. Ostaggio perso. Debriefing al rientro.</Italian>
+            <Russian>МИССИЯ ПРОВАЛЕНА. Заложник потерян. Разбор по возвращении.</Russian>
+            <Polish>MISJA NIEUDANA. Zakładnik stracony. Odprawa po powrocie.</Polish>
+            <Czech>MISE SELHALA. Rukojmí ztracen. Debriefing po návratu.</Czech>
+            <Turkish>GÖREV BAŞARISIZ. Rehine kaybedildi. Dönüşte brifing.</Turkish>
+            <Chinese>任務失敗。人質遇難。返回基地後進行匯報。</Chinese>
+            <Chinesesimp>任务失败。人质遇难。返回基地后进行汇报。</Chinesesimp>
+            <Japanese>任務失敗。人質を失った。RTB後にデブリーフィング。</Japanese>
+            <Portuguese>MISSÃO FALHOU. Refém perdido. Debriefing ao retornar.</Portuguese>
+            <Korean>임무 실패. 인질 사망. 귀환 후 브리핑.</Korean>
+        </Key><!-- WEAPONS CACHE TASK -->
+        <Key ID="STR_CACHE_TASK_TITLE">
+            <English>WEAPONS CACHE - Destroy</English>
+            <French>CACHE D&apos;ARMES - Destruction</French>
+            <German>WAFFENLAGER - Zerstörung</German>
+            <Spanish>ALIJO DE ARMAS - Destruir</Spanish>
+            <Italian>DEPOSITO ARMI - Distruzione</Italian>
+            <Russian>СКЛАД ОРУЖИЯ - Уничтожение</Russian>
+            <Polish>SKRYTKA Z BRONIĄ - Zniszczenie</Polish>
+            <Czech>SKLAD ZBRANÍ - Zničení</Czech>
+            <Turkish>SİLAH DEPOSU - İmha</Turkish>
+            <Chinese>武器藏匿點 - 摧毀</Chinese>
+            <Chinesesimp>武器藏匿点 - 摧毁</Chinesesimp>
+            <Japanese>武器キャッシュ - 破壊</Japanese>
+            <Portuguese>ESCONDERIJO DE ARMAS - Destruir</Portuguese>
+            <Korean>무기 은닉처 - 파괴</Korean>
+        </Key>
+        <Key ID="STR_CACHE_TASK_DESC">
+            <English>INTEL REPORT. HUMINT confirms weapons cache location in the AO. Suspected insurgent resupply point. Proceed to location, neutralize any hostiles, and destroy the cache. Set charges and evacuate before detonation. ROE: Weapons free on confirmed hostiles. Execute. Out.</English>
+            <French>RAPPORT RENS. HUMINT confirme localisation cache d&apos;armes dans la ZO. Point de ravitaillement insurgé suspecté. Rejoignez la position, neutralisez les hostiles et détruisez la cache. Posez les charges et évacuez avant détonation. ROE : Tir autorisé sur hostiles confirmés. Exécution. Terminé.</French>
+            <German>INTEL-BERICHT. HUMINT bestätigt Waffenlager-Standort im Einsatzgebiet. Verdächtiger Nachschubpunkt der Aufständischen. Begeben Sie sich zum Standort, neutralisieren Sie Feinde und zerstören Sie das Lager. Sprengsätze platzieren und vor Detonation evakuieren. ROE: Feuerfreigabe auf bestätigte Feinde. Ausführen. Ende.</German>
+            <Spanish>INFORME INTEL. HUMINT confirma ubicación de alijo de armas en la ZO. Punto de reabastecimiento insurgente sospechado. Diríjase a la ubicación, neutralice hostiles y destruya el alijo. Coloque cargas y evacúe antes de la detonación. ROE: Fuego libre sobre hostiles confirmados. Ejecutar. Cambio.</Spanish>
+            <Italian>RAPPORTO INTEL. HUMINT conferma posizione deposito armi nella ZO. Sospetto punto di rifornimento insorti. Procedete alla posizione, neutralizzate i nemici e distruggete il deposito. Piazzate le cariche ed evacuate prima della detonazione. ROE: Fuoco libero su ostili confermati. Eseguire. Passo.</Italian>
+            <Russian>РАЗВЕДДАННЫЕ. HUMINT подтверждает расположение склада оружия в зоне операции. Предполагаемый пункт снабжения повстанцев. Выдвигайтесь на позицию, нейтрализуйте противника и уничтожьте склад. Установите заряды и эвакуируйтесь до детонации. ПП: Огонь разрешён по подтверждённым целям. Выполнять. Конец связи.</Russian>
+            <Polish>RAPORT WYWIADOWCZY. HUMINT potwierdza lokalizację skrytki z bronią w strefie operacyjnej. Podejrzany punkt zaopatrzenia powstańców. Udajcie się na miejsce, zneutralizujcie wrogów i zniszczcie skrytkę. Podłóżcie ładunki i ewakuujcie się przed detonacją. ROE: Ogień dozwolony na potwierdzonych wrogów. Wykonać. Odbiór.</Polish>
+            <Czech>ZPRAVODAJSKÁ ZPRÁVA. HUMINT potvrzuje polohu skladu zbraní v operační zóně. Podezřelý zásobovací bod povstalců. Přesuňte se na místo, zneškodněte nepřátele a zničte sklad. Nastavte nálože a evakuujte před detonací. ROE: Palba povolena na potvrzené nepřátele. Provést. Konec.</Czech>
+            <Turkish>İSTİHBARAT RAPORU. HUMINT harekât bölgesinde silah deposu konumunu doğruluyor. Şüpheli isyancı ikmal noktası. Konuma gidin, düşmanları etkisiz hale getirin ve depoyu yok edin. Patlayıcıları yerleştirin ve patlamadan önce tahliye edin. ÇK: Onaylanan düşmanlara ateş serbest. Uygulayın. Tamam.</Turkish>
+            <Chinese>情報報告。人力情報確認作戰區內武器藏匿點位置。疑似叛亂分子補給站。前往該位置，消滅敵人並摧毀藏匿點。放置炸藥並在引爆前撤離。交戰規則：對已確認敵人自由開火。執行。完畢。</Chinese>
+            <Chinesesimp>情报报告。人力情报确认作战区内武器藏匿点位置。疑似叛乱分子补给站。前往该位置，消灭敌人并摧毁藏匿点。放置炸药并在引爆前撤离。交战规则：对已确认敌人自由开火。执行。完毕。</Chinesesimp>
+            <Japanese>インテル報告。HUMINTがAO内の武器キャッシュ位置を確認。反乱軍の補給ポイントの疑い。現場に向かい、敵を無力化し、キャッシュを破壊せよ。爆薬を設置し、起爆前に退避せよ。交戦規定：確認された敵には射撃許可。実行せよ。以上。</Japanese>
+            <Portuguese>RELATÓRIO INTEL. HUMINT confirma localização de esconderijo de armas na ZO. Suspeito ponto de reabastecimento insurgente. Prossiga ao local, neutralize hostis e destrua o esconderijo. Arme as cargas e evacue antes da detonação. ROE: Fogo livre sobre hostis confirmados. Executar. Câmbio.</Portuguese>
+            <Korean>인텔 보고. HUMINT가 작전지역 내 무기 은닉처 위치를 확인함. 의심되는 반군 보급 지점. 해당 위치로 이동, 적 무력화 및 은닉처 파괴. 폭발물 설치 후 폭발 전 대피. 교전규칙: 식별된 적에게 사격 허용. 실행. 이상.</Korean>
+        </Key>
+        <Key ID="STR_CACHE_MARKER">
+            <English>WEAPONS CACHE</English>
+            <French>CACHE D&apos;ARMES</French>
+            <German>WAFFENLAGER</German>
+            <Spanish>ALIJO DE ARMAS</Spanish>
+            <Italian>DEPOSITO ARMI</Italian>
+            <Russian>СКЛАД ОРУЖИЯ</Russian>
+            <Polish>SKRYTKA Z BRONIĄ</Polish>
+            <Czech>SKLAD ZBRANÍ</Czech>
+            <Turkish>SİLAH DEPOSU</Turkish>
+            <Chinese>武器藏匿點</Chinese>
+            <Chinesesimp>武器藏匿点</Chinesesimp>
+            <Japanese>武器キャッシュ</Japanese>
+            <Portuguese>ESCONDERIJO DE ARMAS</Portuguese>
+            <Korean>무기 은닉처</Korean>
+        </Key>
+        <Key ID="STR_CACHE_ACTION_DESTROY">
+            <English>Plant explosives on cache</English>
+            <French>Poser des explosifs sur la cache</French>
+            <German>Sprengstoff am Lager platzieren</German>
+            <Spanish>Colocar explosivos en el alijo</Spanish>
+            <Italian>Piazzare esplosivi sul deposito</Italian>
+            <Russian>Заложить взрывчатку на складе</Russian>
+            <Polish>Podłóż ładunki przy skrytce</Polish>
+            <Czech>Umístit výbušniny na sklad</Czech>
+            <Turkish>Depoya patlayıcı yerleştir</Turkish>
+            <Chinese>在藏匿點放置炸藥</Chinese>
+            <Chinesesimp>在藏匿点放置炸药</Chinesesimp>
+            <Japanese>キャッシュに爆薬を設置</Japanese>
+            <Portuguese>Colocar explosivos no esconderijo</Portuguese>
+            <Korean>은닉처에 폭발물 설치</Korean>
+        </Key>
+        <Key ID="STR_CACHE_EVACUATE">
+            <English>CHARGES SET! 40 seconds to detonation. EVACUATE THE AREA!</English>
+            <French>CHARGES POSÉES ! 40 secondes avant détonation. ÉVACUEZ LA ZONE !</French>
+            <German>SPRENGLADUNG GESETZT! 40 Sekunden bis zur Detonation. EVAKUIEREN SIE DAS GEBIET!</German>
+            <Spanish>¡CARGAS COLOCADAS! 40 segundos para detonación. ¡EVACÚEN EL ÁREA!</Spanish>
+            <Italian>CARICHE PIAZZATE! 40 secondi alla detonazione. EVACUATE L&apos;AREA!</Italian>
+            <Russian>ЗАРЯДЫ УСТАНОВЛЕНЫ! 40 секунд до детонации. ЭВАКУИРУЙТЕ ЗОНУ!</Russian>
+            <Polish>ŁADUNKI PODŁOŻONE! 40 sekund do detonacji. EWAKUUJCIE TEREN!</Polish>
+            <Czech>NÁLOŽE NASTAVENY! 40 sekund do detonace. EVAKUUJTE OBLAST!</Czech>
+            <Turkish>PATLAYICILAR YERLEŞTİRİLDİ! Patlamaya 40 saniye. BÖLGEYİ TAHLİYE EDİN!</Turkish>
+            <Chinese>炸藥已設置！40秒後引爆。撤離該區域！</Chinese>
+            <Chinesesimp>炸药已设置！40秒后引爆。撤离该区域！</Chinesesimp>
+            <Japanese>爆薬設置完了！起爆まで40秒。エリアから退避せよ！</Japanese>
+            <Portuguese>CARGAS ARMADAS! 40 segundos para detonação. EVACUE A ÁREA!</Portuguese>
+            <Korean>폭발물 설치 완료! 폭발까지 40초. 지역에서 대피하십시오!</Korean>
+        </Key>
+        <Key ID="STR_CACHE_DESTROYED">
+            <English>TARGET DESTROYED. Weapons cache eliminated. Outstanding work. RTB. Out.</English>
+            <French>CIBLE DÉTRUITE. Cache d&apos;armes éliminée. Excellent travail. RTB. Terminé.</French>
+            <German>ZIEL ZERSTÖRT. Waffenlager eliminiert. Hervorragende Arbeit. RTB. Ende.</German>
+            <Spanish>OBJETIVO DESTRUIDO. Alijo de armas eliminado. Trabajo excepcional. RTB. Cambio.</Spanish>
+            <Italian>OBIETTIVO DISTRUTTO. Deposito armi eliminato. Lavoro eccellente. RTB. Passo.</Italian>
+            <Russian>ЦЕЛЬ УНИЧТОЖЕНА. Склад оружия ликвидирован. Отличная работа. Возвращайтесь на базу. Конец связи.</Russian>
+            <Polish>CEL ZNISZCZONY. Skrytka z bronią zlikwidowana. Świetna robota. RTB. Odbiór.</Polish>
+            <Czech>CÍL ZNIČEN. Sklad zbraní eliminován. Vynikající práce. RTB. Konec.</Czech>
+            <Turkish>HEDEF İMHA EDİLDİ. Silah deposu yok edildi. Mükemmel iş. RTB. Tamam.</Turkish>
+            <Chinese>目標已摧毀。武器藏匿點已消滅。出色的工作。返回基地。完畢。</Chinese>
+            <Chinesesimp>目标已摧毁。武器藏匿点已消灭。出色的工作。返回基地。完毕。</Chinesesimp>
+            <Japanese>目標破壊。武器キャッシュを排除。見事な仕事だ。RTB。以上。</Japanese>
+            <Portuguese>ALVO DESTRUÍDO. Esconderijo de armas eliminado. Trabalho excelente. RTB. Câmbio.</Portuguese>
+            <Korean>목표 파괴. 무기 은닉처 제거됨. 훌륭한 작업. RTB. 이상.</Korean>
+        </Key>
+        <Key ID="STR_CACHE_FAILED">
+            <English>MISSION FAILED. Cache not destroyed. Debrief upon RTB.</English>
+            <French>MISSION ÉCHOUÉE. Cache non détruite. Débriefing au retour.</French>
+            <German>MISSION FEHLGESCHLAGEN. Lager nicht zerstört. Nachbesprechung nach RTB.</German>
+            <Spanish>MISIÓN FALLIDA. Alijo no destruido. Informe al regresar.</Spanish>
+            <Italian>MISSIONE FALLITA. Deposito non distrutto. Debriefing al rientro.</Italian>
+            <Russian>МИССИЯ ПРОВАЛЕНА. Склад не уничтожен. Разбор по возвращении.</Russian>
+            <Polish>MISJA NIEUDANA. Skrytka nie zniszczona. Odprawa po powrocie.</Polish>
+            <Czech>MISE SELHALA. Sklad nezničen. Debriefing po návratu.</Czech>
+            <Turkish>GÖREV BAŞARISIZ. Depo imha edilmedi. Dönüşte brifing.</Turkish>
+            <Chinese>任務失敗。藏匿點未摧毀。返回基地後進行匯報。</Chinese>
+            <Chinesesimp>任务失败。藏匿点未摧毁。返回基地后进行汇报。</Chinesesimp>
+            <Japanese>任務失敗。キャッシュ未破壊。RTB後にデブリーフィング。</Japanese>
+            <Portuguese>MISSÃO FALHOU. Esconderijo não destruído. Debriefing ao retornar.</Portuguese>
+            <Korean>임무 실패. 은닉처 미파괴. 귀환 후 브리핑.</Korean>
+        </Key><!-- MILITIA APPOINTMENT TASK -->
+        <Key ID="STR_APPOINTMENT_TASK_TITLE">
+            <English>Militia Contact - Rendezvous</English>
+            <French>Contact Milice - Rendez-vous</French>
+            <German>Miliz-Kontakt - Treffpunkt</German>
+            <Spanish>Contacto Milicia - Cita</Spanish>
+            <Italian>Contatto Milizia - Appuntamento</Italian>
+            <Russian>Контакт с ополчением - Встреча</Russian>
+            <Polish>Kontakt z Milicją - Spotkanie</Polish>
+            <Czech>Kontakt s Milicí - Schůzka</Czech>
+            <Turkish>Milis İletişimi - Buluşma</Turkish>
+            <Chinese>民兵聯繫 - 會面</Chinese>
+            <Chinesesimp>民兵联系 - 会面</Chinesesimp>
+            <Japanese>民兵との接触 - 会合</Japanese>
+            <Portuguese>Contato com Milícia - Encontro</Portuguese>
+            <Korean>민병대 접촉 - 만남</Korean>
+        </Key>
+        <Key ID="STR_APPOINTMENT_TASK_DESC">
+            <English>INTEL PRIORITY. Local militia leader requesting contact. Claims to have actionable intelligence on IED placements in AO. Proceed to designated coordinates for face-to-face meeting. INTEL ASSESSMENT: Three possible outcomes - (1) Cooperative exchange: informant provides intel, mission success. (2) Direct betrayal: militia turns hostile, eliminate all threats. (3) Internal conflict: informant is betrayed by his men, protect the informant and neutralize hostiles. Exercise extreme caution - loyalties uncertain. ROE: Engage only if hostile. Time-sensitive operation.</English>
+            <French>PRIORITÉ RENS. Chef de milice locale demande contact. Prétend détenir des renseignements sur les emplacements d&apos;IED dans la ZO. Rejoindre coordonnées désignées pour rencontre. ÉVALUATION RENS: Trois issues possibles - (1) Échange coopératif: l&apos;informateur fournit les infos, mission réussie. (2) Trahison directe: la milice devient hostile, éliminer toutes les menaces. (3) Conflit interne: l&apos;informateur est trahi par ses hommes, protéger l&apos;informateur et neutraliser les hostiles. Extrême prudence - loyautés incertaines. ROE: Engager seulement si hostile. Opération sensible au temps.</French>
+            <German>INTEL PRIORITÄT. Lokaler Milizführer fordert Kontakt. Behauptet verwertbare Informationen über IED-Standorte im Einsatzgebiet zu haben. Begeben Sie sich zu den Koordinaten für ein persönliches Treffen. INTEL-BEWERTUNG: Drei mögliche Ausgänge - (1) Kooperativer Austausch: Informant liefert Intel, Mission erfolgreich. (2) Direkter Verrat: Miliz wird feindlich, alle Bedrohungen eliminieren. (3) Interner Konflikt: Informant wird von seinen Leuten verraten, Informant schützen und Feinde neutralisieren. Äußerste Vorsicht - Loyalitäten unsicher. ROE: Nur bei Feindseligkeit eingreifen. Zeitkritische Operation.</German>
+            <Spanish>PRIORIDAD INTEL. Líder de milicia local solicita contacto. Afirma tener inteligencia sobre ubicaciones de IED en la ZO. Diríjase a coordenadas designadas para reunión. EVALUACIÓN INTEL: Tres posibles resultados - (1) Intercambio cooperativo: informante proporciona intel, misión exitosa. (2) Traición directa: milicia se vuelve hostil, eliminar todas las amenazas. (3) Conflicto interno: informante es traicionado por sus hombres, proteger al informante y neutralizar hostiles. Extrema precaución - lealtades inciertas. ROE: Abrir fuego solo si hostil. Operación sensible al tiempo.</Spanish>
+            <Italian>PRIORITÀ INTEL. Leader milizia locale richiede contatto. Afferma di avere informazioni su posizioni IED nella ZO. Procedere alle coordinate per incontro. VALUTAZIONE INTEL: Tre possibili esiti - (1) Scambio cooperativo: informatore fornisce intel, missione riuscita. (2) Tradimento diretto: milizia diventa ostile, eliminare tutte le minacce. (3) Conflitto interno: informatore tradito dai suoi uomini, proteggere l&apos;informatore e neutralizzare ostili. Massima cautela - lealtà incerte. ROE: Ingaggiare solo se ostile. Operazione sensibile al tempo.</Italian>
+            <Russian>ПРИОРИТЕТ РАЗВЕДКИ. Местный лидер ополчения запрашивает контакт. Утверждает, что имеет разведданные о размещении СВУ в зоне операции. Прибыть на координаты для личной встречи. ОЦЕНКА РАЗВЕДКИ: Три возможных исхода - (1) Мирный обмен: информатор предоставляет данные, миссия успешна. (2) Прямое предательство: ополчение становится враждебным, уничтожить все угрозы. (3) Внутренний конфликт: информатора предают его люди, защитить информатора и нейтрализовать противников. Крайняя осторожность - лояльность неопределена. ПП: Огонь только при враждебности. Операция ограничена по времени.</Russian>
+            <Polish>PRIORYTET WYWIADOWCZY. Lokalny przywódca milicji żąda kontaktu. Twierdzi, że posiada informacje o lokalizacjach IED w strefie operacji. Udaj się na wyznaczone współrzędne na spotkanie. OCENA WYWIADU: Trzy możliwe wyniki - (1) Wymiana współpracy: informator dostarcza wywiad, misja zakończona sukcesem. (2) Bezpośrednia zdrada: milicja staje się wroga, wyeliminuj wszystkie zagrożenia. (3) Konflikt wewnętrzny: informator zdradzony przez swoich ludzi, chroń informatora i zneutralizuj wrogów. Ekstremalna ostrożność - lojalność niepewna. ROE: Angażować tylko w przypadku wrogości. Operacja wrażliwa czasowo.</Polish>
+            <Czech>PRIORITA ZPRAVODAJSTVÍ. Místní vůdce milice žádá kontakt. Tvrdí, že má informace o umístění IED v operační zóně. Přesuňte se na určené souřadnice na osobní schůzku. HODNOCENÍ INTEL: Tři možné výsledky - (1) Kooperativní výměna: informátor poskytne intel, mise úspěšná. (2) Přímá zrada: milice se stane nepřátelskou, zlikvidujte všechny hrozby. (3) Vnitřní konflikt: informátor zrazen svými lidmi, chraňte informátora a neutralizujte nepřátele. Maximální opatrnost - loajalita nejistá. ROE: Zapojit pouze při nepřátelství. Časově citlivá operace.</Czech>
+            <Turkish>İSTİHBARAT ÖNCELİĞİ. Yerel milis lideri temas talep ediyor. Harekât bölgesindeki IED konumları hakkında istihbarata sahip olduğunu iddia ediyor. Yüz yüze görüşme için belirlenen koordinatlara gidin. İSTİHBARAT DEĞERLENDİRMESİ: Üç olası sonuç - (1) İşbirlikçi değişim: muhbir istihbarat sağlar, görev başarılı. (2) Doğrudan ihanet: milis düşman olur, tüm tehditleri etkisiz hale getirin. (3) Dahili çatışma: muhbir adamları tarafından ihanete uğrar, muhbiri koruyun ve düşmanları etkisiz hale getirin. Son derece dikkatli olun - sadakatler belirsiz. ÇK: Yalnızca düşmanca davranırsa ateş aç. Zamana duyarlı operasyon.</Turkish>
+            <Chinese>情報優先。當地民兵領袖請求聯繫。聲稱擁有作戰區域IED位置的情報。前往指定坐標進行會談。情報評估：三種可能結果 - (1) 合作交換：線人提供情報，任務成功。(2) 直接背叛：民兵變成敵對，消滅所有威脅。(3) 內部衝突：線人被手下背叛，保護線人並消滅敵人。務必格外小心 - 忠誠度不確定。交戰規則：僅在敵對時交戰。時間敏感行動。</Chinese>
+            <Chinesesimp>情报优先。当地民兵领袖请求联系。声称拥有作战区域IED位置的情报。前往指定坐标进行会谈。情报评估：三种可能结果 - (1) 合作交换：线人提供情报，任务成功。(2) 直接背叛：民兵变成敌对，消灭所有威胁。(3) 内部冲突：线人被手下背叛，保护线人并消灭敌人。务必格外小心 - 忠诚度不确定。交战规则：仅在敌对时交战。时间敏感行动。</Chinesesimp>
+            <Japanese>情報優先。地元民兵リーダーが接触を要請。AO内のIED設置場所に関する情報を持っていると主張。指定座標で対面会談を実施せよ。情報評価：3つの可能な結果 - (1) 協力的な交換：情報提供者が情報を提供、任務成功。(2) 直接的裏切り：民兵が敵対的になる、すべての脅威を排除。(3) 内部紛争：情報提供者が部下に裏切られる、情報提供者を守り敵を無力化。細心の注意を払え - 忠誠心は不明。交戦規定：敵対的な場合のみ交戦。時間的制約のある作戦。</Japanese>
+            <Portuguese>PRIORIDADE INTEL. Líder de milícia local solicitando contato. Afirma ter inteligência sobre posições de IED na ZO. Prossiga para coordenadas designadas para reunião. AVALIAÇÃO INTEL: Três resultados possíveis - (1) Troca cooperativa: informante fornece intel, missão bem sucedida. (2) Traição direta: milícia se torna hostil, elimine todas as ameaças. (3) Conflito interno: informante é traído por seus homens, proteja o informante e neutralize hostis. Extrema cautela - lealdades incertas. ROE: Engaje apenas se hostil. Operação sensível ao tempo.</Portuguese>
+            <Korean>정보 우선. 지역 민병대 지도자가 접촉을 요청함. 작전지역 내 IED 배치에 대한 정보를 가지고 있다고 주장. 대면 회의를 위해 지정된 좌표로 이동하라. 정보 평가: 세 가지 가능한 결과 - (1) 협력적 교환: 정보원이 정보 제공, 임무 성공. (2) 직접적 배신: 민병대가 적대적으로 변함, 모든 위협 제거. (3) 내부 충돌: 정보원이 부하들에게 배신당함, 정보원을 보호하고 적 무력화. 극도의 주의 요망 - 충성심 불확실. 교전규칙: 적대적일 경우에만 교전. 시간 민감 작전.</Korean>
+        </Key>
+        <Key ID="STR_APPOINTMENT_MARKER">
+            <English>MILITIA RDV</English>
+            <French>RDV MILICE</French>
+            <German>MILIZ TREFF</German>
+            <Spanish>CITA MILICIA</Spanish>
+            <Italian>RDV MILIZIA</Italian>
+            <Russian>ВСТРЕЧА ОПОЛЧЕНИЯ</Russian>
+            <Polish>SPOTKANIE MILICJI</Polish>
+            <Czech>SCHŮZKA MILICE</Czech>
+            <Turkish>MİLİS BULUŞMA</Turkish>
+            <Chinese>民兵會面點</Chinese>
+            <Chinesesimp>民兵会面点</Chinesesimp>
+            <Japanese>民兵会合地点</Japanese>
+            <Portuguese>RDV MILÍCIA</Portuguese>
+            <Korean>민병대 만남</Korean>
+        </Key>
+        <Key ID="STR_APPOINTMENT_MINE_MARKER">
+            <English>MINE %1</English>
+            <French>MINE %1</French>
+            <German>MINE %1</German>
+            <Spanish>MINA %1</Spanish>
+            <Italian>MINA %1</Italian>
+            <Russian>МИНА %1</Russian>
+            <Polish>MINA %1</Polish>
+            <Czech>MINA %1</Czech>
+            <Turkish>MAYIN %1</Turkish>
+            <Chinese>地雷 %1</Chinese>
+            <Chinesesimp>地雷 %1</Chinesesimp>
+            <Japanese>地雷 %1</Japanese>
+            <Portuguese>MINA %1</Portuguese>
+            <Korean>지뢰 %1</Korean>
+        </Key>
+        <Key ID="STR_APPOINTMENT_ACTION_TALK">
+            <English>Talk to the militia leader</English>
+            <French>Parler avec le chef de milices</French>
+            <German>Mit dem Milizführer sprechen</German>
+            <Spanish>Hablar con el líder de milicia</Spanish>
+            <Italian>Parla con il capo milizia</Italian>
+            <Russian>Поговорить с лидером ополчения</Russian>
+            <Polish>Porozmawiaj z przywódcą milicji</Polish>
+            <Czech>Promluvte s vůdcem milice</Czech>
+            <Turkish>Milis lideriyle konuş</Turkish>
+            <Chinese>與民兵領袖交談</Chinese>
+            <Chinesesimp>与民兵领袖交谈</Chinesesimp>
+            <Japanese>民兵リーダーと話す</Japanese>
+            <Portuguese>Falar com o líder da milícia</Portuguese>
+            <Korean>민병대 지도자와 대화</Korean>
+        </Key>
+        <Key ID="STR_APPOINTMENT_SUCCESS_INFO">
+            <English>The militia leader provides you with valuable intel on 5 mine locations. Positions marked on map.</English>
+            <French>Le chef de milice vous fournit des renseignements précieux sur 5 emplacements de mines. Positions marquées sur la carte.</French>
+            <German>Der Milizführer gibt Ihnen wertvolle Informationen über 5 Minenstandorte. Positionen auf der Karte markiert.</German>
+            <Spanish>El líder de milicia le proporciona información valiosa sobre 5 ubicaciones de minas. Posiciones marcadas en el mapa.</Spanish>
+            <Italian>Il capo milizia ti fornisce informazioni preziose su 5 posizioni di mine. Posizioni segnate sulla mappa.</Italian>
+            <Russian>Лидер ополчения предоставляет ценную информацию о 5 местах установки мин. Позиции отмечены на карте.</Russian>
+            <Polish>Przywódca milicji przekazuje ci cenne informacje o 5 lokalizacjach min. Pozycje zaznaczone na mapie.</Polish>
+            <Czech>Vůdce milice vám poskytuje cenné informace o 5 pozicích min. Pozice vyznačeny na mapě.</Czech>
+            <Turkish>Milis lideri size 5 mayın konumu hakkında değerli istihbarat sağlıyor. Konumlar haritada işaretlendi.</Turkish>
+            <Chinese>民兵領袖向您提供了5處地雷位置的寶貴情報。位置已標記在地圖上。</Chinese>
+            <Chinesesimp>民兵领袖向您提供了5处地雷位置的宝贵情报。位置已标记在地图上。</Chinesesimp>
+            <Japanese>民兵リーダーが5つの地雷位置に関する貴重な情報を提供。位置は地図上にマークされました。</Japanese>
+            <Portuguese>O líder da milícia fornece informações valiosas sobre 5 locais de minas. Posições marcadas no mapa.</Portuguese>
+            <Korean>민병대 지도자가 5개 지뢰 위치에 대한 귀중한 정보를 제공합니다. 위치가 지도에 표시되었습니다.</Korean>
+        </Key>
+        <Key ID="STR_APPOINTMENT_TASK_SUCCESS">
+            <English>Intel acquired. Mission successful. RTB when ready.</English>
+            <French>Renseignements obtenus. Mission réussie. RTB quand prêt.</French>
+            <German>Intel erhalten. Mission erfolgreich. RTB wenn bereit.</German>
+            <Spanish>Intel adquirido. Misión exitosa. RTB cuando esté listo.</Spanish>
+            <Italian>Intel acquisito. Missione riuscita. RTB quando pronti.</Italian>
+            <Russian>Разведданные получены. Миссия успешна. Возвращайтесь на базу.</Russian>
+            <Polish>Wywiad pozyskany. Misja zakończona sukcesem. RTB gdy gotowy.</Polish>
+            <Czech>Intel získán. Mise úspěšná. RTB až budete připraveni.</Czech>
+            <Turkish>İstihbarat alındı. Görev başarılı. Hazır olduğunuzda RTB.</Turkish>
+            <Chinese>情報已獲取。任務成功。準備好後返回基地。</Chinese>
+            <Chinesesimp>情报已获取。任务成功。准备好后返回基地。</Chinesesimp>
+            <Japanese>情報取得完了。任務成功。準備でき次第RTB。</Japanese>
+            <Portuguese>Intel adquirido. Missão bem sucedida. RTB quando pronto.</Portuguese>
+            <Korean>정보 획득. 임무 성공. 준비되면 RTB.</Korean>
+        </Key>
+        <Key ID="STR_APPOINTMENT_BETRAYAL_DIRECT">
+            <English>AMBUSH! It&apos;s a trap! The militia is hostile! Engage and neutralize all threats!</English>
+            <French>EMBUSCADE ! C&apos;est un piège ! La milice est hostile ! Engagez et neutralisez toutes les menaces !</French>
+            <German>HINTERHALT! Es ist eine Falle! Die Miliz ist feindlich! Alle Bedrohungen bekämpfen!</German>
+            <Spanish>¡EMBOSCADA! ¡Es una trampa! ¡La milicia es hostil! ¡Neutralice todas las amenazas!</Spanish>
+            <Italian>IMBOSCATA! È una trappola! La milizia è ostile! Ingaggia e neutralizza tutte le minacce!</Italian>
+            <Russian>ЗАСАДА! Это ловушка! Ополчение враждебно! Поражайте все угрозы!</Russian>
+            <Polish>ZASADZKA! To pułapka! Milicja jest wroga! Zwalczaj wszystkie zagrożenia!</Polish>
+            <Czech>PŘEPADENÍ! Je to past! Milice je nepřátelská! Zlikvidujte všechny hrozby!</Czech>
+            <Turkish>PUSU! Bu bir tuzak! Milis düşman! Tüm tehditleri etkisiz hale getirin!</Turkish>
+            <Chinese>伏擊！這是陷阱！民兵有敵意！交戰並消滅所有威脅！</Chinese>
+            <Chinesesimp>伏击！这是陷阱！民兵有敌意！交战并消灭所有威胁！</Chinesesimp>
+            <Japanese>待ち伏せ！罠だ！民兵は敵対的！すべての脅威を排除せよ！</Japanese>
+            <Portuguese>EMBOSCADA! É uma armadilha! A milícia é hostil! Engaje e neutralize todas as ameaças!</Portuguese>
+            <Korean>매복! 함정이다! 민병대가 적대적이다! 모든 위협을 제거하라!</Korean>
+        </Key>
+        <Key ID="STR_APPOINTMENT_BETRAYAL_INTERNAL">
+            <English>INTERNAL CONFLICT! The militia is turning on their leader! Protect the informant and eliminate hostile militia!</English>
+            <French>CONFLIT INTERNE ! La milice se retourne contre leur chef ! Protégez l&apos;informateur et éliminez la milice hostile !</French>
+            <German>INTERNER KONFLIKT! Die Miliz wendet sich gegen ihren Anführer! Schützen Sie den Informanten und eliminieren Sie feindliche Miliz!</German>
+            <Spanish>¡CONFLICTO INTERNO! ¡La milicia se vuelve contra su líder! ¡Proteja al informante y elimine la milicia hostil!</Spanish>
+            <Italian>CONFLITTO INTERNO! La milizia si sta rivoltando contro il loro capo! Proteggi l&apos;informatore ed elimina la milizia ostile!</Italian>
+            <Russian>ВНУТРЕННИЙ КОНФЛИКТ! Ополчение обращается против своего лидера! Защитите информатора и уничтожьте враждебных ополченцев!</Russian>
+            <Polish>KONFLIKT WEWNĘTRZNY! Milicja zwraca się przeciwko swojemu przywódcy! Chroń informatora i wyeliminuj wrogą milicję!</Polish>
+            <Czech>VNITŘNÍ KONFLIKT! Milice se obrací proti svému vůdci! Chraňte informátora a zlikvidujte nepřátelskou milici!</Czech>
+            <Turkish>DAHİLİ ÇATIŞMA! Milis liderlerine isyan ediyor! Muhbiri koruyun ve düşman milisleri etkisiz hale getirin!</Turkish>
+            <Chinese>內部衝突！民兵正在背叛他們的領袖！保護線人並消滅敵對民兵！</Chinese>
+            <Chinesesimp>内部冲突！民兵正在背叛他们的领袖！保护线人并消灭敌对民兵！</Chinesesimp>
+            <Japanese>内部紛争！民兵がリーダーに反旗を翻した！情報提供者を守り敵対的な民兵を排除せよ！</Japanese>
+            <Portuguese>CONFLITO INTERNO! A milícia está se voltando contra seu líder! Proteja o informante e elimine a milícia hostil!</Portuguese>
+            <Korean>내부 충돌! 민병대가 지도자에게 반기를 들었다! 정보원을 보호하고 적대적 민병대를 제거하라!</Korean>
+        </Key>
+        <Key ID="STR_APPOINTMENT_MILITIA_ELIMINATED">
+            <English>All hostile militia eliminated. Mission complete.</English>
+            <French>Toute la milice hostile éliminée. Mission accomplie.</French>
+            <German>Alle feindlichen Milizen eliminiert. Mission abgeschlossen.</German>
+            <Spanish>Toda la milicia hostil eliminada. Misión completada.</Spanish>
+            <Italian>Tutta la milizia ostile eliminata. Missione completata.</Italian>
+            <Russian>Все враждебные ополченцы уничтожены. Миссия выполнена.</Russian>
+            <Polish>Cała wroga milicja wyeliminowana. Misja zakończona.</Polish>
+            <Czech>Všechna nepřátelská milice zlikvidována. Mise dokončena.</Czech>
+            <Turkish>Tüm düşman milisler etkisiz hale getirildi. Görev tamamlandı.</Turkish>
+            <Chinese>所有敵對民兵已消滅。任務完成。</Chinese>
+            <Chinesesimp>所有敌对民兵已消灭。任务完成。</Chinesesimp>
+            <Japanese>すべての敵対的民兵を排除。任務完了。</Japanese>
+            <Portuguese>Toda milícia hostil eliminada. Missão completa.</Portuguese>
+            <Korean>모든 적대적 민병대 제거됨. 임무 완료.</Korean>
+        </Key>
+        <Key ID="STR_APPOINTMENT_CHIEF_DEAD">
+            <English>MISSION FAILED. Informant KIA. No intel recovered.</English>
+            <French>MISSION ÉCHOUÉE. Informateur tué. Aucun renseignement récupéré.</French>
+            <German>MISSION FEHLGESCHLAGEN. Informant gefallen. Keine Informationen geborgen.</German>
+            <Spanish>MISIÓN FALLIDA. Informante KIA. Sin intel recuperado.</Spanish>
+            <Italian>MISSIONE FALLITA. Informatore ucciso. Nessun intel recuperato.</Italian>
+            <Russian>МИССИЯ ПРОВАЛЕНА. Информатор убит. Разведданные не получены.</Russian>
+            <Polish>MISJA NIEUDANA. Informator zabity. Brak pozyskanych informacji.</Polish>
+            <Czech>MISE SELHALA. Informátor zabit. Žádný intel nezískán.</Czech>
+            <Turkish>GÖREV BAŞARISIZ. Muhbir öldürüldü. İstihbarat alınamadı.</Turkish>
+            <Chinese>任務失敗。線人陣亡。未獲取任何情報。</Chinese>
+            <Chinesesimp>任务失败。线人阵亡。未获取任何情报。</Chinesesimp>
+            <Japanese>任務失敗。情報提供者戦死。情報回収できず。</Japanese>
+            <Portuguese>MISSÃO FALHOU. Informante KIA. Nenhum intel recuperado.</Portuguese>
+            <Korean>임무 실패. 정보원 사망. 정보 회수 불가.</Korean>
+        </Key>
+        <Key ID="STR_APPOINTMENT_CHIEF_SAVED">
+            <English>Informant secured. Hostile militia neutralized. Intel acquired. Mission success.</English>
+            <French>Informateur en sécurité. Milice hostile neutralisée. Renseignements obtenus. Mission réussie.</French>
+            <German>Informant gesichert. Feindliche Miliz neutralisiert. Intel erhalten. Mission erfolgreich.</German>
+            <Spanish>Informante asegurado. Milicia hostil neutralizada. Intel adquirido. Misión exitosa.</Spanish>
+            <Italian>Informatore al sicuro. Milizia ostile neutralizzata. Intel acquisito. Missione riuscita.</Italian>
+            <Russian>Информатор в безопасности. Враждебное ополчение нейтрализовано. Разведданные получены. Миссия успешна.</Russian>
+            <Polish>Informator zabezpieczony. Wroga milicja zneutralizowana. Wywiad pozyskany. Misja zakończona sukcesem.</Polish>
+            <Czech>Informátor zajištěn. Nepřátelská milice zneškodněna. Intel získán. Mise úspěšná.</Czech>
+            <Turkish>Muhbir güvende. Düşman milis etkisiz hale getirildi. İstihbarat alındı. Görev başarılı.</Turkish>
+            <Chinese>線人已確保安全。敵對民兵已消滅。情報已獲取。任務成功。</Chinese>
+            <Chinesesimp>线人已确保安全。敌对民兵已消灭。情报已获取。任务成功。</Chinesesimp>
+            <Japanese>情報提供者を確保。敵対的民兵を無力化。情報取得。任務成功。</Japanese>
+            <Portuguese>Informante assegurado. Milícia hostil neutralizada. Intel adquirido. Missão bem sucedida.</Portuguese>
+            <Korean>정보원 확보됨. 적대적 민병대 무력화. 정보 획득. 임무 성공.</Korean>
+        </Key>
+        <Key ID="STR_APPOINTMENT_TIMEOUT">
+            <English>MISSION FAILED. Contact window expired. Militia has dispersed. No intel acquired.</English>
+            <French>MISSION ÉCHOUÉE. Fenêtre de contact expirée. La milice s&apos;est dispersée. Aucun renseignement obtenu.</French>
+            <German>MISSION FEHLGESCHLAGEN. Kontaktfenster abgelaufen. Miliz hat sich zerstreut. Keine Informationen erhalten.</German>
+            <Spanish>MISIÓN FALLIDA. Ventana de contacto expirada. La milicia se ha dispersado. Sin intel adquirido.</Spanish>
+            <Italian>MISSIONE FALLITA. Finestra di contatto scaduta. La milizia si è dispersa. Nessun intel acquisito.</Italian>
+            <Russian>МИССИЯ ПРОВАЛЕНА. Окно контакта истекло. Ополчение рассеялось. Разведданные не получены.</Russian>
+            <Polish>MISJA NIEUDANA. Okno kontaktu wygasło. Milicja się rozproszyła. Brak pozyskanych informacji.</Polish>
+            <Czech>MISE SELHALA. Časové okno kontaktu vypršelo. Milice se rozptýlila. Žádný intel nezískán.</Czech>
+            <Turkish>GÖREV BAŞARISIZ. Temas penceresi sona erdi. Milis dağıldı. İstihbarat alınamadı.</Turkish>
+            <Chinese>任務失敗。聯繫時間窗口已過期。民兵已散去。未獲取任何情報。</Chinese>
+            <Chinesesimp>任务失败。联系时间窗口已过期。民兵已散去。未获取任何情报。</Chinesesimp>
+            <Japanese>任務失敗。接触時間切れ。民兵は離散。情報取得できず。</Japanese>
+            <Portuguese>MISSÃO FALHOU. Janela de contato expirou. Milícia dispersou. Nenhum intel adquirido.</Portuguese>
+            <Korean>임무 실패. 접촉 시간 만료. 민병대가 해산됨. 정보 획득 불가.</Korean>
+        </Key><!-- INTRODUCTION CINEMATIQUE -->
+        <Key ID="STR_INTRO_AUTHOR">
+            <English>@la404family</English>
+            <French>@la404family</French>
+            <German>@la404family</German>
+            <Spanish>@la404family</Spanish>
+            <Italian>@la404family</Italian>
+            <Russian>@la404family</Russian>
+            <Polish>@la404family</Polish>
+            <Czech>@la404family</Czech>
+            <Turkish>@la404family</Turkish>
+            <Chinese>@la404family</Chinese>
+            <Chinesesimp>@la404family</Chinesesimp>
+            <Japanese>@la404family</Japanese>
+            <Portuguese>@la404family</Portuguese>
+            <Korean>@la404family</Korean>
+        </Key>
+        <Key ID="STR_INTRO_PRESENTS">
+            <English>presents</English>
+            <French>présente</French>
+            <German>präsentiert</German>
+            <Spanish>presenta</Spanish>
+            <Italian>presenta</Italian>
+            <Russian>представляет</Russian>
+            <Polish>prezentuje</Polish>
+            <Czech>představuje</Czech>
+            <Turkish>sunar</Turkish>
+            <Chinese>呈獻</Chinese>
+            <Chinesesimp>呈献</Chinesesimp>
+            <Japanese>提供</Japanese>
+            <Portuguese>apresenta</Portuguese>
+            <Korean>선보이다</Korean>
+        </Key>
+        <Key ID="STR_INTRO_TITLE">
+            <English>ACUTE STRESS DISORDER</English>
+            <French>ACUTE STRESS DISORDER</French>
+            <German>ACUTE STRESS DISORDER</German>
+            <Spanish>ACUTE STRESS DISORDER</Spanish>
+            <Italian>ACUTE STRESS DISORDER</Italian>
+            <Russian>ACUTE STRESS DISORDER</Russian>
+            <Polish>ACUTE STRESS DISORDER</Polish>
+            <Czech>ACUTE STRESS DISORDER</Czech>
+            <Turkish>ACUTE STRESS DISORDER</Turkish>
+            <Chinese>ACUTE STRESS DISORDER</Chinese>
+            <Chinesesimp>ACUTE STRESS DISORDER</Chinesesimp>
+            <Japanese>ACUTE STRESS DISORDER</Japanese>
+            <Portuguese>ACUTE STRESS DISORDER</Portuguese>
+            <Korean>ACUTE STRESS DISORDER</Korean>
+        </Key>
+        <Key ID="STR_INTRO_SUBTITLE">
+            <English>No one could have prepared you for this...</English>
+            <French>Personne ne pouvait vous préparer à ça...</French>
+            <German>Niemand hätte dich darauf vorbereiten können...</German>
+            <Spanish>Nadie podría haberte preparado para esto...</Spanish>
+            <Italian>Nessuno avrebbe potuto prepararti a questo...</Italian>
+            <Russian>Никто не мог подготовить тебя к этому...</Russian>
+            <Polish>Nikt nie mógł cię na to przygotować...</Polish>
+            <Czech>Nikdo tě na to nemohl připravit...</Czech>
+            <Turkish>Kimse seni buna hazırlayamazdı...</Turkish>
+            <Chinese>沒有人能讓你為此做好準備...</Chinese>
+            <Chinesesimp>没有人能让你为此做好准备...</Chinesesimp>
+            <Japanese>誰もあなたをこれに備えさせることはできなかった...</Japanese>
+            <Portuguese>Ninguém poderia ter te preparado para isso...</Portuguese>
+            <Korean>아무도 당신을 이것에 대비시킬 수 없었다...</Korean>
+        </Key>
+        <Key ID="STR_MISSION_START">
+            <English>Read your instructions and wait for orders</English>
+            <French>Lisez vos instructions et attendez les ordres</French>
+            <German>Lesen Sie Ihre Anweisungen und warten Sie auf Befehle</German>
+            <Spanish>Lea sus instrucciones y espere órdenes</Spanish>
+            <Italian>Leggi le tue istruzioni e attendi gli ordini</Italian>
+            <Russian>Прочитайте ваши инструкции и ждите приказов</Russian>
+            <Polish>Przeczytaj instrukcje i czekaj na rozkazy</Polish>
+            <Czech>Přečtěte si pokyny a čekejte na rozkazy</Czech>
+            <Turkish>Talimatlarınızı okuyun ve emirleri bekleyin</Turkish>
+            <Chinese>閱讀您的指示並等待命令</Chinese>
+            <Chinesesimp>阅读您的指示并等待命令</Chinesesimp>
+            <Japanese>指示を読み、命令を待て</Japanese>
+            <Portuguese>Leia suas instruções e aguarde ordens</Portuguese>
+            <Korean>지시를 읽고 명령을 기다리세요</Korean>
+        </Key>
+        <Key ID="STR_MISSION_START_SUBTITLE">
+            <English>The line between civilian and combatant no longer exists</English>
+            <French>La ligne entre civil et combattant n&apos;existe plus</French>
+            <German>Die Grenze zwischen Zivilist und Kämpfer existiert nicht mehr</German>
+            <Spanish>La línea entre civil y combatiente ya no existe</Spanish>
+            <Italian>La linea tra civile e combattente non esiste più</Italian>
+            <Russian>Граница между гражданским и комбатантом больше не существует</Russian>
+            <Polish>Granica między cywilem a bojownikiem już nie istnieje</Polish>
+            <Czech>Hranice mezi civilistou a bojovníkem již neexistuje</Czech>
+            <Turkish>Sivil ve savaşan arasındaki çizgi artık yok</Turkish>
+            <Chinese>平民與戰鬥員之間的界線已不復存在</Chinese>
+            <Chinesesimp>平民与战斗员之间的界线已不复存在</Chinesesimp>
+            <Japanese>民間人と戦闘員の境界線はもはや存在しない</Japanese>
+            <Portuguese>A linha entre civil e combatente não existe mais</Portuguese>
+            <Korean>민간인과 전투원 사이의 경계가 더 이상 존재하지 않습니다</Korean>
+        </Key>
+    </Package>
+</Project>
