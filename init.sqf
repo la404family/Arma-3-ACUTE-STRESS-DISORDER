@@ -45,7 +45,10 @@ if (hasInterface) then {
 };
 
 // Lancer l'introduction cinématique
-[] spawn Mission_fnc_task_intro;
+//[] spawn Mission_fnc_task_intro;
+
+// Créer le briefing général de la mission (journal)
+[] spawn Mission_fnc_task_x_briefing;
 
 // ============================================================
 // FONCTIONS DE LA MISSION
@@ -83,7 +86,7 @@ if (hasInterface) then {
 [] spawn Mission_fnc_lang_marker_name;   
 
 // Fonction qui lance l'arsenal
-[] spawn Mission_fnc_spawn_arsenal;
+["INIT"] spawn Mission_fnc_spawn_arsenal;
 
 // Fonction qui permet de choisir ses freres d'armes (INIT mode)
 ["INIT"] spawn Mission_fnc_spawn_brothers_in_arms;

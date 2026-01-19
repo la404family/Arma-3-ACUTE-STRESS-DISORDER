@@ -10,23 +10,36 @@ params [["_mode", "INIT"]];
 // INIT - Initialisation de l'action
 // ============================================================================
 if (_mode == "INIT") exitWith {
+    // Cette partie ne doit être exécutée que par les clients avec interface
+    if (!hasInterface) exitWith {};
+    
     // Attendre que la mission commence réellement (temps > 0)
     [] spawn {
-        waitUntil {time > 0};    // Ajouter l'action au joueur pour ouvrir le menu météo/temps
-    // La condition "player inArea weather_and_time_request" assure que l'action n'apparaît que dans la zone spécifique
-    player addAction [
-        localize "STR_ACTION_WEATHER", 
-        {
-            ["OPEN"] call MISSION_fnc_spawn_weather_and_time;
-        },
-        [],
-        1.5, 
-        true, 
-        true, 
-        "", 
-        "player inArea weather_and_time_request"
-    ];
-};};// ============================================================================
+        waitUntil {time > 0};
+        waitUntil { !isNull player };
+        
+        // ============================================================
+        // ANTI-DOUBLON: Vérifie si l'action a déjà été ajoutée
+        // ============================================================
+        if (player getVariable ["MISSION_weatherActionAdded", false]) exitWith {};
+        player setVariable ["MISSION_weatherActionAdded", true];
+        
+        // Ajouter l'action au joueur pour ouvrir le menu météo/temps
+        // La condition "player inArea weather_and_time_request" assure que l'action n'apparaît que dans la zone spécifique
+        player addAction [
+            localize "STR_ACTION_WEATHER", 
+            {
+                ["OPEN"] call MISSION_fnc_spawn_weather_and_time;
+            },
+            [],
+            1.5, 
+            true, 
+            true, 
+            "", 
+            "player inArea weather_and_time_request"
+        ];
+    };
+};// ============================================================================
 // OPEN - Ouverture et remplissage du dialogue
 // ============================================================================
 if (_mode == "OPEN") exitWith {

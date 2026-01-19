@@ -1386,6 +1386,470 @@
             <Japanese>民間人と戦闘員の境界線はもはや存在しない</Japanese>
             <Portuguese>A linha entre civil e combatente não existe mais</Portuguese>
             <Korean>민간인과 전투원 사이의 경계가 더 이상 존재하지 않습니다</Korean>
+        </Key><!-- DIARY BRIEFING STRINGS -->
+        <Key ID="STR_DIARY_BRIEFING">
+            <English>Mission Briefing</English>
+            <French>Briefing de Mission</French>
+            <German>Missionsbriefing</German>
+            <Spanish>Informe de Misión</Spanish>
+            <Italian>Briefing Missione</Italian>
+            <Russian>Брифинг миссии</Russian>
+            <Polish>Odprawa Misyjna</Polish>
+            <Czech>Misionářský Briefing</Czech>
+            <Turkish>Görev Brifing</Turkish>
+            <Chinese>任務簡報</Chinese>
+            <Chinesesimp>任务简报</Chinesesimp>
+            <Japanese>ミッションブリーフィング</Japanese>
+            <Korean>임무 브리핑</Korean>
+            <Portuguese>Briefing da Missão</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_SITUATION_TITLE">
+            <English>SITUATION</English>
+            <French>SITUATION</French>
+            <German>LAGE</German>
+            <Spanish>SITUACIÓN</Spanish>
+            <Italian>SITUAZIONE</Italian>
+            <Russian>ОБСТАНОВКА</Russian>
+            <Polish>SYTUACJA</Polish>
+            <Czech>SITUACE</Czech>
+            <Turkish>DURUM</Turkish>
+            <Chinese>情況</Chinese>
+            <Chinesesimp>情况</Chinesesimp>
+            <Japanese>状況</Japanese>
+            <Korean>상황</Korean>
+            <Portuguese>SITUAÇÃO</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_SITUATION_TEXT">
+            <English>&lt;br/&gt;&lt;font size=&apos;14&apos; color=&apos;#FF6600&apos;&gt;ACUTE STRESS DISORDER&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;You are deployed where civilian and combatant are indistinguishable. The enemy wears no uniform.&lt;br/&gt;&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;THREATS:&lt;/font&gt;&lt;br/&gt;• Every 100-400 sec, 3 civilians become OPFOR with AKM&lt;br/&gt;• 140 mines in 14 zones, no markers</English>
+            <French>&lt;br/&gt;&lt;font size=&apos;14&apos; color=&apos;#FF6600&apos;&gt;ACUTE STRESS DISORDER&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;Vous êtes déployé où civil et combattant sont indiscernables. L&apos;ennemi ne porte pas d&apos;uniforme.&lt;br/&gt;&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;MENACES:&lt;/font&gt;&lt;br/&gt;• Toutes les 100-400 sec, 3 civils deviennent OPFOR avec AKM&lt;br/&gt;• 140 mines sur 14 zones, aucun marqueur</French>
+            <German>&lt;br/&gt;&lt;font size=&apos;14&apos; color=&apos;#FF6600&apos;&gt;ACUTE STRESS DISORDER&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;Sie sind dort eingesetzt, wo Zivilist und Kämpfer nicht zu unterscheiden sind. Der Feind trägt keine Uniform.&lt;br/&gt;&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;BEDROHUNGEN:&lt;/font&gt;&lt;br/&gt;• Alle 100-400 Sek werden 3 Zivilisten OPFOR mit AKM&lt;br/&gt;• 140 Minen in 14 Zonen, keine Markierungen</German>
+            <Spanish>&lt;br/&gt;&lt;font size=&apos;14&apos; color=&apos;#FF6600&apos;&gt;ACUTE STRESS DISORDER&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;Estás desplegado donde civil y combatiente son indistinguibles. El enemigo no usa uniforme.&lt;br/&gt;&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;AMENAZAS:&lt;/font&gt;&lt;br/&gt;• Cada 100-400 seg, 3 civiles se vuelven OPFOR con AKM&lt;br/&gt;• 140 minas en 14 zonas, sin marcadores</Spanish>
+            <Italian>&lt;br/&gt;&lt;font size=&apos;14&apos; color=&apos;#FF6600&apos;&gt;ACUTE STRESS DISORDER&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;Sei schierato dove civile e combattente sono indistinguibili. Il nemico non indossa uniforme.&lt;br/&gt;&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;MINACCE:&lt;/font&gt;&lt;br/&gt;• Ogni 100-400 sec, 3 civili diventano OPFOR con AKM&lt;br/&gt;• 140 mine in 14 zone, nessun marcatore</Italian>
+            <Russian>&lt;br/&gt;&lt;font size=&apos;14&apos; color=&apos;#FF6600&apos;&gt;ACUTE STRESS DISORDER&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;Вы развёрнуты там, где гражданский и боевик неразличимы. Враг не носит форму.&lt;br/&gt;&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;УГРОЗЫ:&lt;/font&gt;&lt;br/&gt;• Каждые 100-400 сек 3 гражданских становятся OPFOR с АКМ&lt;br/&gt;• 140 мин в 14 зонах, без маркеров</Russian>
+            <Polish>&lt;br/&gt;&lt;font size=&apos;14&apos; color=&apos;#FF6600&apos;&gt;ACUTE STRESS DISORDER&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;Jesteś rozmieszczony tam, gdzie cywil i bojownik są nierozróżnialni. Wróg nie nosi munduru.&lt;br/&gt;&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;ZAGROŻENIA:&lt;/font&gt;&lt;br/&gt;• Co 100-400 sek 3 cywilów staje się OPFOR z AKM&lt;br/&gt;• 140 min w 14 strefach, bez znaczników</Polish>
+            <Czech>&lt;br/&gt;&lt;font size=&apos;14&apos; color=&apos;#FF6600&apos;&gt;ACUTE STRESS DISORDER&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;Jste nasazeni tam, kde civilista a bojovník jsou nerozeznatelní. Nepřítel nenosí uniformu.&lt;br/&gt;&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;HROZBY:&lt;/font&gt;&lt;br/&gt;• Každých 100-400 sek se 3 civilisté stávají OPFOR s AKM&lt;br/&gt;• 140 min ve 14 zónách, bez značek</Czech>
+            <Turkish>&lt;br/&gt;&lt;font size=&apos;14&apos; color=&apos;#FF6600&apos;&gt;ACUTE STRESS DISORDER&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;Sivil ve savaşanın ayırt edilemediği yere konuşlandınız. Düşman üniforma giymiyor.&lt;br/&gt;&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;TEHDİTLER:&lt;/font&gt;&lt;br/&gt;• Her 100-400 sn&apos;de 3 sivil AKM ile OPFOR olur&lt;br/&gt;• 14 bölgede 140 mayın, işaret yok</Turkish>
+            <Chinese>&lt;br/&gt;&lt;font size=&apos;14&apos; color=&apos;#FF6600&apos;&gt;ACUTE STRESS DISORDER&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;你被部署在平民與戰鬥員無法區分的地方。敵人不穿制服。&lt;br/&gt;&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;威脅：&lt;/font&gt;&lt;br/&gt;• 每100-400秒，3名平民攜帶AKM成為OPFOR&lt;br/&gt;• 14區域140枚地雷，無標記</Chinese>
+            <Chinesesimp>&lt;br/&gt;&lt;font size=&apos;14&apos; color=&apos;#FF6600&apos;&gt;ACUTE STRESS DISORDER&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;你被部署在平民与战斗员无法区分的地方。敌人不穿制服。&lt;br/&gt;&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;威胁：&lt;/font&gt;&lt;br/&gt;• 每100-400秒，3名平民携带AKM成为OPFOR&lt;br/&gt;• 14区域140枚地雷，无标记</Chinesesimp>
+            <Japanese>&lt;br/&gt;&lt;font size=&apos;14&apos; color=&apos;#FF6600&apos;&gt;ACUTE STRESS DISORDER&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;民間人と戦闘員が区別できない場所に展開しています。敵は制服を着ていません。&lt;br/&gt;&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;脅威：&lt;/font&gt;&lt;br/&gt;• 100-400秒ごとに3人がAKMでOPFORに&lt;br/&gt;• 14ゾーンに140個の地雷、マーカーなし</Japanese>
+            <Korean>&lt;br/&gt;&lt;font size=&apos;14&apos; color=&apos;#FF6600&apos;&gt;ACUTE STRESS DISORDER&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;민간인과 전투원을 구별할 수 없는 곳에 배치되었습니다. 적군은 제복을 입지 않습니다.&lt;br/&gt;&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;위협：&lt;/font&gt;&lt;br/&gt;• 100-400초마다 3명이 AKM으로 OPFOR로&lt;br/&gt;• 14개 구역에 140개 지뢰, 마커 없음</Korean>
+            <Portuguese>&lt;br/&gt;&lt;font size=&apos;14&apos; color=&apos;#FF6600&apos;&gt;ACUTE STRESS DISORDER&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;Você está implantado onde civil e combatente são indistinguíveis. O inimigo não usa uniforme.&lt;br/&gt;&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;AMEAÇAS:&lt;/font&gt;&lt;br/&gt;• A cada 100-400 seg, 3 civis se tornam OPFOR com AKM&lt;br/&gt;• 140 minas em 14 zonas, sem marcadores</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_THREATS">
+            <English>Threats</English>
+            <French>Menaces</French>
+            <German>Bedrohungen</German>
+            <Spanish>Amenazas</Spanish>
+            <Italian>Minacce</Italian>
+            <Russian>Угрозы</Russian>
+            <Polish>Zagrożenia</Polish>
+            <Czech>Hrozby</Czech>
+            <Turkish>Tehditler</Turkish>
+            <Chinese>威脅</Chinese>
+            <Chinesesimp>威胁</Chinesesimp>
+            <Japanese>脅威</Japanese>
+            <Korean>위협</Korean>
+            <Portuguese>Ameaças</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_THREAT_INSURGENTS_TITLE">
+            <English>DISGUISED INSURGENTS</English>
+            <French>INSURGÉS DÉGUISÉS</French>
+            <German>VERKLEIDETE AUFSTÄNDISCHE</German>
+            <Spanish>INSURGENTES DISFRAZADOS</Spanish>
+            <Italian>INSORTI MASCHERATI</Italian>
+            <Russian>ЗАМАСКИРОВАННЫЕ ПОВСТАНЦЫ</Russian>
+            <Polish>ZAMASKROWANI POWSTAŃCY</Polish>
+            <Czech>MASKOVANÍ POVSTALCI</Czech>
+            <Turkish>GİZLENMİŞ İSYANCILAR</Turkish>
+            <Chinese>偽裝的叛亂分子</Chinese>
+            <Chinesesimp>伪装的叛乱分子</Chinesesimp>
+            <Japanese>変装した反乱軍</Japanese>
+            <Korean>위장한 반군</Korean>
+            <Portuguese>INSURGENTES DISFARÇADOS</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_THREAT_INSURGENTS_TEXT">
+            <English>&lt;br/&gt;&lt;font color=&apos;#FF6600&apos;&gt;CIVILIAN CONVERSION&lt;/font&gt;&lt;br/&gt;• Every 100-400 sec, 3 civilians become OPFOR&lt;br/&gt;• They keep civilian appearance&lt;br/&gt;• They receive: AKM + 180 rounds&lt;br/&gt;• They attack immediately</English>
+            <French>&lt;br/&gt;&lt;font color=&apos;#FF6600&apos;&gt;CONVERSION CIVILE&lt;/font&gt;&lt;br/&gt;• Toutes les 100-400 sec, 3 civils deviennent OPFOR&lt;br/&gt;• Ils gardent l&apos;apparence civile&lt;br/&gt;• Ils reçoivent: AKM + 180 munitions&lt;br/&gt;• Ils attaquent immédiatement</French>
+            <German>&lt;br/&gt;&lt;font color=&apos;#FF6600&apos;&gt;ZIVILE KONVERSION&lt;/font&gt;&lt;br/&gt;• Alle 100-400 Sek werden 3 Zivilisten OPFOR&lt;br/&gt;• Sie behalten ziviles Aussehen&lt;br/&gt;• Sie erhalten: AKM + 180 Schuss&lt;br/&gt;• Sie greifen sofort an</German>
+            <Spanish>&lt;br/&gt;&lt;font color=&apos;#FF6600&apos;&gt;CONVERSIÓN CIVIL&lt;/font&gt;&lt;br/&gt;• Cada 100-400 seg, 3 civiles se vuelven OPFOR&lt;br/&gt;• Mantienen apariencia civil&lt;br/&gt;• Reciben: AKM + 180 balas&lt;br/&gt;• Atacan inmediatamente</Spanish>
+            <Italian>&lt;br/&gt;&lt;font color=&apos;#FF6600&apos;&gt;CONVERSIONE CIVILE&lt;/font&gt;&lt;br/&gt;• Ogni 100-400 sec, 3 civili diventano OPFOR&lt;br/&gt;• Mantengono aspetto civile&lt;br/&gt;• Ricevono: AKM + 180 colpi&lt;br/&gt;• Attaccano subito</Italian>
+            <Russian>&lt;br/&gt;&lt;font color=&apos;#FF6600&apos;&gt;КОНВЕРСИЯ ГРАЖДАНСКИХ&lt;/font&gt;&lt;br/&gt;• Каждые 100-400 сек 3 гражданских становятся OPFOR&lt;br/&gt;• Сохраняют гражданский вид&lt;br/&gt;• Получают: АКМ + 180 патронов&lt;br/&gt;• Атакуют немедленно</Russian>
+            <Polish>&lt;br/&gt;&lt;font color=&apos;#FF6600&apos;&gt;KONWERSJA CYWILÓW&lt;/font&gt;&lt;br/&gt;• Co 100-400 sek 3 cywilów staje się OPFOR&lt;br/&gt;• Zachowują wygląd cywila&lt;br/&gt;• Otrzymują: AKM + 180 naboi&lt;br/&gt;• Atakują natychmiast</Polish>
+            <Czech>&lt;br/&gt;&lt;font color=&apos;#FF6600&apos;&gt;KONVERZE CIVILISTŮ&lt;/font&gt;&lt;br/&gt;• Každých 100-400 sek se 3 civilisté stávají OPFOR&lt;br/&gt;• Zachovávají civilní vzhled&lt;br/&gt;• Dostanou: AKM + 180 nábojů&lt;br/&gt;• Útočí okamžitě</Czech>
+            <Turkish>&lt;br/&gt;&lt;font color=&apos;#FF6600&apos;&gt;SİVİL DÖNÜŞÜMİ&lt;/font&gt;&lt;br/&gt;• Her 100-400 sn&apos;de 3 sivil OPFOR olur&lt;br/&gt;• Sivil görünümü korurlar&lt;br/&gt;• Alırlar: AKM + 180 mermi&lt;br/&gt;• Hemen saldırırlar</Turkish>
+            <Chinese>&lt;br/&gt;&lt;font color=&apos;#FF6600&apos;&gt;平民轉化&lt;/font&gt;&lt;br/&gt;• 每100-400秒，3名平民成為OPFOR&lt;br/&gt;• 保持平民外觀&lt;br/&gt;• 獲得：AKM + 180發&lt;br/&gt;• 立即攻擊</Chinese>
+            <Chinesesimp>&lt;br/&gt;&lt;font color=&apos;#FF6600&apos;&gt;平民转化&lt;/font&gt;&lt;br/&gt;• 每100-400秒，3名平民成为OPFOR&lt;br/&gt;• 保持平民外观&lt;br/&gt;• 获得：AKM + 180发&lt;br/&gt;• 立即攻击</Chinesesimp>
+            <Japanese>&lt;br/&gt;&lt;font color=&apos;#FF6600&apos;&gt;民間人の転換&lt;/font&gt;&lt;br/&gt;• 100-400秒ごとに3人がOPFORに&lt;br/&gt;• 民間人の外見を維持&lt;br/&gt;• AKM + 180発を受取&lt;br/&gt;• 即座に攻撃</Japanese>
+            <Korean>&lt;br/&gt;&lt;font color=&apos;#FF6600&apos;&gt;민간인 전환&lt;/font&gt;&lt;br/&gt;• 100-400초마다 3명이 OPFOR로&lt;br/&gt;• 민간인 외모 유지&lt;br/&gt;• AKM + 180발 획득&lt;br/&gt;• 즉시 공격</Korean>
+            <Portuguese>&lt;br/&gt;&lt;font color=&apos;#FF6600&apos;&gt;CONVERSÃO CIVIL&lt;/font&gt;&lt;br/&gt;• A cada 100-400 seg, 3 civis viram OPFOR&lt;br/&gt;• Mantêm aparência civil&lt;br/&gt;• Recebem: AKM + 180 balas&lt;br/&gt;• Atacam imediatamente</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_THREAT_MINES_TITLE">
+            <English>MINEFIELD</English>
+            <French>CHAMP DE MINES</French>
+            <German>MINENFELD</German>
+            <Spanish>CAMPO MINADO</Spanish>
+            <Italian>CAMPO MINATO</Italian>
+            <Russian>МИННОЕ ПОЛЕ</Russian>
+            <Polish>POLE MINOWE</Polish>
+            <Czech>MINOVÉ POLE</Czech>
+            <Turkish>MAYIN TARLASI</Turkish>
+            <Chinese>地雷區</Chinese>
+            <Chinesesimp>地雷区</Chinesesimp>
+            <Japanese>地雷原</Japanese>
+            <Korean>지뢰밭</Korean>
+            <Portuguese>CAMPO MINADO</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_THREAT_MINES_TEXT">
+            <English>&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;DANGER - UNSECURED ZONE&lt;/font&gt;&lt;br/&gt;• 140 anti-personnel mines&lt;br/&gt;• 14 zones (10 per zone)&lt;br/&gt;• Random each game&lt;br/&gt;• No markers</English>
+            <French>&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;DANGER - ZONE NON SÉCURISÉE&lt;/font&gt;&lt;br/&gt;• 140 mines antipersonnel&lt;br/&gt;• 14 zones (10 par zone)&lt;br/&gt;• Aléatoire à chaque partie&lt;br/&gt;• Aucun marqueur</French>
+            <German>&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;GEFAHR - UNGESICHERTE ZONE&lt;/font&gt;&lt;br/&gt;• 140 Antipersonenminen&lt;br/&gt;• 14 Zonen (10 pro Zone)&lt;br/&gt;• Jedes Spiel zufällig&lt;br/&gt;• Keine Markierungen</German>
+            <Spanish>&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;PELIGRO - ZONA NO SEGURA&lt;/font&gt;&lt;br/&gt;• 140 minas antipersona&lt;br/&gt;• 14 zonas (10 por zona)&lt;br/&gt;• Aleatorio cada partida&lt;br/&gt;• Sin marcadores</Spanish>
+            <Italian>&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;PERICOLO - ZONA NON SICURA&lt;/font&gt;&lt;br/&gt;• 140 mine antiuomo&lt;br/&gt;• 14 zone (10 per zona)&lt;br/&gt;• Casuale ogni partita&lt;br/&gt;• Nessun marcatore</Italian>
+            <Russian>&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;ОПАСНОСТЬ - НЕЗАЩИЩЁННАЯ ЗОНА&lt;/font&gt;&lt;br/&gt;• 140 противопехотных мин&lt;br/&gt;• 14 зон (10 на зону)&lt;br/&gt;• Случайно каждую игру&lt;br/&gt;• Без маркеров</Russian>
+            <Polish>&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;NIEBEZPIECZEŃSTWO - NIEZABEZPIECZONA&lt;/font&gt;&lt;br/&gt;• 140 min przeciwpiechotnych&lt;br/&gt;• 14 stref (10 na strefę)&lt;br/&gt;• Losowo każdą grę&lt;br/&gt;• Bez znaczników</Polish>
+            <Czech>&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;NEBEZPEČÍ - NEZABEZPEČENÁ&lt;/font&gt;&lt;br/&gt;• 140 protipěchotních min&lt;br/&gt;• 14 zón (10 na zónu)&lt;br/&gt;• Náhodně každou hru&lt;br/&gt;• Žádné značky</Czech>
+            <Turkish>&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;TEHLİKE - GÜVENSİZ BÖLGE&lt;/font&gt;&lt;br/&gt;• 140 antipersonel mayın&lt;br/&gt;• 14 bölge (bölge başına 10)&lt;br/&gt;• Her oyun rastgele&lt;br/&gt;• İşaret yok</Turkish>
+            <Chinese>&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;危險 - 未保護區域&lt;/font&gt;&lt;br/&gt;• 140枚殺傷地雷&lt;br/&gt;• 14區域（每區10枚）&lt;br/&gt;• 每場隨機&lt;br/&gt;• 無標記</Chinese>
+            <Chinesesimp>&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;危险 - 未保护区域&lt;/font&gt;&lt;br/&gt;• 140枚杀伤地雷&lt;br/&gt;• 14区域（每区10枚）&lt;br/&gt;• 每场随机&lt;br/&gt;• 无标记</Chinesesimp>
+            <Japanese>&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;危険 - 未確保区域&lt;/font&gt;&lt;br/&gt;• 140個の対人地雷&lt;br/&gt;• 14ゾーン（各10個）&lt;br/&gt;• 毎回ランダム&lt;br/&gt;• マーカーなし</Japanese>
+            <Korean>&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;위험 - 미확보 구역&lt;/font&gt;&lt;br/&gt;• 140개 대인지뢰&lt;br/&gt;• 14구역 (구역당 10개)&lt;br/&gt;• 매번 랜덤&lt;br/&gt;• 마커 없음</Korean>
+            <Portuguese>&lt;br/&gt;&lt;font color=&apos;#FF0000&apos;&gt;PERIGO - ZONA NÃO SEGURA&lt;/font&gt;&lt;br/&gt;• 140 minas antipessoal&lt;br/&gt;• 14 zonas (10 por zona)&lt;br/&gt;• Aleatório cada jogo&lt;br/&gt;• Sem marcadores</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_MISSIONS">
+            <English>Dynamic Missions</English>
+            <French>Missions Dynamiques</French>
+            <German>Dynamische Missionen</German>
+            <Spanish>Misiones Dinámicas</Spanish>
+            <Italian>Missioni Dinamiche</Italian>
+            <Russian>Динамические миссии</Russian>
+            <Polish>Misje Dynamiczne</Polish>
+            <Czech>Dynamické Mise</Czech>
+            <Turkish>Dinamik Görevler</Turkish>
+            <Chinese>動態任務</Chinese>
+            <Chinesesimp>动态任务</Chinesesimp>
+            <Japanese>ダイナミックミッション</Japanese>
+            <Korean>동적 임무</Korean>
+            <Portuguese>Missões Dinâmicas</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_MISSION_PROTECTION_TITLE">
+            <English>CIVILIAN PROTECTION</English>
+            <French>PROTECTION CIVILE</French>
+            <German>ZIVILSCHUTZ</German>
+            <Spanish>PROTECCIÓN CIVIL</Spanish>
+            <Italian>PROTEZIONE CIVILE</Italian>
+            <Russian>ЗАЩИТА ГРАЖДАНСКИХ</Russian>
+            <Polish>OCHRONA CYWILÓW</Polish>
+            <Czech>OCHRANA CIVILISTŮ</Czech>
+            <Turkish>SİVİL KORUMA</Turkish>
+            <Chinese>平民保護</Chinese>
+            <Chinesesimp>平民保护</Chinesesimp>
+            <Japanese>民間人保護</Japanese>
+            <Korean>민간인 보호</Korean>
+            <Portuguese>PROTEÇÃO CIVIL</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_MISSION_PROTECTION_TEXT">
+            <English>&lt;br/&gt;• Objective: Do not kill more than 5 civilians&lt;br/&gt;• Automatic death counting&lt;br/&gt;• 5 deaths = MISSION FAILED</English>
+            <French>&lt;br/&gt;• Objectif: Ne pas tuer plus de 5 civils&lt;br/&gt;• Comptage automatique des morts&lt;br/&gt;• 5 morts = ÉCHEC</French>
+            <German>&lt;br/&gt;• Ziel: Nicht mehr als 5 Zivilisten töten&lt;br/&gt;• Automatische Todeszählung&lt;br/&gt;• 5 Tote = MISSION FEHLGESCHLAGEN</German>
+            <Spanish>&lt;br/&gt;• Objetivo: No matar más de 5 civiles&lt;br/&gt;• Conteo automático de muertes&lt;br/&gt;• 5 muertes = MISIÓN FALLIDA</Spanish>
+            <Italian>&lt;br/&gt;• Obiettivo: Non uccidere più di 5 civili&lt;br/&gt;• Conteggio automatico morti&lt;br/&gt;• 5 morti = MISSIONE FALLITA</Italian>
+            <Russian>&lt;br/&gt;• Цель: Не убивать более 5 гражданских&lt;br/&gt;• Автоподсчёт смертей&lt;br/&gt;• 5 смертей = ПРОВАЛ</Russian>
+            <Polish>&lt;br/&gt;• Cel: Nie zabijać więcej niż 5 cywilów&lt;br/&gt;• Automatyczne liczenie zgonów&lt;br/&gt;• 5 zgonów = PORAŻKA</Polish>
+            <Czech>&lt;br/&gt;• Cíl: Nezabít více než 5 civilistů&lt;br/&gt;• Automatické počítání úmrtí&lt;br/&gt;• 5 úmrtí = MISE SELHALA</Czech>
+            <Turkish>&lt;br/&gt;• Hedef: 5&apos;ten fazla sivil öldürmeyin&lt;br/&gt;• Otomatik ölüm sayımı&lt;br/&gt;• 5 ölüm = GÖREV BAŞARISIZ</Turkish>
+            <Chinese>&lt;br/&gt;• 目標：不要殺死超過5名平民&lt;br/&gt;• 自動死亡計數&lt;br/&gt;• 5人死亡 = 任務失敗</Chinese>
+            <Chinesesimp>&lt;br/&gt;• 目标：不要杀死超过5名平民&lt;br/&gt;• 自动死亡计数&lt;br/&gt;• 5人死亡 = 任务失败</Chinesesimp>
+            <Japanese>&lt;br/&gt;• 目標：民間人を5人以上殺さない&lt;br/&gt;• 自動死亡カウント&lt;br/&gt;• 5人死亡 = 任務失敗</Japanese>
+            <Korean>&lt;br/&gt;• 목표: 민간인 5명 이상 사살 금지&lt;br/&gt;• 자동 사망 카운트&lt;br/&gt;• 5명 사망 = 임무 실패</Korean>
+            <Portuguese>&lt;br/&gt;• Objetivo: Não matar mais de 5 civis&lt;br/&gt;• Contagem automática de mortes&lt;br/&gt;• 5 mortes = MISSÃO FALHOU</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_MISSION_BOMB_TITLE">
+            <English>BOMB DEFUSAL</English>
+            <French>DÉSAMORÇAGE DE BOMBE</French>
+            <German>BOMBENENTSCHÄRFUNG</German>
+            <Spanish>DESACTIVACIÓN DE BOMBA</Spanish>
+            <Italian>DISINNESCO BOMBA</Italian>
+            <Russian>ОБЕЗВРЕЖИВАНИЕ БОМБЫ</Russian>
+            <Polish>ROZBRAJANIE BOMBY</Polish>
+            <Czech>ZNEŠKODNĚNÍ BOMBY</Czech>
+            <Turkish>BOMBA İMHASI</Turkish>
+            <Chinese>拆彈</Chinese>
+            <Chinesesimp>拆弹</Chinesesimp>
+            <Japanese>爆弾処理</Japanese>
+            <Korean>폭탄 해체</Korean>
+            <Portuguese>DESARME DE BOMBA</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_MISSION_BOMB_TEXT">
+            <English>&lt;br/&gt;• Position: Random 177 locations&lt;br/&gt;• Timer: 5-10 min (hidden)&lt;br/&gt;• Signal: Beep every 5 sec&lt;br/&gt;• Defusal: 10 sec action</English>
+            <French>&lt;br/&gt;• Position: Aléatoire 177 lieux&lt;br/&gt;• Minuteur: 5-10 min (caché)&lt;br/&gt;• Signal: Bip toutes les 5 sec&lt;br/&gt;• Désamorçage: Action 10 sec</French>
+            <German>&lt;br/&gt;• Position: Zufällig 177 Orte&lt;br/&gt;• Timer: 5-10 Min (versteckt)&lt;br/&gt;• Signal: Piep alle 5 Sek&lt;br/&gt;• Entschärfung: 10 Sek Aktion</German>
+            <Spanish>&lt;br/&gt;• Posición: Aleatorio 177 lugares&lt;br/&gt;• Temporizador: 5-10 min (oculto)&lt;br/&gt;• Señal: Pitido cada 5 seg&lt;br/&gt;• Desactivar: Acción 10 seg</Spanish>
+            <Italian>&lt;br/&gt;• Posizione: Casuale 177 luoghi&lt;br/&gt;• Timer: 5-10 min (nascosto)&lt;br/&gt;• Segnale: Bip ogni 5 sec&lt;br/&gt;• Disinnesco: Azione 10 sec</Italian>
+            <Russian>&lt;br/&gt;• Позиция: случайная из 177&lt;br/&gt;• Таймер: 5-10 мин (скрыт)&lt;br/&gt;• Сигнал: бип каждые 5 сек&lt;br/&gt;• Обезвреживание: 10 сек</Russian>
+            <Polish>&lt;br/&gt;• Pozycja: Losowa ze 177&lt;br/&gt;• Timer: 5-10 min (ukryty)&lt;br/&gt;• Sygnał: Bip co 5 sek&lt;br/&gt;• Rozbrojenie: 10 sek akcja</Polish>
+            <Czech>&lt;br/&gt;• Pozice: Náhodná ze 177&lt;br/&gt;• Časovač: 5-10 min (skrytý)&lt;br/&gt;• Signál: Pípnutí každých 5 sek&lt;br/&gt;• Zneškodnění: 10 sek akce</Czech>
+            <Turkish>&lt;br/&gt;• Konum: 177 yerden rastgele&lt;br/&gt;• Zamanlayıcı: 5-10 dk (gizli)&lt;br/&gt;• Sinyal: Her 5 sn bip&lt;br/&gt;• İmha: 10 sn eylem</Turkish>
+            <Chinese>&lt;br/&gt;• 位置：177處隨機&lt;br/&gt;• 計時器：5-10分（隱藏）&lt;br/&gt;• 信號：每5秒嗶聲&lt;br/&gt;• 拆除：10秒動作</Chinese>
+            <Chinesesimp>&lt;br/&gt;• 位置：177处随机&lt;br/&gt;• 计时器：5-10分（隐藏）&lt;br/&gt;• 信号：每5秒哔声&lt;br/&gt;• 拆除：10秒动作</Chinesesimp>
+            <Japanese>&lt;br/&gt;• 位置：177箇所からランダム&lt;br/&gt;• タイマー：5-10分（非表示）&lt;br/&gt;• 信号：5秒ごとにビープ&lt;br/&gt;• 解除：10秒アクション</Japanese>
+            <Korean>&lt;br/&gt;• 위치: 177곳 중 랜덤&lt;br/&gt;• 타이머: 5-10분 (숨김)&lt;br/&gt;• 신호: 5초마다 비프&lt;br/&gt;• 해체: 10초 액션</Korean>
+            <Portuguese>&lt;br/&gt;• Posição: Aleatório 177 locais&lt;br/&gt;• Temporizador: 5-10 min (oculto)&lt;br/&gt;• Sinal: Bip a cada 5 seg&lt;br/&gt;• Desarme: Ação 10 seg</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_MISSION_HOSTAGE_TITLE">
+            <English>HOSTAGE RESCUE</English>
+            <French>SAUVETAGE D&apos;OTAGE</French>
+            <German>GEISELBEFREIUNG</German>
+            <Spanish>RESCATE DE REHÉN</Spanish>
+            <Italian>SALVATAGGIO OSTAGGIO</Italian>
+            <Russian>СПАСЕНИЕ ЗАЛОЖНИКА</Russian>
+            <Polish>UWOLNIENIE ZAKŁADNIKA</Polish>
+            <Czech>ZÁCHRANA RUKOJMÍ</Czech>
+            <Turkish>REHİNE KURTARMA</Turkish>
+            <Chinese>人質救援</Chinese>
+            <Chinesesimp>人质救援</Chinesesimp>
+            <Japanese>人質救出</Japanese>
+            <Korean>인질 구출</Korean>
+            <Portuguese>RESGATE DE REFÉM</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_MISSION_HOSTAGE_TEXT">
+            <English>&lt;br/&gt;• Guards: 3-5 OPFOR disguised as civilians&lt;br/&gt;• Hostage: In execution position&lt;br/&gt;• Liberation: Hold action&lt;br/&gt;• Extraction: CH-67 Huron</English>
+            <French>&lt;br/&gt;• Gardes: 3-5 OPFOR déguisés en civils&lt;br/&gt;• Otage: En position d&apos;exécution&lt;br/&gt;• Libération: Action maintenue&lt;br/&gt;• Extraction: CH-67 Huron</French>
+            <German>&lt;br/&gt;• Wachen: 3-5 OPFOR als Zivilisten verkleidet&lt;br/&gt;• Geisel: In Hinrichtungsposition&lt;br/&gt;• Befreiung: Halteaktion&lt;br/&gt;• Extraktion: CH-67 Huron</German>
+            <Spanish>&lt;br/&gt;• Guardias: 3-5 OPFOR disfrazados de civiles&lt;br/&gt;• Rehén: En posición de ejecución&lt;br/&gt;• Liberación: Acción sostenida&lt;br/&gt;• Extracción: CH-67 Huron</Spanish>
+            <Italian>&lt;br/&gt;• Guardie: 3-5 OPFOR travestiti da civili&lt;br/&gt;• Ostaggio: In posizione di esecuzione&lt;br/&gt;• Liberazione: Azione prolungata&lt;br/&gt;• Estrazione: CH-67 Huron</Italian>
+            <Russian>&lt;br/&gt;• Охрана: 3-5 OPFOR под видом гражданских&lt;br/&gt;• Заложник: в позиции казни&lt;br/&gt;• Освобождение: Удерживайте действие&lt;br/&gt;• Эвакуация: CH-67 Huron</Russian>
+            <Polish>&lt;br/&gt;• Strażnicy: 3-5 OPFOR przebranych za cywilów&lt;br/&gt;• Zakładnik: W pozycji egzekucji&lt;br/&gt;• Uwolnienie: Przytrzymaj akcję&lt;br/&gt;• Ekstrakcja: CH-67 Huron</Polish>
+            <Czech>&lt;br/&gt;• Stráže: 3-5 OPFOR převlečených za civilisty&lt;br/&gt;• Rukojmí: V pozici popravy&lt;br/&gt;• Osvobození: Podržte akci&lt;br/&gt;• Extrakce: CH-67 Huron</Czech>
+            <Turkish>&lt;br/&gt;• Korumalar: Sivil kılığında 3-5 OPFOR&lt;br/&gt;• Rehine: İnfaz pozisyonunda&lt;br/&gt;• Kurtarma: Eylemi basılı tutun&lt;br/&gt;• Çıkarma: CH-67 Huron</Turkish>
+            <Chinese>&lt;br/&gt;• 守衛：3-5名偽裝平民的OPFOR&lt;br/&gt;• 人質：處刑位置&lt;br/&gt;• 解放：長按動作&lt;br/&gt;• 撤離：CH-67 Huron</Chinese>
+            <Chinesesimp>&lt;br/&gt;• 守卫：3-5名伪装平民的OPFOR&lt;br/&gt;• 人质：处刑位置&lt;br/&gt;• 解放：长按动作&lt;br/&gt;• 撤离：CH-67 Huron</Chinesesimp>
+            <Japanese>&lt;br/&gt;• 護衛：民間人に変装した3-5人のOPFOR&lt;br/&gt;• 人質：処刑体勢&lt;br/&gt;• 解放：長押しアクション&lt;br/&gt;• 抽出：CH-67 Huron</Japanese>
+            <Korean>&lt;br/&gt;• 경비: 민간인 위장 OPFOR 3-5명&lt;br/&gt;• 인질: 처형 자세&lt;br/&gt;• 해방: 길게 누르기&lt;br/&gt;• 추출: CH-67 Huron</Korean>
+            <Portuguese>&lt;br/&gt;• Guardas: 3-5 OPFOR disfarçados de civis&lt;br/&gt;• Refém: Em posição de execução&lt;br/&gt;• Liberação: Ação prolongada&lt;br/&gt;• Extração: CH-67 Huron</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_MISSION_CACHE_TITLE">
+            <English>WEAPONS CACHE DESTRUCTION</English>
+            <French>DESTRUCTION DE CACHE D&apos;ARMES</French>
+            <German>WAFFENLAGER-ZERSTÖRUNG</German>
+            <Spanish>DESTRUCCIÓN DE ALIJO</Spanish>
+            <Italian>DISTRUZIONE DEPOSITO ARMI</Italian>
+            <Russian>УНИЧТОЖЕНИЕ СКЛАДА ОРУЖИЯ</Russian>
+            <Polish>ZNISZCZENIE SKŁADU BRONI</Polish>
+            <Czech>ZNIČENÍ SKLADU ZBRANÍ</Czech>
+            <Turkish>SİLAH DEPOSİ İMHASI</Turkish>
+            <Chinese>武器庫銷毀</Chinese>
+            <Chinesesimp>武器库销毁</Chinesesimp>
+            <Japanese>武器庫破壊</Japanese>
+            <Korean>무기 은닉처 파괴</Korean>
+            <Portuguese>DESTRUIÇÃO DE ARSENAL</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_MISSION_CACHE_TEXT">
+            <English>&lt;br/&gt;• Guards: 1-3 OPFOR disguised&lt;br/&gt;• Cache: Indestructible by weapons&lt;br/&gt;• Destruction: 5 sec explosive placement&lt;br/&gt;• Evacuate: 40 sec countdown</English>
+            <French>&lt;br/&gt;• Gardes: 1-3 OPFOR déguisés&lt;br/&gt;• Cache: Indestructible par armes&lt;br/&gt;• Destruction: Pose explosive 5 sec&lt;br/&gt;• Évacuer: Compte à rebours 40 sec</French>
+            <German>&lt;br/&gt;• Wachen: 1-3 OPFOR verkleidet&lt;br/&gt;• Lager: Unzerstörbar durch Waffen&lt;br/&gt;• Zerstörung: 5 Sek Sprengstoff platzieren&lt;br/&gt;• Evakuieren: 40 Sek Countdown</German>
+            <Spanish>&lt;br/&gt;• Guardias: 1-3 OPFOR disfrazados&lt;br/&gt;• Alijo: Indestructible por armas&lt;br/&gt;• Destrucción: Colocar explosivo 5 seg&lt;br/&gt;• Evacuar: 40 seg cuenta regresiva</Spanish>
+            <Italian>&lt;br/&gt;• Guardie: 1-3 OPFOR travestiti&lt;br/&gt;• Deposito: Indistruttibile dalle armi&lt;br/&gt;• Distruzione: 5 sec piazzamento esplosivo&lt;br/&gt;• Evacuare: 40 sec conto alla rovescia</Italian>
+            <Russian>&lt;br/&gt;• Охрана: 1-3 OPFOR замаскированных&lt;br/&gt;• Склад: Неуничтожим оружием&lt;br/&gt;• Уничтожение: 5 сек установка взрывчатки&lt;br/&gt;• Эвакуация: 40 сек отсчёт</Russian>
+            <Polish>&lt;br/&gt;• Strażnicy: 1-3 OPFOR przebranych&lt;br/&gt;• Skład: Niezniszczalny bronią&lt;br/&gt;• Zniszczenie: 5 sek podłożenie ładunku&lt;br/&gt;• Ewakuacja: 40 sek odliczanie</Polish>
+            <Czech>&lt;br/&gt;• Stráže: 1-3 OPFOR převlečených&lt;br/&gt;• Sklad: Nezničitelný zbraněmi&lt;br/&gt;• Zničení: 5 sek umístění výbušniny&lt;br/&gt;• Evakuace: 40 sek odpočet</Czech>
+            <Turkish>&lt;br/&gt;• Korumalar: 1-3 OPFOR kılık değiştirmiş&lt;br/&gt;• Depo: Silahlarla yok edilemez&lt;br/&gt;• İmha: 5 sn patlayıcı yerleştir&lt;br/&gt;• Tahliye: 40 sn geri sayım</Turkish>
+            <Chinese>&lt;br/&gt;• 守衛：1-3名偽裝OPFOR&lt;br/&gt;• 庫存：武器無法摧毀&lt;br/&gt;• 銷毀：5秒放置炸藥&lt;br/&gt;• 撤離：40秒倒計時</Chinese>
+            <Chinesesimp>&lt;br/&gt;• 守卫：1-3名伪装OPFOR&lt;br/&gt;• 库存：武器无法摧毁&lt;br/&gt;• 销毁：5秒放置炸药&lt;br/&gt;• 撤离：40秒倒计时</Chinesesimp>
+            <Japanese>&lt;br/&gt;• 護衛：変装した1-3人のOPFOR&lt;br/&gt;• 武器庫：武器で破壊不可&lt;br/&gt;• 破壊：5秒で爆発物設置&lt;br/&gt;• 退避：40秒カウントダウン</Japanese>
+            <Korean>&lt;br/&gt;• 경비: 위장 OPFOR 1-3명&lt;br/&gt;• 은닉처: 무기로 파괴 불가&lt;br/&gt;• 파괴: 5초 폭발물 설치&lt;br/&gt;• 대피: 40초 카운트다운</Korean>
+            <Portuguese>&lt;br/&gt;• Guardas: 1-3 OPFOR disfarçados&lt;br/&gt;• Arsenal: Indestrutível por armas&lt;br/&gt;• Destruir: 5 seg colocar explosivo&lt;br/&gt;• Evacuar: 40 seg contagem</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_MISSION_MILITIA_TITLE">
+            <English>MILITIA MEETING</English>
+            <French>RDV AVEC LA MILICE</French>
+            <German>MILIZ-TREFFEN</German>
+            <Spanish>REUNIÓN CON MILICIA</Spanish>
+            <Italian>INCONTRO CON MILIZIA</Italian>
+            <Russian>ВСТРЕЧА С ОПОЛЧЕНИЕМ</Russian>
+            <Polish>SPOTKANIE Z MILICJĄ</Polish>
+            <Czech>SETKÁNÍ S MILICÍ</Czech>
+            <Turkish>MİLİS BULUŞMASI</Turkish>
+            <Chinese>民兵會面</Chinese>
+            <Chinesesimp>民兵会面</Chinesesimp>
+            <Japanese>民兵との会合</Japanese>
+            <Korean>민병대 미팅</Korean>
+            <Portuguese>ENCONTRO COM MILÍCIA</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_MISSION_MILITIA_TEXT">
+            <English>&lt;br/&gt;• Chief: 1 unit, civilian clothes, pistol&lt;br/&gt;• Guards: 2-4 militia, AKM&lt;br/&gt;• 3 scenarios: Cooperation / Betrayal / Internal betrayal</English>
+            <French>&lt;br/&gt;• Chef: 1 unité, tenue civile, pistolet&lt;br/&gt;• Gardes: 2-4 miliciens, AKM&lt;br/&gt;• 3 scénarios: Coopération / Trahison / Trahison interne</French>
+            <German>&lt;br/&gt;• Anführer: 1 Einheit, Zivilkleidung, Pistole&lt;br/&gt;• Wachen: 2-4 Miliz, AKM&lt;br/&gt;• 3 Szenarien: Kooperation / Verrat / Interner Verrat</German>
+            <Spanish>&lt;br/&gt;• Jefe: 1 unidad, ropa civil, pistola&lt;br/&gt;• Guardias: 2-4 milicia, AKM&lt;br/&gt;• 3 escenarios: Cooperación / Traición / Traición interna</Spanish>
+            <Italian>&lt;br/&gt;• Capo: 1 unità, abiti civili, pistola&lt;br/&gt;• Guardie: 2-4 milizia, AKM&lt;br/&gt;• 3 scenari: Cooperazione / Tradimento / Tradimento interno</Italian>
+            <Russian>&lt;br/&gt;• Главарь: 1 боец, гражданская одежда, пистолет&lt;br/&gt;• Охрана: 2-4 ополченца, АКМ&lt;br/&gt;• 3 сценария: Сотрудничество / Предательство / Внутреннее предательство</Russian>
+            <Polish>&lt;br/&gt;• Przywódca: 1 jednostka, ubranie cywilne, pistolet&lt;br/&gt;• Strażnicy: 2-4 milicjantów, AKM&lt;br/&gt;• 3 scenariusze: Współpraca / Zdrada / Zdrada wewnętrzna</Polish>
+            <Czech>&lt;br/&gt;• Vůdce: 1 jednotka, civilní oblečení, pistole&lt;br/&gt;• Stráže: 2-4 milice, AKM&lt;br/&gt;• 3 scénáře: Spolupráce / Zrada / Vnitřní zrada</Czech>
+            <Turkish>&lt;br/&gt;• Şef: 1 birim, sivil kıyafet, tabanca&lt;br/&gt;• Korumalar: 2-4 milis, AKM&lt;br/&gt;• 3 senaryo: İşbirliği / İhanet / İç ihanet</Turkish>
+            <Chinese>&lt;br/&gt;• 首領：1單位，平民服裝，手槍&lt;br/&gt;• 守衛：2-4民兵，AKM&lt;br/&gt;• 3種情景：合作/背叛/內部背叛</Chinese>
+            <Chinesesimp>&lt;br/&gt;• 首领：1单位，平民服装，手枪&lt;br/&gt;• 守卫：2-4民兵，AKM&lt;br/&gt;• 3种情景：合作/背叛/内部背叛</Chinesesimp>
+            <Japanese>&lt;br/&gt;• 首領：1ユニット、民間服、ピストル&lt;br/&gt;• 護衛：2-4人の民兵、AKM&lt;br/&gt;• 3つのシナリオ：協力/裏切り/内部裏切り</Japanese>
+            <Korean>&lt;br/&gt;• 두목: 1유닛, 민간 복장, 권총&lt;br/&gt;• 경비: 2-4 민병대, AKM&lt;br/&gt;• 3가지 시나리오: 협력/배신/내부 배신</Korean>
+            <Portuguese>&lt;br/&gt;• Chefe: 1 unidade, roupa civil, pistola&lt;br/&gt;• Guardas: 2-4 milícia, AKM&lt;br/&gt;• 3 cenários: Cooperação / Traição / Traição interna</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_SYSTEMS">
+            <English>Player Systems</English>
+            <French>Systèmes Joueur</French>
+            <German>Spielersysteme</German>
+            <Spanish>Sistemas de Jugador</Spanish>
+            <Italian>Sistemi Giocatore</Italian>
+            <Russian>Системы игрока</Russian>
+            <Polish>Systemy Gracza</Polish>
+            <Czech>Systémy Hráče</Czech>
+            <Turkish>Oyuncu Sistemleri</Turkish>
+            <Chinese>玩家系統</Chinese>
+            <Chinesesimp>玩家系统</Chinesesimp>
+            <Japanese>プレイヤーシステム</Japanese>
+            <Korean>플레이어 시스템</Korean>
+            <Portuguese>Sistemas do Jogador</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_SYSTEMS_ARSENAL_TITLE">
+            <English>VIRTUAL ARSENAL</English>
+            <French>ARSENAL VIRTUEL</French>
+            <German>VIRTUELLES ARSENAL</German>
+            <Spanish>ARSENAL VIRTUAL</Spanish>
+            <Italian>ARSENALE VIRTUALE</Italian>
+            <Russian>ВИРТУАЛЬНЫЙ АРСЕНАЛ</Russian>
+            <Polish>WIRTUALNY ARSENAŁ</Polish>
+            <Czech>VIRTUÁLNÍ ARZENÁL</Czech>
+            <Turkish>SANAL CEPHANELİK</Turkish>
+            <Chinese>虛擬軍火庫</Chinese>
+            <Chinesesimp>虚拟军火库</Chinesesimp>
+            <Japanese>バーチャルアーセナル</Japanese>
+            <Korean>가상 무기고</Korean>
+            <Portuguese>ARSENAL VIRTUAL</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_SYSTEMS_ARSENAL_TEXT">
+            <English>&lt;br/&gt;Access BIS Virtual Arsenal at HQ zone.&lt;br/&gt;Voice sync to allied AI when leader exits zone.</English>
+            <French>&lt;br/&gt;Accédez à l&apos;Arsenal Virtuel BIS dans la zone QG.&lt;br/&gt;Synchronisation vocale vers IA alliées quand le chef quitte la zone.</French>
+            <German>&lt;br/&gt;Zugang zum BIS Virtual Arsenal in der HQ-Zone.&lt;br/&gt;Stimmsynchronisation zu verbündeten KI wenn der Anführer die Zone verlässt.</German>
+            <Spanish>&lt;br/&gt;Acceso al Arsenal Virtual BIS en la zona del CG.&lt;br/&gt;Sincronización de voz con IA aliadas cuando el líder sale.</Spanish>
+            <Italian>&lt;br/&gt;Accesso all&apos;Arsenale Virtuale BIS nella zona QG.&lt;br/&gt;Sincronizzazione vocale con IA alleate quando il leader esce.</Italian>
+            <Russian>&lt;br/&gt;Доступ к BIS Virtual Arsenal в зоне штаба.&lt;br/&gt;Синхронизация голоса с союзным ИИ при выходе лидера.</Russian>
+            <Polish>&lt;br/&gt;Dostęp do BIS Virtual Arsenal w strefie HQ.&lt;br/&gt;Synchronizacja głosu z sojuszniczą AI gdy lider wyjdzie.</Polish>
+            <Czech>&lt;br/&gt;Přístup k BIS Virtual Arsenal v zóně HQ.&lt;br/&gt;Synchronizace hlasu se spojeneckou AI když vůdce odejde.</Czech>
+            <Turkish>&lt;br/&gt;HQ bölgesinde BIS Virtual Arsenal erişimi.&lt;br/&gt;Lider çıkınca müttefik AI ile ses senkronizasyonu.</Turkish>
+            <Chinese>&lt;br/&gt;在總部區域訪問BIS虛擬軍火庫。&lt;br/&gt;隊長離開時與盟友AI同步語音。</Chinese>
+            <Chinesesimp>&lt;br/&gt;在总部区域访问BIS虚拟军火库。&lt;br/&gt;队长离开时与盟友AI同步语音。</Chinesesimp>
+            <Japanese>&lt;br/&gt;HQゾーンでBIS Virtual Arsenal へアクセス。&lt;br/&gt;リーダー退出時に味方AIへ音声同期。</Japanese>
+            <Korean>&lt;br/&gt;HQ 구역에서 BIS Virtual Arsenal 접근.&lt;br/&gt;리더 퇴장 시 아군 AI에 음성 동기화.</Korean>
+            <Portuguese>&lt;br/&gt;Acesse o Arsenal Virtual BIS na zona do QG.&lt;br/&gt;Sincronização de voz com IA aliadas quando o líder sai.</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_SYSTEMS_VEHICLES_TITLE">
+            <English>VEHICLE GARAGE</English>
+            <French>GARAGE DE VÉHICULES</French>
+            <German>FAHRZEUG-GARAGE</German>
+            <Spanish>GARAJE DE VEHÍCULOS</Spanish>
+            <Italian>GARAGE VEICOLI</Italian>
+            <Russian>ГАРАЖ ТЕХНИКИ</Russian>
+            <Polish>GARAŻ POJAZDÓW</Polish>
+            <Czech>GARÁŽ VOZIDEL</Czech>
+            <Turkish>ARAÇ GARAJI</Turkish>
+            <Chinese>車輛車庫</Chinese>
+            <Chinesesimp>车辆车库</Chinesesimp>
+            <Japanese>車両ガレージ</Japanese>
+            <Korean>차량 차고</Korean>
+            <Portuguese>GARAGEM DE VEÍCULOS</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_SYSTEMS_VEHICLES_TEXT">
+            <English>&lt;br/&gt;Spawn faction vehicles at garage zone.&lt;br/&gt;Ground and air vehicles available.</English>
+            <French>&lt;br/&gt;Faites apparaître les véhicules de faction dans la zone garage.&lt;br/&gt;Véhicules terrestres et aériens disponibles.</French>
+            <German>&lt;br/&gt;Fraktionsfahrzeuge in der Garagenzone spawnen.&lt;br/&gt;Boden- und Luftfahrzeuge verfügbar.</German>
+            <Spanish>&lt;br/&gt;Genera vehículos de facción en la zona de garaje.&lt;br/&gt;Vehículos terrestres y aéreos disponibles.</Spanish>
+            <Italian>&lt;br/&gt;Genera veicoli della fazione nella zona garage.&lt;br/&gt;Veicoli terrestri e aerei disponibili.</Italian>
+            <Russian>&lt;br/&gt;Спавн техники фракции в зоне гаража.&lt;br/&gt;Наземная и воздушная техника доступна.</Russian>
+            <Polish>&lt;br/&gt;Przyzwij pojazdy frakcji w strefie garażu.&lt;br/&gt;Pojazdy naziemne i powietrzne dostępne.</Polish>
+            <Czech>&lt;br/&gt;Spawn vozidel frakce v garáži.&lt;br/&gt;Pozemní a vzdušná vozidla dostupná.</Czech>
+            <Turkish>&lt;br/&gt;Garaj bölgesinde hizip araçlarını oluşturun.&lt;br/&gt;Kara ve hava araçları mevcut.</Turkish>
+            <Chinese>&lt;br/&gt;在車庫區生成陣營車輛。&lt;br/&gt;地面和空中載具可用。</Chinese>
+            <Chinesesimp>&lt;br/&gt;在车库区生成阵营车辆。&lt;br/&gt;地面和空中载具可用。</Chinesesimp>
+            <Japanese>&lt;br/&gt;ガレージゾーンで陣営車両をスポーン。&lt;br/&gt;地上・空中車両が利用可能。</Japanese>
+            <Korean>&lt;br/&gt;차고 구역에서 진영 차량 소환.&lt;br/&gt;지상 및 항공 차량 사용 가능.</Korean>
+            <Portuguese>&lt;br/&gt;Gere veículos da facção na zona da garagem.&lt;br/&gt;Veículos terrestres e aéreos disponíveis.</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_SYSTEMS_WEATHER_TITLE">
+            <English>WEATHER &amp; TIME</English>
+            <French>MÉTÉO &amp; TEMPS</French>
+            <German>WETTER &amp; ZEIT</German>
+            <Spanish>CLIMA &amp; HORA</Spanish>
+            <Italian>METEO &amp; ORA</Italian>
+            <Russian>ПОГОДА И ВРЕМЯ</Russian>
+            <Polish>POGODA I CZAS</Polish>
+            <Czech>POČASÍ A ČAS</Czech>
+            <Turkish>HAVA VE ZAMAN</Turkish>
+            <Chinese>天氣與時間</Chinese>
+            <Chinesesimp>天气与时间</Chinesesimp>
+            <Japanese>天候と時間</Japanese>
+            <Korean>날씨와 시간</Korean>
+            <Portuguese>CLIMA E HORA</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_SYSTEMS_WEATHER_TEXT">
+            <English>&lt;br/&gt;Modify time and weather.&lt;br/&gt;• Time: 03:00-22:00&lt;br/&gt;• Clouds: 5%-95%&lt;br/&gt;• Fog: 0%-2.5%</English>
+            <French>&lt;br/&gt;Modifiez l&apos;heure et la météo.&lt;br/&gt;• Heure: 03:00-22:00&lt;br/&gt;• Nuages: 5%-95%&lt;br/&gt;• Brouillard: 0%-2.5%</French>
+            <German>&lt;br/&gt;Zeit und Wetter ändern.&lt;br/&gt;• Zeit: 03:00-22:00&lt;br/&gt;• Wolken: 5%-95%&lt;br/&gt;• Nebel: 0%-2.5%</German>
+            <Spanish>&lt;br/&gt;Modificar hora y clima.&lt;br/&gt;• Hora: 03:00-22:00&lt;br/&gt;• Nubes: 5%-95%&lt;br/&gt;• Niebla: 0%-2.5%</Spanish>
+            <Italian>&lt;br/&gt;Modifica ora e meteo.&lt;br/&gt;• Ora: 03:00-22:00&lt;br/&gt;• Nuvole: 5%-95%&lt;br/&gt;• Nebbia: 0%-2.5%</Italian>
+            <Russian>&lt;br/&gt;Изменить время и погоду.&lt;br/&gt;• Время: 03:00-22:00&lt;br/&gt;• Облака: 5%-95%&lt;br/&gt;• Туман: 0%-2.5%</Russian>
+            <Polish>&lt;br/&gt;Zmień czas i pogodę.&lt;br/&gt;• Czas: 03:00-22:00&lt;br/&gt;• Chmury: 5%-95%&lt;br/&gt;• Mgła: 0%-2.5%</Polish>
+            <Czech>&lt;br/&gt;Upravit čas a počasí.&lt;br/&gt;• Čas: 03:00-22:00&lt;br/&gt;• Mraky: 5%-95%&lt;br/&gt;• Mlha: 0%-2.5%</Czech>
+            <Turkish>&lt;br/&gt;Saat ve hava değiştir.&lt;br/&gt;• Saat: 03:00-22:00&lt;br/&gt;• Bulut: 5%-95%&lt;br/&gt;• Sis: 0%-2.5%</Turkish>
+            <Chinese>&lt;br/&gt;修改時間和天氣。&lt;br/&gt;• 時間：03:00-22:00&lt;br/&gt;• 雲量：5%-95%&lt;br/&gt;• 霧：0%-2.5%</Chinese>
+            <Chinesesimp>&lt;br/&gt;修改时间和天气。&lt;br/&gt;• 时间：03:00-22:00&lt;br/&gt;• 云量：5%-95%&lt;br/&gt;• 雾：0%-2.5%</Chinesesimp>
+            <Japanese>&lt;br/&gt;時間と天候を変更。&lt;br/&gt;• 時間：03:00-22:00&lt;br/&gt;• 雲：5%-95%&lt;br/&gt;• 霧：0%-2.5%</Japanese>
+            <Korean>&lt;br/&gt;시간과 날씨 변경.&lt;br/&gt;• 시간: 03:00-22:00&lt;br/&gt;• 구름: 5%-95%&lt;br/&gt;• 안개: 0%-2.5%</Korean>
+            <Portuguese>&lt;br/&gt;Modificar hora e clima.&lt;br/&gt;• Hora: 03:00-22:00&lt;br/&gt;• Nuvens: 5%-95%&lt;br/&gt;• Nevoeiro: 0%-2.5%</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_SYSTEMS_BROTHERS_TITLE">
+            <English>BROTHERS IN ARMS</English>
+            <French>FRÈRES D&apos;ARMES</French>
+            <German>WAFFENBRÜDER</German>
+            <Spanish>HERMANOS DE ARMAS</Spanish>
+            <Italian>FRATELLI D&apos;ARMI</Italian>
+            <Russian>БРАТЬЯ ПО ОРУЖИЮ</Russian>
+            <Polish>BRACIA BRONI</Polish>
+            <Czech>BRATŘI VE ZBRANI</Czech>
+            <Turkish>SİLAH ARKADAŞLARI</Turkish>
+            <Chinese>戰友</Chinese>
+            <Chinesesimp>战友</Chinesesimp>
+            <Japanese>戦友</Japanese>
+            <Korean>전우</Korean>
+            <Portuguese>IRMÃOS DE ARMAS</Portuguese>
+        </Key>
+        <Key ID="STR_DIARY_SYSTEMS_BROTHERS_TEXT">
+            <English>&lt;br/&gt;Recruit up to 14 AI.&lt;br/&gt;• All faction units&lt;br/&gt;• Clone option available</English>
+            <French>&lt;br/&gt;Recrutez jusqu&apos;à 14 IA.&lt;br/&gt;• Toutes les unités de faction&lt;br/&gt;• Option clone disponible</French>
+            <German>&lt;br/&gt;Bis zu 14 KI rekrutieren.&lt;br/&gt;• Alle Fraktionseinheiten&lt;br/&gt;• Klonoption verfügbar</German>
+            <Spanish>&lt;br/&gt;Recluta hasta 14 IA.&lt;br/&gt;• Todas las unidades de facción&lt;br/&gt;• Opción clonar disponible</Spanish>
+            <Italian>&lt;br/&gt;Recluta fino a 14 IA.&lt;br/&gt;• Tutte le unità della fazione&lt;br/&gt;• Opzione clone disponibile</Italian>
+            <Russian>&lt;br/&gt;Наберите до 14 ИИ.&lt;br/&gt;• Все юниты фракции&lt;br/&gt;• Опция клонирования доступна</Russian>
+            <Polish>&lt;br/&gt;Rekrutuj do 14 AI.&lt;br/&gt;• Wszystkie jednostki frakcji&lt;br/&gt;• Opcja klonowania dostępna</Polish>
+            <Czech>&lt;br/&gt;Rekrutujte až 14 AI.&lt;br/&gt;• Všechny jednotky frakce&lt;br/&gt;• Možnost klonování dostupná</Czech>
+            <Turkish>&lt;br/&gt;14 AI&apos;ye kadar işe alın.&lt;br/&gt;• Tüm hizip birimleri&lt;br/&gt;• Klonlama seçeneği mevcut</Turkish>
+            <Chinese>&lt;br/&gt;招募最多14名AI。&lt;br/&gt;• 所有陣營單位&lt;br/&gt;• 克隆選項可用</Chinese>
+            <Chinesesimp>&lt;br/&gt;招募最多14名AI。&lt;br/&gt;• 所有阵营单位&lt;br/&gt;• 克隆选项可用</Chinesesimp>
+            <Japanese>&lt;br/&gt;最大14人のAIを募集。&lt;br/&gt;• すべての陣営ユニット&lt;br/&gt;• クローンオプション利用可能</Japanese>
+            <Korean>&lt;br/&gt;최대 14 AI 모집.&lt;br/&gt;• 모든 진영 유닛&lt;br/&gt;• 클론 옵션 사용 가능</Korean>
+            <Portuguese>&lt;br/&gt;Recrute até 14 IA.&lt;br/&gt;• Todas as unidades da facção&lt;br/&gt;• Opção de clone disponível</Portuguese>
+        </Key>
+        <Key ID="STR_GAME_DESCRIPTION">
+            <English>COMPATIBILITY with essential mods: RHS, CUP, TMT, R3F, BWMod, FFAA, VME PLA, NIArms...</English>
+            <French>COMPATIBILITÉ avec les mods essentiels : RHS, CUP, TMT, R3F, BWMod, FFAA, VME PLA, NIArms...</French>
+            <German>KOMPATIBILITÄT mit wichtigen Mods: RHS, CUP, TMT, R3F, BWMod, FFAA, VME PLA, NIArms...</German>
+            <Spanish>COMPATIBILIDAD con mods esenciales: RHS, CUP, TMT, R3F, BWMod, FFAA, VME PLA, NIArms...</Spanish>
+            <Italian>COMPATIBILITÀ con mod essenziali: RHS, CUP, TMT, R3F, BWMod, FFAA, VME PLA, NIArms...</Italian>
+            <Russian>СОВМЕСТИМОСТЬ с основными модами: RHS, CUP, TMT, R3F, BWMod, FFAA, VME PLA, NIArms...</Russian>
+            <Polish>KOMPATYBILNOŚĆ z kluczowymi modami: RHS, CUP, TMT, R3F, BWMod, FFAA, VME PLA, NIArms...</Polish>
+            <Czech>KOMPATIBILITA s důležitými mody: RHS, CUP, TMT, R3F, BWMod, FFAA, VME PLA, NIArms...</Czech>
+            <Turkish>Temel modlarla UYUMLULUK: RHS, CUP, TMT, R3F, BWMod, FFAA, VME PLA, NIArms...</Turkish>
+            <Chinese>与主要模组兼容：RHS, CUP, TMT, R3F, BWMod, FFAA, VME PLA, NIArms...</Chinese>
+            <Chinesesimp>与主要模组兼容：RHS, CUP, TMT, R3F, BWMod, FFAA, VME PLA, NIArms...</Chinesesimp>
+            <Japanese>主要MODとの互換性：RHS, CUP, TMT, R3F, BWMod, FFAA, VME PLA, NIArms...</Japanese>
+            <Portuguese>COMPATIBILIDADE com mods essenciais: RHS, CUP, TMT, R3F, BWMod, FFAA, VME PLA, NIArms...</Portuguese>
+            <Korean>필수 모드 호환성: RHS, CUP, TMT, R3F, BWMod, FFAA, VME PLA, NIArms...</Korean>
         </Key>
     </Package>
 </Project>

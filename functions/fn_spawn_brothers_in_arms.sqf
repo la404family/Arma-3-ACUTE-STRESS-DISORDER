@@ -31,6 +31,12 @@ switch (_mode) do {
         // Attend que l'objet joueur soit prêt
         waitUntil { !isNull player };
         
+        // ============================================================
+        // ANTI-DOUBLON: Vérifie si l'action a déjà été ajoutée
+        // ============================================================
+        if (player getVariable ["MISSION_brothersActionAdded", false]) exitWith {};
+        player setVariable ["MISSION_brothersActionAdded", true];
+        
         // Ajoute l'action de recrutement
         player addAction [
             localize "STR_ADD_BROTHER", // "Recruter des frères d'armes"

@@ -5,6 +5,25 @@
 #include "dialogs\missions_menu.hpp"
 #include "dialogs\enemies_menu.hpp"
 
+// ============================================================
+// CONFIGURATION RESPAWN MULTIJOUEUR OPTIMISÉE
+// ============================================================
+
+// Type de respawn: BASE = Réapparition sur marqueur "respawn_west" ou module
+respawn = "BASE";
+
+// Délai en secondes avant de réapparaître
+respawnDelay = 5;
+
+// Empêche le respawn automatique au lancement (-1 = désactivé au début)
+respawnOnStart = -1;
+
+// Templates de respawn: MenuInventory = garde l'équipement du joueur mort
+respawnTemplates[] = {"MenuInventory"};
+
+// Dialogue de respawn désactivé (pas de menu de choix)
+respawnDialog = 0;
+
 
 class CfgFunctions
 {
@@ -32,6 +51,7 @@ class CfgFunctions
             class nettoyage {}; // Nettoyage OPFOR distants (optimisation)
             class task_appointment {}; // Mission RDV avec milices locales
             class task_intro {}; // Introduction cinématique
+            class task_x_briefing {}; // Briefing général de la mission
         };
     };
 };

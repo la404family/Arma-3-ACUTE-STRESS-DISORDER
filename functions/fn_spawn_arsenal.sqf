@@ -27,6 +27,12 @@ switch (_mode) do {
         // Attend que l'objet "player" soit initialisé et valide.
         waitUntil { !isNull player };
         
+        // ============================================================
+        // ANTI-DOUBLON: Vérifie si l'action a déjà été ajoutée
+        // ============================================================
+        if (player getVariable ["MISSION_arsenalActionAdded", false]) exitWith {};
+        player setVariable ["MISSION_arsenalActionAdded", true];
+        
         // Ajoute une action au joueur pour ouvrir l'arsenal.
         player addAction [
             localize "STR_ACTION_ARSENAL", // Nom de l'action affiché (localisé).

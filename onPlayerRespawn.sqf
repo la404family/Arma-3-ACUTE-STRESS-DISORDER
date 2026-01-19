@@ -19,11 +19,23 @@ params ["_newUnit", "_oldUnit", "_respawn", "_respawnDelay"];
 diag_log format ["[MISSION] Joueur respawné: %1", name _newUnit];
 
 // ============================================================
-// RÉINITIALISATION DES ACTIONS DU JOUEUR
+// RESTAURATION DE L'ÉQUIPEMENT (LOADOUT)
 // ============================================================
 
+// Récupère l'équipement de l'ancien corps et l'applique au nouveau joueur
+if (!isNull _oldUnit) then {
+    private _loadout = getUnitLoadout _oldUnit;
+    if (count _loadout > 0) then {
+        _newUnit setUnitLoadout _loadout;
+        diag_log format ["[MISSION] Loadout restauré depuis l'ancien corps pour %1", name _newUnit];
+    };
+};
+
+// ============================================================
+// RÉINITIALISATION DES ACTIONS DU JOUEUR
+// ============================================================
 // Arsenal - Ajoute l'action pour ouvrir l'arsenal virtuel
-[] spawn Mission_fnc_spawn_arsenal;
+["INIT"] spawn Mission_fnc_spawn_arsenal;
 
 // Frères d'armes - Ajoute l'action pour recruter des IA
 ["INIT"] spawn Mission_fnc_spawn_brothers_in_arms;

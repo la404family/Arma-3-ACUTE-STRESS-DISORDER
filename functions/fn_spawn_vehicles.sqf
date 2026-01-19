@@ -16,6 +16,12 @@ switch (_mode) do {
         // Attend que le joueur soit prêt
         waitUntil { !isNull player };
         
+        // ============================================================
+        // ANTI-DOUBLON: Vérifie si l'action a déjà été ajoutée
+        // ============================================================
+        if (player getVariable ["MISSION_vehiclesActionAdded", false]) exitWith {};
+        player setVariable ["MISSION_vehiclesActionAdded", true];
+        
         // Ajoute l'action d'ouverture du garage
         player addAction [
             localize "STR_ACTION_GARAGE", 
