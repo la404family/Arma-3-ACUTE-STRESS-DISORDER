@@ -262,9 +262,9 @@ if (hasInterface) then {
         
         // Position relative par rapport au centre de l'hélicoptère :
         // X = 0 : centré latéralement
-        // Y = -3 : 3 mètres vers l'arrière (fond du cargo)
-        // Z = -0.5 : légèrement sous le niveau des sièges pour une vue immersive
-        private _fixedPos = [0, -3, -0.5];
+        // Y = -0.1 : 0.1 mètre vers l'arrière (fond du cargo)
+        // Z = -0.6 : légèrement sous le niveau des sièges pour une vue immersive
+        private _fixedPos = [0, 1.5, -0.6];
         
         // Attacher la caméra à l'hélicoptère (elle suivra ses mouvements automatiquement)
         _cam attachTo [_camHeli, _fixedPos];

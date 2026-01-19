@@ -229,33 +229,68 @@ Recrutez jusqu'à **14 unités IA** pour renforcer votre groupe.
 
 ## ⚙️ ARCHITECTURE TECHNIQUE
 
+### Optimisation Multijoueur
+Cette mission est **entièrement optimisée pour le multijoueur** avec une séparation stricte Client/Serveur.
+
+| Composant | Exécution | Fonction |
+|-----------|-----------|----------|
+| Logique IA & Missions | 🖥️ Serveur | Évite les conflits de synchronisation |
+| Interface & Actions | 👤 Client | Performance optimale |
+| Synchronisation | 🔄 remoteExec | Compatible JIP (Join In Progress) |
+
 ```
 📁 Acute Stress Disorder.SefrouRamal/
 ├── 📄 init.sqf                           # Point d'entrée principal
-├── 📄 description.ext                    # Configuration mission + fonctions
-├── 📄 stringtable.xml                    # Localisation multilingue
-├── 📄 mission.sqm                        # Données de l'éditeur
-├── 📁 functions/
-│   ├── fn_civil_change.sqf               # Conversion civils → insurgés
-│   ├── fn_civilian_logique.sqf           # Gestion population civile
-│   ├── fn_mine.sqf                       # Spawn des mines
-│   ├── fn_ezan.sqf                       # Appel à la prière
-│   ├── fn_task_bomb.sqf                  # Mission désamorçage
-│   ├── fn_task_civil_ostage.sqf          # Mission sauvetage otage
-│   ├── fn_task_cache_armes.sqf           # Mission cache d'armes
-│   ├── fn_task_civil_protection.sqf      # Mission protection civile
-│   ├── fn_spawn_brothers_in_arms.sqf     # Recrutement IA
-│   ├── fn_spawn_weather_and_time.sqf     # Contrôle météo/heure
+├── 📄 onPlayerRespawn.sqf                # Réinitialisation après respawn
+├── 📄 description.ext                    # Configuration mission + CfgFunctions
+├── 📄 stringtable.xml                    # Localisation (13 langues)
+├── 📄 mission.sqm                        # Données de l'éditeur Eden
+│
+├── 📁 functions/                         # 20 fonctions SQF
+│   │
+│   │── 🎬 CINÉMATIQUE
+│   ├── fn_task_intro.sqf                 # Introduction cinématique (5 plans caméra)
+│   │
+│   │── 👥 GESTION CIVILS
+│   ├── fn_civilian_logique.sqf           # Spawn dynamique (45 civils max, agents)
+│   ├── fn_civil_change.sqf               # Conversion civils → insurgés OPFOR
+│   │
+│   │── 🎯 MISSIONS DYNAMIQUES
+│   ├── fn_task_civil_protection.sqf      # Protection civile (5 morts max)
+│   ├── fn_task_bomb.sqf                  # Désamorçage de bombe (177 positions)
+│   ├── fn_task_civil_ostage.sqf          # Sauvetage d'otage + extraction hélico
+│   ├── fn_task_cache_armes.sqf           # Destruction cache d'armes
+│   ├── fn_task_appointment.sqf           # RDV milices (3 scénarios aléatoires)
+│   │
+│   │── ⚙️ SYSTÈMES JOUEUR
+│   ├── fn_spawn_arsenal.sqf              # Arsenal virtuel + sync voix
+│   ├── fn_spawn_brothers_in_arms.sqf     # Recrutement IA (14 max)
 │   ├── fn_spawn_vehicles.sqf             # Garage de véhicules
-│   ├── fn_spawn_arsenal.sqf              # Arsenal virtuel
-│   ├── fn_ajust_AI_skills.sqf            # Ajustement compétences IA
-│   ├── fn_ajust_change_team_leader.sqf   # Gestion chef de groupe
-│   ├── fn_nettoyage.sqf                  # Optimisation mémoire OPFOR
-│   ├── fn_task_x_revival.sqf             # Système de soins
-│   └── fn_task_appointment.sqf           # Mission RDV milices
-├── 📁 dialogs/                           # Interfaces utilisateur
+│   ├── fn_spawn_weather_and_time.sqf     # Contrôle météo/heure
+│   ├── fn_task_x_revival.sqf             # Auto-soins groupe IA
+│   ├── fn_task_x_badge.sqf               # Synchronisation insignes équipe
+│   │
+│   │── 🤖 GESTION IA
+│   ├── fn_ajust_AI_skills.sqf            # Compétences IA (OPFOR/BLUFOR)
+│   ├── fn_ajust_change_team_leader.sqf   # Transfert leadership auto
+│   │
+│   │── 🌍 ENVIRONNEMENT
+│   ├── fn_mine.sqf                       # 140 mines sur 14 zones
+│   ├── fn_ezan.sqf                       # Appel à la prière (5 minarets)
+│   ├── fn_lang_marker_name.sqf           # Localisation marqueurs carte
+│   └── fn_nettoyage.sqf                  # Cleanup OPFOR distants (1200m)
+│
+├── 📁 dialogs/                           # Interfaces utilisateur (HPP)
+│   ├── defines.hpp
+│   ├── recruit_menu.hpp                  # Menu frères d'armes
+│   ├── vehicle_menu.hpp                  # Menu garage
+│   ├── weather_time_menu.hpp             # Menu météo/temps
+│   ├── missions_menu.hpp
+│   └── enemies_menu.hpp
+│
 └── 📁 music/
-    └── ezan.ogg                          # Son de l'appel à la prière
+    ├── ezan.ogg                          # Appel à la prière
+    └── intro.ogg                         # Musique d'introduction
 ```
 
 ---
