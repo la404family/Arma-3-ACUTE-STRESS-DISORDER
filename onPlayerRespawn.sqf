@@ -41,6 +41,19 @@ if (!isNull _oldUnit) then {
 // RÉINITIALISATION DES ACTIONS DU JOUEUR
 // ============================================================
 
+// CRITIQUE: Réinitialiser les variables anti-doublon pour la nouvelle unité
+// Ces variables étaient sur l'ancienne unité, mais il faut s'assurer
+// qu'elles sont à false sur la nouvelle unité pour que les actions soient ajoutées
+_newUnit setVariable ["MISSION_SupportMenuAdded", false];
+_newUnit setVariable ["MISSION_arsenalActionAdded", false];
+_newUnit setVariable ["MISSION_brothersActionAdded", false];
+_newUnit setVariable ["MISSION_vehiclesActionAdded", false];
+_newUnit setVariable ["MISSION_weatherActionAdded", false];
+_newUnit setVariable ["MISSION_briefing_created", false];
+
+// Petit délai pour s'assurer que l'unité est complètement initialisée
+sleep 0.5;
+
 // Ajouter le menu de support (Livraison Véhicule)
 // Note: MN_fnc_AddSupportMenu est défini dans initPlayerLocal.sqf
 if (!isNil "MN_fnc_AddSupportMenu") then {

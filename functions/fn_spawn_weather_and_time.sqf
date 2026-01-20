@@ -13,14 +13,17 @@ if (_mode == "INIT") exitWith {
     // Cette partie ne doit être exécutée que par les clients avec interface
     if (!hasInterface) exitWith {};
     
-    // Attendre que la mission commence réellement (temps > 0)
-    [_params] spawn {
-        params ["_params"];
-        
-        // Récupère l'unité cible (défaut: player)
-        _params params [["_unit", player]];
+    // Récupère l'unité cible (défaut: player)
+    _params params [["_unit", player]];
 
-        // Sécurité : Si l'unité passée est nulle (ex: problème respawn), on utilise player local
+    // Sécurité : Si l'unité passée est nulle (ex: problème respawn), on utilise player local
+    if (isNull _unit) then { _unit = player; };
+
+    // Attendre que la mission commence réellement (temps > 0)
+    [_unit] spawn {
+        params ["_unit"];
+        
+        // Re-vérifier l'unité après le spawn
         if (isNull _unit) then { _unit = player; };
 
         waitUntil {time > 0};

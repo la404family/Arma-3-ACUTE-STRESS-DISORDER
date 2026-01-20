@@ -75,8 +75,19 @@ if (hasInterface) then {
         diag_log format ["[SWITCH] TeamSwitch: %1 -> %2", name _previousUnit, name _newUnit];
         
         // Petit délai pour laisser le switch se terminer
-        [] spawn {
+        [_newUnit] spawn {
+            params ["_newUnit"];
+            
             sleep 0.5;
+            
+            // CRITIQUE: Réinitialiser les variables anti-doublon sur la nouvelle unité
+            _newUnit setVariable ["MISSION_SupportMenuAdded", false];
+            _newUnit setVariable ["MISSION_arsenalActionAdded", false];
+            _newUnit setVariable ["MISSION_brothersActionAdded", false];
+            _newUnit setVariable ["MISSION_vehiclesActionAdded", false];
+            _newUnit setVariable ["MISSION_weatherActionAdded", false];
+            _newUnit setVariable ["MISSION_briefing_created", false];
+            
             // Restaurer le statut de chef d'équipe
             [] call Mission_fnc_ajust_change_team_leader;
             
@@ -84,10 +95,10 @@ if (hasInterface) then {
             [] call Mission_fnc_task_x_briefing;
             
             // Réinitialiser les actions (arsenal, véhicules, etc.)
-            ["INIT"] call Mission_fnc_spawn_arsenal;
-            ["INIT"] call Mission_fnc_spawn_brothers_in_arms;
-            [] call Mission_fnc_spawn_weather_and_time;
-            ["INIT"] call Mission_fnc_spawn_vehicles;
+            ["INIT", [_newUnit]] call Mission_fnc_spawn_arsenal;
+            ["INIT", [_newUnit]] call Mission_fnc_spawn_brothers_in_arms;
+            ["INIT", [_newUnit]] call Mission_fnc_spawn_weather_and_time;
+            ["INIT", [_newUnit]] call Mission_fnc_spawn_vehicles;
             
             // Réattacher la tâche de protection civile (l'état ASSIGNED/FAILED est préservé)
             if ("task_civil_protection" call BIS_fnc_taskExists) then {
@@ -109,7 +120,7 @@ if (hasInterface) then {
 ["INIT"] spawn Mission_fnc_spawn_brothers_in_arms;
 
 // Fonction qui permet de modifier le temps et le climat
-[] spawn Mission_fnc_spawn_weather_and_time;
+["INIT"] spawn Mission_fnc_spawn_weather_and_time;
 
 // Fonction qui lance le spawn de véhicule (garage)
 ["INIT"] spawn Mission_fnc_spawn_vehicles;

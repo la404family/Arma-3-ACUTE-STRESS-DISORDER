@@ -13,6 +13,9 @@ MN_fnc_AddSupportMenu = {
     // Vérifier que c'est bien le joueur local
     if (_unit != player) exitWith {};
 
+    // Sécurité: S'assurer que l'unité est valide
+    if (isNull _unit) exitWith {};
+
     // ANTI-DOUBLON: Vérifie si le menu a déjà été ajouté à cette unité
     if (_unit getVariable ["MISSION_SupportMenuAdded", false]) exitWith {};
     _unit setVariable ["MISSION_SupportMenuAdded", true];
