@@ -14,7 +14,7 @@ if (!isServer) exitWith {};
 diag_log "[FIN_MISSION] === Démarrage du système de fin de mission ===";
 
 // --- CONFIGURATION ---
-private _delayBeforeMessage = 300; // 5 minutes (300 secondes) - MODIFIER POUR LES TESTS
+private _delayBeforeMessage = 1800 + floor(random 900); // 30 à 45 minutes
 private _heliClass = "B_Heli_Transport_01_F"; // UH-80 Ghost Hawk
 private _flyTime = 120; // 120 secondes de vol avant fin de mission
 
@@ -63,7 +63,7 @@ diag_log format ["[FIN_MISSION] Extraction dans %1 secondes (%2 minutes)", _dela
     // ============================================================
     // MESSAGE RADIO POUR TOUS LES JOUEURS
     // ============================================================
-    (localize "STR_FIN_MESSAGE_EXTRACTION") remoteExec ["systemChat", 0];
+    // (localize "STR_FIN_MESSAGE_EXTRACTION") remoteExec ["systemChat", 0];
     (localize "STR_FIN_MESSAGE_EXTRACTION") remoteExec ["hint", 0];
     
     sleep 3;
@@ -116,7 +116,7 @@ diag_log format ["[FIN_MISSION] Extraction dans %1 secondes (%2 minutes)", _dela
     _heli allowDamage false;
     
     // Message: hélico en approche
-    (localize "STR_FIN_HELI_INBOUND") remoteExec ["systemChat", 0];
+    // (localize "STR_FIN_HELI_INBOUND") remoteExec ["systemChat", 0];
     
     // ============================================================
     // VOL VERS LA BASE ET ATTERRISSAGE
@@ -139,7 +139,7 @@ diag_log format ["[FIN_MISSION] Extraction dans %1 secondes (%2 minutes)", _dela
     _heli flyInHeight 0;
     _heli land "GET IN";
     
-    waitUntil { sleep 1; (_heli distance2D _landingPos) < 80 || !alive _heli };
+    waitUntil { sleep 2; (_heli distance2D _landingPos) < 80 || !alive _heli };
     
     _heli setFuel 0; // Couper le carburant pour forcer l'atterrissage
     
@@ -156,7 +156,7 @@ diag_log format ["[FIN_MISSION] Extraction dans %1 secondes (%2 minutes)", _dela
     diag_log "[FIN_MISSION] Hélicoptère posé - En attente des joueurs";
     
     // Message: hélico en attente
-    (localize "STR_FIN_HELI_WAITING") remoteExec ["systemChat", 0];
+    // (localize "STR_FIN_HELI_WAITING") remoteExec ["systemChat", 0];
     
     // Créer un marqueur sur l'hélico
     private _marker = createMarker ["extraction_heli", getPos _heli];
@@ -197,13 +197,17 @@ diag_log format ["[FIN_MISSION] Extraction dans %1 secondes (%2 minutes)", _dela
     
     diag_log "[FIN_MISSION] Décollage vers extraction";
     
-    // Restaurer le carburant
+    // Annuler le mode atterrissage et stop
+    _heli land "NONE";
+    
+    // Restaurer le carburant et allumer le moteur
     _heli setFuel 1;
+    _heli engineOn true;
     
     // Message: décollage
-    (localize "STR_FIN_TAKEOFF") remoteExec ["systemChat", 0];
+    // (localize "STR_FIN_TAKEOFF") remoteExec ["systemChat", 0];
     
-    sleep 3;
+    sleep 5; // Laisser le temps au moteur de démarrer
     
     // Supprimer le marqueur
     deleteMarker "extraction_heli";

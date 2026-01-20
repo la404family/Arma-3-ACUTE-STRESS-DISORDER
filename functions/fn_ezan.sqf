@@ -1,48 +1,42 @@
 /*
     File: fn_ezan.sqf
-    Description: Plays the ezan sound from 5 minarets every 30 minutes with a staggered start.
+    Description: Plays the ezan sound from 5 minarets every 30 minutes.
+    OPTIMIZATION: Only sends network traffic to players within audible range (2000m).
 */
 
-if (!isServer) exitWith {}; // Only run on server to avoid duplicate sounds in MP
+if (!isServer) exitWith {}; // Only run on server
 
-// Wait between 250 seconds and 15 minutes (900s) after mission start
+// --- CONFIGURATION ---
+private _soundRange = 2500; // Portée du son en mètres
+// Liste des noms de variables des objets minarets
+private _minaretsVars = ["bouteille_ezan_1", "bouteille_ezan_2", "bouteille_ezan_3", "bouteille_ezan_4", "bouteille_ezan_0"];
+
+// Attente initiale (aléatoire entre 250s et 15min)
 sleep (250 + (random 900));
 
 while {true} do {
-    // Play sound on minaret 1
-    if (!isNil "bouteille_ezan_1") then {
-        [bouteille_ezan_1, ["ezan", 2500, 1]] remoteExec ["say3D", 0];
-    };
     
-    sleep 0.1;
+    {
+        private _varName = _x;
+        // Récupérer l'objet via son nom de variable
+        private _minaretObj = missionNamespace getVariable [_varName, objNull];
+        
+        if (!isNull _minaretObj) then {
+            // OPTIMISATION NETWORK : Trouver les joueurs à portée audio uniquement
+            private _nearbyPlayers = allPlayers select { (_x distance _minaretObj) < _soundRange };
+            
+            // Si des joueurs sont à portée, envoyer le son UNIQUEMENT à eux
+            if (count _nearbyPlayers > 0) then {
+                [_minaretObj, ["ezan", _soundRange, 1]] remoteExec ["say3D", _nearbyPlayers];
+                // diag_log format ["[EZAN] Son joué sur %1 pour %2 joueurs", _varName, count _nearbyPlayers];
+            };
+        };
+        
+        // Décalage léger entre les minarets pour effet d'écho réaliste
+        sleep 0.5;
+        
+    } forEach _minaretsVars;
     
-    // Play sound on minaret 2
-    if (!isNil "bouteille_ezan_2") then {
-        [bouteille_ezan_2, ["ezan", 2500, 1]] remoteExec ["say3D", 0];
-    };
-    
-    sleep 0.1;
-    
-    // Play sound on minaret 3
-    if (!isNil "bouteille_ezan_3") then {
-        [bouteille_ezan_3, ["ezan", 2500, 1]] remoteExec ["say3D", 0];
-    };
-    sleep 0.1;
-
-    // Play sound on minaret 4
-    if (!isNil "bouteille_ezan_4") then {
-        [bouteille_ezan_4, ["ezan", 2500, 1]] remoteExec ["say3D", 0];
-    };
-    
-    sleep 0.1;
-    
-    // Play sound on minaret 0
-    if (!isNil "bouteille_ezan_0") then {
-        [bouteille_ezan_0, ["ezan", 2500, 1]] remoteExec ["say3D", 0];
-    };
-    
-    sleep 0.1;
-    
-    // Wait 30 minutes
+    // Attendre 30 minutes avant le prochain appel
     sleep 1800;
 };

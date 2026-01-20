@@ -6,6 +6,21 @@
 #include "dialogs\enemies_menu.hpp"
 
 // ============================================================
+// INFORMATIONS PRINCIPALES (Visible dans le menu scénario)
+// ============================================================
+author = "Kevin [la404family]";
+onLoadName = "Acute Stress Disorder";
+onLoadMission = "Votre capacité à distinguer un civil d'un insurgé déterminera votre survie.";
+loadScreen = ""; // Image de chargement (ex: "images\loadScreen.jpg")
+
+class Header
+{
+    gameType = COOP; // Type de jeu (Coop, DM, TDM, etc.)
+    minPlayers = 1;  // Min joueurs (1 = Compatible Solo)
+    maxPlayers = 14; // Max joueurs
+};
+
+// ============================================================
 // MENU DE COMMUNICATION (0-8) - SUPPORT LOGISTIQUE
 // ============================================================
 class CfgCommunicationMenu
