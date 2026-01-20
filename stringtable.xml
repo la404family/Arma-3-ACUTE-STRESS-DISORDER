@@ -1850,6 +1850,150 @@
             <Japanese>主要MODとの互換性：RHS, CUP, TMT, R3F, BWMod, FFAA, VME PLA, NIArms...</Japanese>
             <Portuguese>COMPATIBILIDADE com mods essenciais: RHS, CUP, TMT, R3F, BWMod, FFAA, VME PLA, NIArms...</Portuguese>
             <Korean>필수 모드 호환성: RHS, CUP, TMT, R3F, BWMod, FFAA, VME PLA, NIArms...</Korean>
+        </Key><!-- LIVRAISON VÉHICULE PAR HÉLICOPTÈRE -->
+        <Key ID="STR_LIVRAISON_MENU_TEXT">
+            <English>CALL SIGN EAGLE - Vehicle Airlift (Heli)</English>
+            <French>INDICATIF AIGLE - Pont Aérien Véhicule (Héli)</French>
+            <German>RUFZEICHEN ADLER - Fahrzeug-Luftbrücke (Heli)</German>
+            <Spanish>INDICATIVO ÁGUILA - Puente Aéreo Vehículo (Heli)</Spanish>
+            <Italian>NOMINATIVO AQUILA - Ponte Aereo Veicolo (Eli)</Italian>
+            <Russian>ПОЗЫВНОЙ ОРЁЛ - Воздушный мост (Вертолёт)</Russian>
+            <Polish>ZNAK WYWOŁAWCZY ORZEŁ - Most Powietrzny (Helikopter)</Polish>
+            <Czech>VOLACÍ ZNAK OREL - Vzdušný Most Vozidla (Heli)</Czech>
+            <Turkish>ÇAĞRI İŞARETİ KARTAL - Araç Hava Köprüsü (Heli)</Turkish>
+            <Chinese>呼號老鷹 - 車輛空運 (直升機)</Chinese>
+            <Chinesesimp>呼号老鹰 - 车辆空运 (直升机)</Chinesesimp>
+            <Japanese>コールサイン・イーグル - 車両空輸 (ヘリ)</Japanese>
+            <Portuguese>INDICATIVO ÁGUIA - Ponte Aéreo Veículo (Heli)</Portuguese>
+            <Korean>콜사인 이글 - 차량 공수 (헬기)</Korean>
+        </Key>
+        <Key ID="STR_LIVRAISON_REQUESTED">
+            <English>ROGER. Request transmitted to HQ. EAGLE inbound. Mark your LZ. Out.</English>
+            <French>REÇU. Demande transmise au QG. AIGLE en approche. Sécurisez la LZ. Terminé.</French>
+            <German>VERSTANDEN. Anfrage an HQ übermittelt. ADLER im Anflug. LZ markieren. Ende.</German>
+            <Spanish>RECIBIDO. Solicitud transmitida al CG. ÁGUILA en camino. Marque su LZ. Cambio.</Spanish>
+            <Italian>RICEVUTO. Richiesta trasmessa al QG. AQUILA in avvicinamento. Marcare la LZ. Passo.</Italian>
+            <Russian>ПРИНЯТО. Запрос передан в штаб. ОРЁЛ на подходе. Обозначьте ЗП. Конец связи.</Russian>
+            <Polish>PRZYJĘTO. Zgłoszenie przekazane do dowództwa. ORZEŁ w drodze. Oznacz LZ. Odbiór.</Polish>
+            <Czech>PŘIJATO. Požadavek předán do velitelství. OREL na cestě. Označte LZ. Konec.</Czech>
+            <Turkish>ANLAŞILDI. Talep KK&apos;ya iletildi. KARTAL yolda. LZ&apos;nizi işaretleyin. Tamam.</Turkish>
+            <Chinese>收到。請求已傳達至指揮部。老鷹進場中。確保降落區安全。完畢。</Chinese>
+            <Chinesesimp>收到。请求已传达至指挥部。老鹰进场中。确保降落区安全。完毕。</Chinesesimp>
+            <Japanese>了解。要請を司令部に送信。イーグル接近中。LZを確保せよ。以上。</Japanese>
+            <Portuguese>RECEBIDO. Pedido transmitido ao QG. ÁGUIA a caminho. Marque sua LZ. Câmbio.</Portuguese>
+            <Korean>수신. 요청을 본부에 전달함. 이글 접근 중. LZ 확보하라. 이상.</Korean>
+        </Key>
+        <Key ID="STR_LIVRAISON_INBOUND">
+            <English>EAGLE is OSCAR MIKE with cargo. ETA 2 mikes. Prepare for sling load drop.</English>
+            <French>AIGLE est OSCAR MIKE avec cargaison. ETA 2 minutes. Préparez réception héliportée.</French>
+            <German>ADLER ist OSCAR MIKE mit Fracht. ETA 2 Minuten. Bereiten Sie Außenlast-Abwurf vor.</German>
+            <Spanish>ÁGUILA está OSCAR MIKE con carga. ETA 2 minutos. Prepárense para descarga con eslinga.</Spanish>
+            <Italian>AQUILA è OSCAR MIKE con carico. ETA 2 minuti. Preparatevi per sgancio con gancio baricentrico.</Italian>
+            <Russian>ОРЁЛ движется с грузом. Время прибытия 2 минуты. Готовьтесь к сбросу на внешней подвеске.</Russian>
+            <Polish>ORZEŁ w ruchu z ładunkiem. Czas przybycia 2 minuty. Przygotujcie się na zrzut podwieszany.</Polish>
+            <Czech>OREL na cestě s nákladem. ETA 2 minuty. Připravte se na shoz podvěsu.</Czech>
+            <Turkish>KARTAL kargo ile hareket halinde. Varış 2 dakika. Askılı yük bırakma için hazırlanın.</Turkish>
+            <Chinese>老鷹攜帶貨物移動中。預計到達2分鐘。準備吊掛投放。</Chinese>
+            <Chinesesimp>老鹰携带货物移动中。预计到达2分钟。准备吊挂投放。</Chinesesimp>
+            <Japanese>イーグル、貨物搭載で移動中。到着予定2分。スリングロード投下準備せよ。</Japanese>
+            <Portuguese>ÁGUIA está OSCAR MIKE com carga. ETA 2 minutos. Prepare para descarga de carga suspensa.</Portuguese>
+            <Korean>이글 화물 탑재 이동 중. 도착 예정 2분. 슬링 로드 투하 준비.</Korean>
+        </Key>
+        <Key ID="STR_LIVRAISON_DROPPED">
+            <English>PACKAGE delivered. Vehicle on deck. EAGLE RTB. Good hunting. Out.</English>
+            <French>COLIS livré. Véhicule en place. AIGLE retour base. Bonne chasse. Terminé.</French>
+            <German>PAKET geliefert. Fahrzeug am Boden. ADLER kehrt zur Basis zurück. Gute Jagd. Ende.</German>
+            <Spanish>PAQUETE entregado. Vehículo en posición. ÁGUILA regresa a base. Buena cacería. Cambio.</Spanish>
+            <Italian>PACCO consegnato. Veicolo a terra. AQUILA rientra alla base. Buona caccia. Passo.</Italian>
+            <Russian>ГРУЗ доставлен. Техника на позиции. ОРЁЛ возвращается на базу. Удачной охоты. Конец связи.</Russian>
+            <Polish>PACZKA dostarczona. Pojazd na miejscu. ORZEŁ wraca do bazy. Udanych łowów. Odbiór.</Polish>
+            <Czech>ZÁSILKA doručena. Vozidlo na místě. OREL se vrací na základnu. Dobrý lov. Konec.</Czech>
+            <Turkish>PAKET teslim edildi. Araç yerinde. KARTAL üsse dönüyor. İyi avlar. Tamam.</Turkish>
+            <Chinese>包裹已投放。車輛就位。老鷹返回基地。狩獵愉快。完畢。</Chinese>
+            <Chinesesimp>包裹已投放。车辆就位。老鹰返回基地。狩猎愉快。完毕。</Chinesesimp>
+            <Japanese>荷物投下完了。車両着地。イーグルRTB。グッドハンティング。以上。</Japanese>
+            <Portuguese>PACOTE entregue. Veículo no local. ÁGUIA retornando à base. Boa caça. Câmbio.</Portuguese>
+            <Korean>패키지 배달 완료. 차량 위치 확보. 이글 기지 복귀. 행운을 빈다. 이상.</Korean>
+        </Key><!-- FIN DE MISSION - EXTRACTION -->
+        <Key ID="STR_FIN_MESSAGE_EXTRACTION">
+            <English>COMMAND: All callsigns RTB. DUSTOFF inbound for extraction. Relief force on standby. Outstanding work. Out.</English>
+            <French>COMMANDEMENT : Tous les indicatifs RTB. DUSTOFF en approche pour extraction. Relève en attente. Excellent travail. Terminé.</French>
+            <German>KOMMANDO: Alle Rufzeichen RTB. DUSTOFF im Anflug zur Evakuierung. Ablösung in Bereitschaft. Hervorragende Arbeit. Ende.</German>
+            <Spanish>MANDO: Todos los indicativos RTB. DUSTOFF en camino para extracción. Fuerza de relevo en espera. Excelente trabajo. Cambio.</Spanish>
+            <Italian>COMANDO: Tutti i nominativi RTB. DUSTOFF in avvicinamento per estrazione. Forza di rilievo in attesa. Ottimo lavoro. Passo.</Italian>
+            <Russian>КОМАНДОВАНИЕ: Всем позывным RTB. DUSTOFF на подходе для эвакуации. Сменная группа в готовности. Отличная работа. Конец связи.</Russian>
+            <Polish>DOWÓDZTWO: Wszystkie znaki wywoławcze RTB. DUSTOFF w drodze na ewakuację. Zmiana w gotowości. Doskonała robota. Odbiór.</Polish>
+            <Czech>VELENÍ: Všechny volací znaky RTB. DUSTOFF na cestě k evakuaci. Střídání v pohotovosti. Vynikající práce. Konec.</Czech>
+            <Turkish>KOMUTA: Tüm çağrı işaretleri RTB. DUSTOFF tahliye için yolda. Yedek kuvvet hazırda. Mükemmel iş. Tamam.</Turkish>
+            <Chinese>指揮部：所有呼號RTB。DUSTOFF正在接近進行撤離。後續部隊待命。出色的工作。完畢。</Chinese>
+            <Chinesesimp>指挥部：所有呼号RTB。DUSTOFF正在接近进行撤离。后续部队待命。出色的工作。完毕。</Chinesesimp>
+            <Japanese>司令部：全コールサインRTB。DUSTOFF撤収のため接近中。交代部隊待機中。素晴らしい仕事だ。以上。</Japanese>
+            <Portuguese>COMANDO: Todos os indicativos RTB. DUSTOFF a caminho para extração. Força de substituição em espera. Excelente trabalho. Câmbio.</Portuguese>
+            <Korean>사령부: 모든 콜사인 RTB. DUSTOFF 추출을 위해 접근 중. 교대 병력 대기 중. 훌륭한 작전이었다. 이상.</Korean>
+        </Key>
+        <Key ID="STR_FIN_HELI_INBOUND">
+            <English>DUSTOFF is OSCAR MIKE. ETA 2 mikes to LZ. Prepare for immediate boarding.</English>
+            <French>DUSTOFF est OSCAR MIKE. ETA 2 minutes vers la LZ. Préparez l&apos;embarquement immédiat.</French>
+            <German>DUSTOFF ist OSCAR MIKE. ETA 2 Minuten zur LZ. Sofortiges Einsteigen vorbereiten.</German>
+            <Spanish>DUSTOFF está OSCAR MIKE. ETA 2 minutos a la LZ. Prepárense para embarque inmediato.</Spanish>
+            <Italian>DUSTOFF è OSCAR MIKE. ETA 2 minuti alla LZ. Preparatevi per imbarco immediato.</Italian>
+            <Russian>DUSTOFF движется. Прибытие через 2 минуты. Готовьтесь к немедленной посадке.</Russian>
+            <Polish>DUSTOFF w ruchu. ETA 2 minuty do LZ. Przygotujcie się do natychmiastowego wsiadania.</Polish>
+            <Czech>DUSTOFF se blíží. ETA 2 minuty do LZ. Připravte se na okamžité nastoupení.</Czech>
+            <Turkish>DUSTOFF hareket halinde. LZ&apos;ye 2 dakika. Hemen biniş için hazırlanın.</Turkish>
+            <Chinese>DUSTOFF移動中。預計2分鐘抵達LZ。準備立即登機。</Chinese>
+            <Chinesesimp>DUSTOFF移动中。预计2分钟抵达LZ。准备立即登机。</Chinesesimp>
+            <Japanese>DUSTOFF移動中。LZまで2分。直ちに搭乗準備せよ。</Japanese>
+            <Portuguese>DUSTOFF está OSCAR MIKE. ETA 2 minutos para LZ. Prepare para embarque imediato.</Portuguese>
+            <Korean>DUSTOFF 이동 중. LZ까지 2분. 즉시 탑승 준비.</Korean>
+        </Key>
+        <Key ID="STR_FIN_HELI_WAITING">
+            <English>DUSTOFF on deck. All personnel board immediately. We are not staying long.</English>
+            <French>DUSTOFF au sol. Tout le personnel embarque immédiatement. Nous ne restons pas longtemps.</French>
+            <German>DUSTOFF am Boden. Alle Einheiten sofort einsteigen. Wir bleiben nicht lange.</German>
+            <Spanish>DUSTOFF en tierra. Todo el personal embarque inmediatamente. No nos quedamos mucho tiempo.</Spanish>
+            <Italian>DUSTOFF a terra. Tutto il personale a bordo immediatamente. Non restiamo a lungo.</Italian>
+            <Russian>DUSTOFF на земле. Весь персонал на борт немедленно. Мы не задерживаемся.</Russian>
+            <Polish>DUSTOFF na ziemi. Cały personel na pokład natychmiast. Nie zostajemy długo.</Polish>
+            <Czech>DUSTOFF na zemi. Veškerý personál okamžitě nastoupit. Nezůstáváme dlouho.</Czech>
+            <Turkish>DUSTOFF yerde. Tüm personel hemen binin. Uzun süre kalmıyoruz.</Turkish>
+            <Chinese>DUSTOFF已降落。所有人員立即登機。我們不會久留。</Chinese>
+            <Chinesesimp>DUSTOFF已降落。所有人员立即登机。我们不会久留。</Chinesesimp>
+            <Japanese>DUSTOFF着陸。全員直ちに搭乗。長居はしない。</Japanese>
+            <Portuguese>DUSTOFF no solo. Todo o pessoal embarque imediatamente. Não vamos ficar muito tempo.</Portuguese>
+            <Korean>DUSTOFF 착륙. 전원 즉시 탑승. 오래 머물지 않는다.</Korean>
+        </Key>
+        <Key ID="STR_FIN_TAKEOFF">
+            <English>All souls aboard. DUSTOFF lifting off. ETA to FOB: 2 mikes. Mission accomplished. Out.</English>
+            <French>Tous à bord. DUSTOFF décolle. ETA vers la FOB : 2 minutes. Mission accomplie. Terminé.</French>
+            <German>Alle an Bord. DUSTOFF hebt ab. ETA zur FOB: 2 Minuten. Mission erfüllt. Ende.</German>
+            <Spanish>Todos a bordo. DUSTOFF despegando. ETA a la FOB: 2 minutos. Misión cumplida. Cambio.</Spanish>
+            <Italian>Tutti a bordo. DUSTOFF in decollo. ETA alla FOB: 2 minuti. Missione compiuta. Passo.</Italian>
+            <Russian>Все на борту. DUSTOFF взлетает. До базы 2 минуты. Миссия выполнена. Конец связи.</Russian>
+            <Polish>Wszyscy na pokładzie. DUSTOFF startuje. ETA do FOB: 2 minuty. Misja wykonana. Odbiór.</Polish>
+            <Czech>Všichni na palubě. DUSTOFF vzlétá. ETA do FOB: 2 minuty. Mise splněna. Konec.</Czech>
+            <Turkish>Herkes gemide. DUSTOFF kalkıyor. FOB&apos;a ETA: 2 dakika. Görev tamamlandı. Tamam.</Turkish>
+            <Chinese>全員登機。DUSTOFF起飛。抵達FOB預計2分鐘。任務完成。完畢。</Chinese>
+            <Chinesesimp>全员登机。DUSTOFF起飞。抵达FOB预计2分钟。任务完成。完毕。</Chinesesimp>
+            <Japanese>全員搭乗完了。DUSTOFF離陸。FOBまで2分。任務完了。以上。</Japanese>
+            <Portuguese>Todos a bordo. DUSTOFF decolando. ETA para FOB: 2 minutos. Missão cumprida. Câmbio.</Portuguese>
+            <Korean>전원 탑승. DUSTOFF 이륙. FOB까지 2분. 임무 완료. 이상.</Korean>
+        </Key>
+        <Key ID="STR_FIN_MARKER_EXTRACTION">
+            <English>EXTRACTION POINT</English>
+            <French>POINT D&apos;EXTRACTION</French>
+            <German>EVAKUIERUNGSPUNKT</German>
+            <Spanish>PUNTO DE EXTRACCIÓN</Spanish>
+            <Italian>PUNTO DI ESTRAZIONE</Italian>
+            <Russian>ТОЧКА ЭВАКУАЦИИ</Russian>
+            <Polish>PUNKT EWAKUACJI</Polish>
+            <Czech>BOD EVAKUACE</Czech>
+            <Turkish>TAHLİYE NOKTASI</Turkish>
+            <Chinese>撤離點</Chinese>
+            <Chinesesimp>撤离点</Chinesesimp>
+            <Japanese>撤収地点</Japanese>
+            <Portuguese>PONTO DE EXTRAÇÃO</Portuguese>
+            <Korean>추출 지점</Korean>
         </Key>
     </Package>
 </Project>

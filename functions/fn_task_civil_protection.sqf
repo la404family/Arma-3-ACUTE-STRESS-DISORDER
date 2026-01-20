@@ -12,7 +12,7 @@ if (!isServer) exitWith {};
 
 // --- CONFIGURATION ---
 CIVIL_PROTECTION_MaxDeaths    = 5;      // Nombre max de morts civils avant échec
-CIVIL_PROTECTION_StartDelay   = 5;      // Délai avant activation (secondes)
+CIVIL_PROTECTION_StartDelay   = 120;      // Délai avant activation (secondes)
 CIVIL_PROTECTION_Debug        = false;  // Mode debug
 
 // Variable globale pour le compteur (synchronisée)

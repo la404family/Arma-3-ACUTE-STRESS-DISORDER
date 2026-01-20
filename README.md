@@ -3,18 +3,14 @@
 
 ---
 
-> **"La guerre n'est pas ce que vous voyez dans les films. C'est le doute permanent. C'est ne jamais savoir si l'homme devant vous va vous offrir du thé ou un balle dans le ventre."**
-> — Anonyme, Vétéran
-
----
-
 ## 📋 CLASSIFICATION : DOCUMENT OPÉRATIONNEL
 
 **Nom de code :** *Acute Stress Disorder*  
 **Zone d'opération :** Sefrou-Ramal  
 **Type :** Combat asymétrique en zone urbaine  
 **Difficulté :** Extrême — AUCUNE CERTITUDE  
-**Mode :** Solo / Coopératif multiplayer
+**Mode :** Solo / Coopératif multiplayer  
+**Respawn :** ✅ Activé (Solo & Multijoueur)
 
 ---
 
@@ -69,7 +65,7 @@ Toutes les missions se déclenchent **automatiquement et aléatoirement** pendan
 ---
 
 ### 🟠 MISSION : PROTECTION CIVILE
-**Déclenchement :** 50 secondes après le début
+**Déclenchement :** 120 secondes après le début
 
 > *"Votre mission principaleest de protéger la population civile. Tout dommage collatéral sera considéré comme un échec de commandement."*
 
@@ -86,7 +82,7 @@ Toutes les missions se déclenchent **automatiquement et aléatoirement** pendan
 ---
 
 ### 🔴 MISSION : DÉSAMORÇAGE DE BOMBE
-**Déclenchement :** Aléatoire (5 à 1500 secondes après le début)
+**Déclenchement :** Aléatoire (150 à 1500 secondes après le début)
 
 > *"Un engin explosif improvisé a été signalé par la population. Temps estimé avant détonation : inconnu."*
 
@@ -104,7 +100,7 @@ Toutes les missions se déclenchent **automatiquement et aléatoirement** pendan
 ---
 
 ### 🟡 MISSION : SAUVETAGE D'OTAGE
-**Déclenchement :** Aléatoire (5 à 1500 secondes après le début)
+**Déclenchement :** Aléatoire (150 à 1500 secondes après le début)
 
 > *"Un civil est retenu par des éléments hostiles. L'extraction par hélicoptère est autorisée."*
 
@@ -160,6 +156,29 @@ Toutes les missions se déclenchent **automatiquement et aléatoirement** pendan
 - Les milices sont du side **INDEPENDENT** (non nettoyées par le système automatique)
 - Spawn à 0.7m au-dessus du sol (anti-bug terrain)
 - Nettoyage uniquement quand tous les joueurs sont à +1200m
+
+---
+
+## 🚁 SUPPORT LOGISTIQUE : LIVRAISON VÉHICULE
+
+> *"INDICATIF AIGLE — Livraison en cours. Sécurisez la LZ."*
+
+**Accès :** Menu communication **0** → **8** → Sélectionner "INDICATIF AIGLE - Pont Aérien Véhicule"
+
+| Paramètre | Valeur |
+|-----------|--------|
+| **Véhicule livré** | Prowler (désarmé) |
+| **Hélicoptère** | CH-67 Huron (sling load) |
+| **Position de largage** | 10-50m du joueur |
+| **Équipage hélico** | Indestructible (permanent) |
+| **Véhicule** | Indestructible pendant transport, destructible après largage |
+
+**Mécanisme :**
+1. Demande envoyée → hélicoptère spawn à 2km
+2. Approche vers le joueur (vol à 150m d'altitude)
+3. Coupure carburant → descente forcée
+4. Largage du véhicule → restauration carburant
+5. Retour et nettoyage automatique (2km de distance)
 
 ---
 
@@ -241,12 +260,15 @@ Cette mission est **entièrement optimisée pour le multijoueur** avec une sépa
 ```
 📁 Acute Stress Disorder.SefrouRamal/
 ├── 📄 init.sqf                           # Point d'entrée principal
+├── 📄 initServer.sqf                     # Initialisation serveur (fonctions remoteExec)
+├── 📄 initPlayerLocal.sqf                # Initialisation client (menus support)
 ├── 📄 onPlayerRespawn.sqf                # Réinitialisation après respawn
+├── 📄 client_request_vehicule.sqf        # Demande livraison véhicule (client)
 ├── 📄 description.ext                    # Configuration mission + CfgFunctions
 ├── 📄 stringtable.xml                    # Localisation (13 langues)
 ├── 📄 mission.sqm                        # Données de l'éditeur Eden
 │
-├── 📁 functions/                         # 20 fonctions SQF
+├── 📁 functions/                         # 22 fonctions SQF
 │   │
 │   │── 🎬 CINÉMATIQUE
 │   ├── fn_task_intro.sqf                 # Introduction cinématique (5 plans caméra)
@@ -269,6 +291,9 @@ Cette mission est **entièrement optimisée pour le multijoueur** avec une sépa
 │   ├── fn_spawn_weather_and_time.sqf     # Contrôle météo/heure
 │   ├── fn_task_x_revival.sqf             # Auto-soins groupe IA
 │   ├── fn_task_x_badge.sqf               # Synchronisation insignes équipe
+│   │
+│   │── 🚁 SUPPORT LOGISTIQUE
+│   ├── fn_livraison_vehicule.sqf         # Livraison véhicule par hélico (sling load)
 │   │
 │   │── 🤖 GESTION IA
 │   ├── fn_ajust_AI_skills.sqf            # Compétences IA (OPFOR/BLUFOR)

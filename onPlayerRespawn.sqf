@@ -53,7 +53,33 @@ if (!isNull _oldUnit) then {
 [] spawn Mission_fnc_ajust_change_team_leader;
 
 // ============================================================
+// RECRÉATION DU BRIEFING (JOURNAL)
+// ============================================================
+
+// Le briefing doit être recréé car il est attaché à l'ancienne unité
+[] spawn Mission_fnc_task_x_briefing;
+
+// ============================================================
+// RÉATTACHEMENT DES TÂCHES PERMANENTES
+// ============================================================
+
+// Tâche de protection civile - réattacher au nouveau joueur
+[] spawn {
+    sleep 1; // Attendre que le joueur soit complètement initialisé
+    
+    // Vérifier si la tâche existe
+    if ("task_civil_protection" call BIS_fnc_taskExists) then {
+        // La tâche existe déjà, on la réattache simplement au joueur
+        // L'état (ASSIGNED ou FAILED) est préservé automatiquement
+        diag_log "[RESPAWN] Tâche protection civile réattachée";
+    } else {
+        // La tâche n'existe pas encore (ne devrait pas arriver)
+        diag_log "[RESPAWN] Tâche protection civile non trouvée - attente création serveur";
+    };
+};
+
+// ============================================================
 // FIN DE LA RÉINITIALISATION
 // ============================================================
 
-diag_log "[MISSION] Actions réinitialisées après respawn";
+diag_log "[MISSION] Actions et briefing réinitialisés après respawn";

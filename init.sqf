@@ -45,7 +45,7 @@ if (hasInterface) then {
 };
 
 // Lancer l'introduction cinématique
-//[] spawn Mission_fnc_task_intro;
+[] spawn Mission_fnc_task_intro;
 
 // Créer le briefing général de la mission (journal)
 [] spawn Mission_fnc_task_x_briefing;
@@ -68,7 +68,7 @@ if (hasInterface) then {
 // Fonction qui corriger le leader des IA lors de la mort ou du switch
 [] spawn Mission_fnc_ajust_change_team_leader;
 
-// Event handler pour TeamSwitch - restaure automatiquement le statut de leader
+// Event handler pour TeamSwitch - restaure automatiquement le statut de leader et le briefing
 if (hasInterface) then {
     addMissionEventHandler ["TeamSwitch", {
         params ["_previousUnit", "_newUnit"];
@@ -77,7 +77,24 @@ if (hasInterface) then {
         // Petit délai pour laisser le switch se terminer
         [] spawn {
             sleep 0.5;
+            // Restaurer le statut de chef d'équipe
             [] call Mission_fnc_ajust_change_team_leader;
+            
+            // Recréer le briefing pour la nouvelle unité
+            [] call Mission_fnc_task_x_briefing;
+            
+            // Réinitialiser les actions (arsenal, véhicules, etc.)
+            ["INIT"] call Mission_fnc_spawn_arsenal;
+            ["INIT"] call Mission_fnc_spawn_brothers_in_arms;
+            [] call Mission_fnc_spawn_weather_and_time;
+            ["INIT"] call Mission_fnc_spawn_vehicles;
+            
+            // Réattacher la tâche de protection civile (l'état ASSIGNED/FAILED est préservé)
+            if ("task_civil_protection" call BIS_fnc_taskExists) then {
+                diag_log "[SWITCH] Tâche protection civile réattachée";
+            };
+            
+            diag_log "[SWITCH] Briefing et actions réinitialisés";
         };
     }];
 };
@@ -115,5 +132,8 @@ if (hasInterface) then {
 // Nettoyage des OPFOR distants (optimisation mémoire)
 [] spawn Mission_fnc_nettoyage;
 
-// Tâche de rendez-vous avec milices locales (démarre après 5 secondes)
+// Tâche de rendez-vous avec milices locales (démarre après 150 secondes)
 [] spawn Mission_fnc_task_appointment;
+
+// Système de fin de mission avec extraction (démarre après 5 minutes)
+[] spawn Mission_fnc_fin;

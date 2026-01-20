@@ -6,6 +6,28 @@
 #include "dialogs\enemies_menu.hpp"
 
 // ============================================================
+// MENU DE COMMUNICATION (0-8) - SUPPORT LOGISTIQUE
+// ============================================================
+class CfgCommunicationMenu
+{
+    class DemandeVehicule
+    {
+        text = "$STR_LIVRAISON_MENU_TEXT";
+        submenu = "";
+        expression = "execVM 'client_request_vehicule.sqf'";
+        icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\supplydrop_ca.paa";
+        cursor = "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";
+        enable = "1";
+        removeAfterExpressionCall = 1;
+    };
+};
+
+// ============================================================
+// DESCRIPTION DE LA MISSION (écran de sélection)
+// ============================================================
+overviewText = "$STR_GAME_DESCRIPTION";
+
+// ============================================================
 // CONFIGURATION RESPAWN MULTIJOUEUR OPTIMISÉE
 // ============================================================
 
@@ -15,11 +37,11 @@ respawn = "BASE";
 // Délai en secondes avant de réapparaître
 respawnDelay = 5;
 
-// Empêche le respawn automatique au lancement (-1 = désactivé au début)
+// Respawn activé dès le début, y compris en SOLO (-1)
 respawnOnStart = -1;
 
-// Templates de respawn: MenuInventory = garde l'équipement du joueur mort
-respawnTemplates[] = {"MenuInventory"};
+// Note: La restauration d'équipement est gérée manuellement dans onPlayerRespawn.sqf
+// via getUnitLoadout/setUnitLoadout (plus fiable)
 
 // Dialogue de respawn désactivé (pas de menu de choix)
 respawnDialog = 0;
@@ -52,6 +74,8 @@ class CfgFunctions
             class task_appointment {}; // Mission RDV avec milices locales
             class task_intro {}; // Introduction cinématique
             class task_x_briefing {}; // Briefing général de la mission
+            class livraison_vehicule {}; // Livraison véhicule par hélicoptère
+            class fin {}; // Fin de mission avec extraction
         };
     };
 };

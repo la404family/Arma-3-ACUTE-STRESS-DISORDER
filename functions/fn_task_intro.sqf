@@ -27,12 +27,12 @@
 if (hasInterface) then {
     [] spawn {
         diag_log "[INTRO] CLIENT: Script démarré";
-        systemChat "[INTRO] CLIENT: Script démarré";
+        //systemChat "[INTRO] CLIENT: Script démarré";
         
         waitUntil { time > 0.1 }; // Safety wait for engine initialization
         
         diag_log "[INTRO] CLIENT: Engine initialisé, démarrage immédiat...";
-        systemChat "[INTRO] CLIENT: Démarrage intro...";
+        //systemChat "[INTRO] CLIENT: Démarrage intro...";
         
         // ==============================================================================================
         // DÉMARRAGE IMMÉDIAT DE L'INTRODUCTION

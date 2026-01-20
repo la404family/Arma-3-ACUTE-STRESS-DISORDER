@@ -128,7 +128,7 @@ while {true} do {
     // ATTENDRE AVANT LA PROCHAINE MISSION
     // ============================================================
     
-    private _waitTime = 5 + floor(random 1495); // 5 à 1500 secondes aléatoire
+    private _waitTime = 150 + floor(random 1350); // 150 à 1500 secondes aléatoire
     [format ["Prochaine mission otage dans %1 secondes (%2 minutes)", _waitTime, round(_waitTime / 60)]] call HOSTAGE_fnc_log;
     
     sleep _waitTime;

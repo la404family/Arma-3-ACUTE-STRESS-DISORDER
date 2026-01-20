@@ -103,7 +103,7 @@ while {true} do {
     // ATTENDRE ENTRE 200 ET 1500 SECONDES AVANT LA PROCHAINE BOMBE
     // ============================================================
     
-    private _waitTime = 5 + floor(random 1495); // 5 à 1500 secondes aléatoire
+    private _waitTime = 150 + floor(random 1350); // 150 à 1500 secondes aléatoire
     diag_log format ["[TASK_BOMB] Prochaine bombe dans %1 secondes (%2 minutes)", _waitTime, round(_waitTime / 60)];
     
     sleep _waitTime;
