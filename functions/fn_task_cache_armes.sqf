@@ -209,7 +209,7 @@ while {true} do {
     // ATTENDRE AVANT LA PROCHAINE MISSION
     // ============================================================
     
-    private _waitTime = 150 + floor(random 1350); // 150 à 1500 secondes aléatoire
+    private _waitTime = 150 + floor(random 600); // 150 à 600 secondes aléatoire
     [format ["Prochaine mission cache d'armes dans %1 secondes (%2 min)", _waitTime, round(_waitTime/60)]] call CACHE_fnc_log;
     
     sleep _waitTime;

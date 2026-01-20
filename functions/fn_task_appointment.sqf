@@ -117,7 +117,7 @@ private _missionCounter = 0;
 // ATTENDRE 5 SECONDES AVANT DE LANCER LA PREMIÈRE MISSION
 // ============================================================
 
-private _initialDelay = 150 + floor(random 1350); // 150 à 1500 secondes aléatoire
+private _initialDelay = 150 + floor(random 600); // 150 à 600 secondes aléatoire
 [format ["Attente de %1 secondes (%2 min) avant le lancement de la mission RDV milices...", _initialDelay, round(_initialDelay / 60)]] call APPOINTMENT_fnc_log;
 sleep _initialDelay;
 
