@@ -24,17 +24,23 @@ switch (_mode) do {
         // Cette partie ne doit être exécutée que par les clients avec interface (joueurs).
         if (!hasInterface) exitWith {};
         
+        // Récupère l'unité cible (défaut: player)
+        _params params [["_unit", player]];
+
+        // Sécurité : Si l'unité passée est nulle (ex: problème respawn), on utilise player local
+        if (isNull _unit) then { _unit = player; };
+
         // Attend que l'objet "player" soit initialisé et valide.
-        waitUntil { !isNull player };
+        waitUntil { !isNull _unit };
         
         // ============================================================
         // ANTI-DOUBLON: Vérifie si l'action a déjà été ajoutée
         // ============================================================
-        if (player getVariable ["MISSION_arsenalActionAdded", false]) exitWith {};
-        player setVariable ["MISSION_arsenalActionAdded", true];
+        if (_unit getVariable ["MISSION_arsenalActionAdded", false]) exitWith {};
+        _unit setVariable ["MISSION_arsenalActionAdded", true];
         
         // Ajoute une action au joueur pour ouvrir l'arsenal.
-        player addAction [
+        _unit addAction [
             localize "STR_ACTION_ARSENAL", // Nom de l'action affiché (localisé).
             {
                 // Script exécuté lors de l'activation de l'action :

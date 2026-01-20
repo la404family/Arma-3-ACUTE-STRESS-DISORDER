@@ -11,24 +11,24 @@ MN_fnc_AddSupportMenu = {
     params ["_unit"];
     
     // Vérifier que c'est bien le joueur local
-    if (_unit == player) then {
-        // Ajouter le menu de communication pour la livraison véhicule
-        [_unit, "DemandeVehicule"] call BIS_fnc_addCommMenuItem;
-        diag_log format ["[SUPPORT] Menu livraison ajouté pour %1", name _unit];
-    };
+    if (_unit != player) exitWith {};
+
+    // ANTI-DOUBLON: Vérifie si le menu a déjà été ajouté à cette unité
+    if (_unit getVariable ["MISSION_SupportMenuAdded", false]) exitWith {};
+    _unit setVariable ["MISSION_SupportMenuAdded", true];
+
+    // Ajouter le menu de communication pour la livraison véhicule
+    [_unit, "DemandeVehicule"] call BIS_fnc_addCommMenuItem;
+    diag_log format ["[SUPPORT] Menu livraison ajouté pour %1", name _unit];
 };
 
 // 1. Ajouter le menu au démarrage
 [player] call MN_fnc_AddSupportMenu;
 
-// 2. Gérer le RESPAWN (MP)
-player addEventHandler ["Respawn", {
-    params ["_unit", "_corpse"];
-    [_unit] call MN_fnc_AddSupportMenu;
-    diag_log "[SUPPORT] Menu livraison réajouté après respawn";
-}];
+// NOTE : La gestion du RESPAWN et du TEAM SWITCH est désormais faite directement
+// dans onPlayerRespawn.sqf et via l'event handler TeamSwitch ici.
 
-// 3. Gérer le TEAM SWITCH (Solo / MP Switch)
+// 2. Gérer le TEAM SWITCH (Solo / MP Switch)
 addMissionEventHandler ["TeamSwitch", {
     params ["_previousUnit", "_newUnit"];
     [_newUnit] call MN_fnc_AddSupportMenu;

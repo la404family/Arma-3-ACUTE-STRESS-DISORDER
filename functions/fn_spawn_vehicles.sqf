@@ -12,18 +12,24 @@ switch (_mode) do {
     case "INIT": {
         // Condition : Interface uniquement (joueur)
         if (!hasInterface) exitWith {};
+
+        // Récupère l'unité cible (défaut: player)
+        _params params [["_unit", player]];
         
-        // Attend que le joueur soit prêt
-        waitUntil { !isNull player };
+        // Sécurité : Si l'unité passée est nulle (ex: problème respawn), on utilise player local
+        if (isNull _unit) then { _unit = player; };
+
+        // Attend que l'unité soit prête
+        waitUntil { !isNull _unit };
         
         // ============================================================
         // ANTI-DOUBLON: Vérifie si l'action a déjà été ajoutée
         // ============================================================
-        if (player getVariable ["MISSION_vehiclesActionAdded", false]) exitWith {};
-        player setVariable ["MISSION_vehiclesActionAdded", true];
+        if (_unit getVariable ["MISSION_vehiclesActionAdded", false]) exitWith {};
+        _unit setVariable ["MISSION_vehiclesActionAdded", true];
         
         // Ajoute l'action d'ouverture du garage
-        player addAction [
+        _unit addAction [
             localize "STR_ACTION_GARAGE", 
             {
                 ["OPEN_UI"] call MISSION_fnc_spawn_vehicles;

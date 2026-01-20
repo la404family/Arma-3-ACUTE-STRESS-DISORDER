@@ -15,6 +15,12 @@
 
 params ["_newUnit", "_oldUnit", "_respawn", "_respawnDelay"];
 
+// Sécurité : Si _newUnit est null (peut arriver lors de lags intenses), on tente de récupérer player
+if (isNull _newUnit) then {
+    _newUnit = player;
+    diag_log "[RESPAWN] ATTENTION: _newUnit était null, fallback sur 'player'";
+};
+
 // Log pour debug (peut être supprimé en production)
 diag_log format ["[MISSION] Joueur respawné: %1", name _newUnit];
 
@@ -34,17 +40,24 @@ if (!isNull _oldUnit) then {
 // ============================================================
 // RÉINITIALISATION DES ACTIONS DU JOUEUR
 // ============================================================
+
+// Ajouter le menu de support (Livraison Véhicule)
+// Note: MN_fnc_AddSupportMenu est défini dans initPlayerLocal.sqf
+if (!isNil "MN_fnc_AddSupportMenu") then {
+    [_newUnit] call MN_fnc_AddSupportMenu;
+};
+
 // Arsenal - Ajoute l'action pour ouvrir l'arsenal virtuel
-["INIT"] spawn Mission_fnc_spawn_arsenal;
+["INIT", [_newUnit]] spawn Mission_fnc_spawn_arsenal;
 
 // Frères d'armes - Ajoute l'action pour recruter des IA
-["INIT"] spawn Mission_fnc_spawn_brothers_in_arms;
+["INIT", [_newUnit]] spawn Mission_fnc_spawn_brothers_in_arms;
 
 // Météo et temps - Ajoute l'action pour modifier le temps/climat
-[] spawn Mission_fnc_spawn_weather_and_time;
+["INIT", [_newUnit]] spawn Mission_fnc_spawn_weather_and_time;
 
 // Véhicules - Ajoute l'action pour le garage de véhicules
-["INIT"] spawn Mission_fnc_spawn_vehicles;
+["INIT", [_newUnit]] spawn Mission_fnc_spawn_vehicles;
 
 // Revival - Réinitialise l'action de soins du groupe (si applicable)
 [] spawn Mission_fnc_task_x_revival;

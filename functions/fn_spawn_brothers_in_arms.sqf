@@ -28,17 +28,23 @@ switch (_mode) do {
         // Condition : Interface uniquement (joueur)
         if (!hasInterface) exitWith {};
         
+        // Récupère l'unité cible (défaut: player)
+        _params params [["_unit", player]];
+
+        // Sécurité : Si l'unité passée est nulle (ex: problème respawn), on utilise player local
+        if (isNull _unit) then { _unit = player; };
+
         // Attend que l'objet joueur soit prêt
-        waitUntil { !isNull player };
+        waitUntil { !isNull _unit };
         
         // ============================================================
         // ANTI-DOUBLON: Vérifie si l'action a déjà été ajoutée
         // ============================================================
-        if (player getVariable ["MISSION_brothersActionAdded", false]) exitWith {};
-        player setVariable ["MISSION_brothersActionAdded", true];
+        if (_unit getVariable ["MISSION_brothersActionAdded", false]) exitWith {};
+        _unit setVariable ["MISSION_brothersActionAdded", true];
         
         // Ajoute l'action de recrutement
-        player addAction [
+        _unit addAction [
             localize "STR_ADD_BROTHER", // "Recruter des frères d'armes"
             {
                 // Appelle ce script avec le mode OPEN_UI

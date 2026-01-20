@@ -11,6 +11,7 @@
 
 // Attendre que la mission soit prête
 waitUntil { time > 0 };
+waitUntil { !isNull player };
 
 // Fonction locale pour créer le briefing sur une unité spécifique
 private _fnc_createBriefingForUnit = {

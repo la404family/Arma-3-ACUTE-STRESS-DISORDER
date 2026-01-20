@@ -4,7 +4,7 @@
     Modes : INIT, OPEN, APPLY.
 */
 
-params [["_mode", "INIT"]];
+params [["_mode", "INIT"], ["_params", []]];
 
 // ============================================================================
 // INIT - Initialisation de l'action
@@ -14,19 +14,27 @@ if (_mode == "INIT") exitWith {
     if (!hasInterface) exitWith {};
     
     // Attendre que la mission commence réellement (temps > 0)
-    [] spawn {
+    [_params] spawn {
+        params ["_params"];
+        
+        // Récupère l'unité cible (défaut: player)
+        _params params [["_unit", player]];
+
+        // Sécurité : Si l'unité passée est nulle (ex: problème respawn), on utilise player local
+        if (isNull _unit) then { _unit = player; };
+
         waitUntil {time > 0};
-        waitUntil { !isNull player };
+        waitUntil { !isNull _unit };
         
         // ============================================================
         // ANTI-DOUBLON: Vérifie si l'action a déjà été ajoutée
         // ============================================================
-        if (player getVariable ["MISSION_weatherActionAdded", false]) exitWith {};
-        player setVariable ["MISSION_weatherActionAdded", true];
+        if (_unit getVariable ["MISSION_weatherActionAdded", false]) exitWith {};
+        _unit setVariable ["MISSION_weatherActionAdded", true];
         
         // Ajouter l'action au joueur pour ouvrir le menu météo/temps
         // La condition "player inArea weather_and_time_request" assure que l'action n'apparaît que dans la zone spécifique
-        player addAction [
+        _unit addAction [
             localize "STR_ACTION_WEATHER", 
             {
                 ["OPEN"] call MISSION_fnc_spawn_weather_and_time;
