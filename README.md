@@ -159,6 +159,23 @@ Toutes les missions se déclenchent **automatiquement et aléatoirement** pendan
 
 ---
 
+### 🔴 MISSION : ATTENTAT TERRORISTE
+**Déclenchement :** Aléatoire (5 à 1500 secondes après le début)
+
+> *"Des terroristes armés attaquent la population civile. Intervenez immédiatement."*
+
+- **Position :** Aléatoire parmi **177 emplacements**
+- **Menace :** 3 à 6 OPFOR déguisés en civils (sac coyote + arme)
+- **Activité :** Ils exécutent sommairement les civils à proximité
+- **Objectif :** Éliminer tous les terroristes
+- **Échec :** Si la zone n'est pas sécurisée à temps
+
+**Urgence absolue :**
+- Ils ne s'arrêtent pas de tuer tant qu'ils ne sont pas neutralisés
+- Impossible de les distinguer des civils tant qu'ils n'ont pas ouvert le feu (ou via leur sac et armes)
+
+---
+
 ## 🚁 SUPPORT LOGISTIQUE : LIVRAISON VÉHICULE
 
 > *"INDICATIF AIGLE — Livraison en cours. Sécurisez la LZ."*
@@ -227,7 +244,7 @@ Recrutez jusqu'à **14 unités IA** pour renforcer votre groupe.
 
 ### Gestion Intelligente
 - **Pool de templates :** 42 apparences civiles uniques (civil_00 à civil_41)
-- **Population active :** Jusqu'à 45 civils simultanément
+- **Population active :** Jusqu'à 45 civils simultanément + mod civil ajouté
 - **Zone de spawn :** Rayon de 400m autour du joueur
 - **Zone de despawn :** Au-delà de 800m
 - **Spawn par vague :** Jusqu'à 5 civils par seconde

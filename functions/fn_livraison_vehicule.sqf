@@ -139,6 +139,7 @@ diag_log format ["[LIVRAISON] Hélicoptère créé en %1, direction cible %2", _
     sleep 2; // Stabilisation
     
     // -- Largage --
+    private _dropTime = -1;
     if (alive _heli && alive _cargo) then {
         _heli setSlingLoad objNull;
         
@@ -147,6 +148,7 @@ diag_log format ["[LIVRAISON] Hélicoptère créé en %1, direction cible %2", _
         
         (localize "STR_LIVRAISON_DROPPED") remoteExec ["systemChat", 0];
         diag_log format ["[LIVRAISON] Véhicule largué en %1 - Véhicule maintenant destructible", _targetPos];
+        _dropTime = time;
     };
     
     sleep 3;
@@ -166,7 +168,9 @@ diag_log format ["[LIVRAISON] Hélicoptère créé en %1, direction cible %2", _
     // -- Nettoyage --
     waitUntil { 
         sleep 5; 
-        (_heli distance2D _targetPos > 2000) || !alive _heli
+        (_heli distance2D _targetPos > 1500) || 
+        !alive _heli ||
+        (_dropTime > 0 && {time - _dropTime > 150})
     };
     
     // Suppression propre

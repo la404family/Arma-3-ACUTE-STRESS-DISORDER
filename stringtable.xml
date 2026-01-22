@@ -798,19 +798,51 @@
         <Key ID="STR_BOMB_DEFUSE_FAILED">
             <English>Defusing interrupted! Get back to the IED.</English>
             <French>Désamorçage interrompu ! Retournez à l&apos;IED.</French>
-            <German>Entschärfung unterbrochen! Zurück zum IED.</German>
-            <Spanish>¡Desactivación interrumpida! Vuelva al IED.</Spanish>
-            <Italian>Disinnesco interrotto! Torna all&apos;IED.</Italian>
-            <Russian>Обезвреживание прервано! Вернитесь к СВУ.</Russian>
-            <Polish>Rozbrajanie przerwane! Wróć do IED.</Polish>
-            <Czech>Zneškodnění přerušeno! Vraťte se k IED.</Czech>
-            <Turkish>Etkisiz hale getirme kesildi! IED&apos;ye geri dönün.</Turkish>
-            <Chinese>拆除中斷！返回IED位置。</Chinese>
-            <Chinesesimp>拆除中断！返回IED位置。</Chinesesimp>
-            <Japanese>解除中断！IEDに戻れ。</Japanese>
-            <Portuguese>Desarmamento interrompido! Volte ao IED.</Portuguese>
-            <Korean>해체 중단! IED로 돌아가십시오.</Korean>
-        </Key><!-- HOSTAGE RESCUE TASK -->
+        </Key><!-- TASK ATTENTAT -->
+        <Key ID="STR_TASK_ATTENTAT_TITLE">
+            <English>Terrorist Attack</English>
+            <French>Attaque Terroriste</French>
+            <German>Terroranschlag</German>
+            <Spanish>Ataque Terrorista</Spanish>
+            <Italian>Attacco Terroristico</Italian>
+            <Russian>Теракт</Russian>
+        </Key>
+        <Key ID="STR_TASK_ATTENTAT_DESC">
+            <English>Insurgents are attacking civilians in %1. Intervene immediately!</English>
+            <French>Des insurgés attaquent des civils en %1. Intervenez immédiatement !</French>
+            <German>Aufständische greifen Zivilisten in %1 an. Sofort eingreifen!</German>
+            <Spanish>¡Los insurgentes están atacando a civiles en %1. Intervengan de inmediato!</Spanish>
+            <Italian>Gli insorti stanno attaccando i civili a %1. Intervenite immediatamente!</Italian>
+            <Russian>Боевики атакуют гражданских в %1. Немедленно вмешайтесь!</Russian>
+        </Key>
+        <Key ID="STR_TASK_ATTENTAT_SUCCESS">
+            <English>Attack repelled.</English>
+            <French>Attaque repoussée.</French>
+            <German>Angriff abgewehrt.</German>
+            <Spanish>Ataque repelido.</Spanish>
+            <Italian>Attacco respinto.</Italian>
+            <Russian>Атака отбита.</Russian>
+        </Key>
+        <Key ID="STR_TASK_ATTENTAT_FAILED">
+            <English>The attack is over, the insurgents have fled.</English>
+            <French>L&apos;attaque est terminée, les insurgés ont fui.</French>
+            <German>Der Angriff ist vorbei, die Aufständischen sind geflohen.</German>
+            <Spanish>El ataque ha terminado, los insurgentes han huido.</Spanish>
+            <Italian>L&apos;attacco è finito, gli insorti sono fuggiti.</Italian>
+            <Russian>Атака закончена, боевики скрылись.</Russian>
+        </Key>
+        <German>Entschärfung unterbrochen! Zurück zum IED.</German>
+        <Spanish>¡Desactivación interrumpida! Vuelva al IED.</Spanish>
+        <Italian>Disinnesco interrotto! Torna all&apos;IED.</Italian>
+        <Russian>Обезвреживание прервано! Вернитесь к СВУ.</Russian>
+        <Polish>Rozbrajanie przerwane! Wróć do IED.</Polish>
+        <Czech>Zneškodnění přerušeno! Vraťte se k IED.</Czech>
+        <Turkish>Etkisiz hale getirme kesildi! IED&apos;ye geri dönün.</Turkish>
+        <Chinese>拆除中斷！返回IED位置。</Chinese>
+        <Chinesesimp>拆除中断！返回IED位置。</Chinesesimp>
+        <Japanese>解除中断！IEDに戻れ。</Japanese>
+        <Portuguese>Desarmamento interrompido! Volte ao IED.</Portuguese>
+        <Korean>해체 중단! IED로 돌아가십시오.</Korean>&lt;/Key&gt;<!-- HOSTAGE RESCUE TASK -->
         <Key ID="STR_HOSTAGE_TASK_TITLE">
             <English>PERSONNEL RECOVERY - Hostage Rescue</English>
             <French>RÉCUPÉRATION DE PERSONNEL - Sauvetage d&apos;Otage</French>

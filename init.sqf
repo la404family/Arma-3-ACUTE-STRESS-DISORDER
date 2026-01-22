@@ -59,8 +59,7 @@ if (hasInterface) then {
 // Fonction qui génère les mines
 [] spawn Mission_fnc_mine;
 
-// Fonction qui génère les civils
-[] spawn Mission_fnc_civilian_logique;
+// (Fonction civils déplacée après l'intro)
 
 // Fonction qui ajuste les compétences des IA
 [] spawn Mission_fnc_ajust_AI_skills;
@@ -126,6 +125,14 @@ if (hasInterface) then {
 // Fonction qui lance le spawn de véhicule (garage)
 ["INIT"] spawn Mission_fnc_spawn_vehicles;
 
+// --------------------------------------------------------------------------------------------------
+// ATTENTE FIN INTRO : Le jeu "actif" ne commence qu'après l'intro
+// --------------------------------------------------------------------------------------------------
+waitUntil { sleep 1; missionNamespace getVariable ["MISSION_intro_finished", false] };
+
+// Fonction qui génère les civils (Spawn une fois sur zone)
+[] spawn Mission_fnc_civilian_logique;
+
 // Fonction qui convertit périodiquement des civils en insurgés OPFOR
 [] spawn Mission_fnc_civil_change;
 
@@ -146,6 +153,9 @@ if (hasInterface) then {
 
 // Tâche de rendez-vous avec milices locales (démarre après 150 secondes)
 [] spawn Mission_fnc_task_appointment;
+
+// Tâche d'attaque terroriste (démarre après 150 secondes)
+[] spawn Mission_fnc_task_attentat;
 
 // Système de fin de mission avec extraction (démarre après 5 minutes)
 [] spawn Mission_fnc_fin;

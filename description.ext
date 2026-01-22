@@ -89,6 +89,7 @@ class CfgFunctions
             class task_appointment {}; // Mission RDV avec milices locales
             class task_intro {}; // Introduction cinématique
             class task_x_briefing {}; // Briefing général de la mission
+            class task_attentat {}; // Mission "Attaque Terroriste"
             class livraison_vehicule {}; // Livraison véhicule par hélicoptère
             class fin {}; // Fin de mission avec extraction
         };
