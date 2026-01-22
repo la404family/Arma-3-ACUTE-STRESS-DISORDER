@@ -31,6 +31,9 @@ MN_fnc_AddSupportMenu = {
 // Initialiser l'action de soin de groupe
 [player] call Mission_fnc_task_x_revival;
 
+// Démarrer la boucle de logique civile (Reddition sur visée)
+["CLIENT_LOOP"] spawn Mission_fnc_civilian_logic;
+
 // NOTE : La gestion du RESPAWN et du TEAM SWITCH est désormais faite directement
 // dans onPlayerRespawn.sqf et via l'event handler TeamSwitch ici.
 

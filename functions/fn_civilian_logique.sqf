@@ -50,10 +50,16 @@ CIV_fnc_spawnAgent = {
     _agent addEventHandler ["FiredNear", {
         params ["_unit", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_gunner"];
         if (_distance < CIV_DistanceTir && {isPlayer _firer}) then {
-             _unit setVariable ["CIV_State", "FLEEING"];
-             _unit setVariable ["CIV_StateTimer", time + 10]; // Courir pendant 10s
-             _unit setVariable ["CIV_ThreatPos", getPos _firer];
-             _unit switchMove ""; 
+             // OPIMIZATION: If already fleeing, just extend timer without resetting animation
+             if ((_unit getVariable ["CIV_State", "IDLE"]) == "FLEEING") then {
+                 _unit setVariable ["CIV_StateTimer", time + 15]; // Extend to 15s
+                 _unit setVariable ["CIV_ThreatPos", getPos _firer];
+             } else {
+                 _unit setVariable ["CIV_State", "FLEEING"];
+                 _unit setVariable ["CIV_StateTimer", time + 15]; // Run for 15s
+                 _unit setVariable ["CIV_ThreatPos", getPos _firer];
+                 _unit switchMove ""; 
+             };
         };
     }];
     
@@ -282,6 +288,7 @@ if (!isServer) exitWith {};
         // --- C. BEHAVIOR UPDATES ---
         {
             [_x, _activeAgents, _wanderPoints] call CIV_fnc_gererComportement;
+            ["AGENT_UPDATE", _x] call Mission_fnc_civilian_logic; // Appel nouvelle logique
             sleep 0.05; 
         } forEach _activeAgents;
 

@@ -66,7 +66,8 @@ while {true} do {
     
     for "_i" from 1 to _terroristCount do {
         private _spawnPos = _missionPos getPos [5 + random 10, random 360];
-        private _unit = _grp createUnit ["O_G_Soldier_F", _spawnPos, [], 0, "NONE"];
+        _spawnPos set [2, 0.7]; // Force height 0.7
+        private _unit = _grp createUnit ["O_G_Soldier_F", _spawnPos, [], 0, "CAN_COLLIDE"];
         
         // NETTOYAGE COMPLET (Robustesse: on retire tout équipement militaire d'abord)
         removeAllWeapons _unit;

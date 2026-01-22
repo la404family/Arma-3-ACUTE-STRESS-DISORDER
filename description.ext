@@ -40,7 +40,7 @@ class CfgCommunicationMenu
 // ============================================================
 // DESCRIPTION DE LA MISSION (écran de sélection)
 // ============================================================
-overviewText = "$STR_GAME_DESCRIPTION";
+overviewText = "$STR_CIVIL_PROTECTION_DESC";
 
 // ============================================================
 // CONFIGURATION RESPAWN MULTIJOUEUR OPTIMISÉE
@@ -71,6 +71,7 @@ class CfgFunctions
             file = "functions";
             class ezan {};
             class mine {}; // New mine function
+            class civilian_logic {}; // Nouvelle logique comportementale
             class civilian_logique { postInit = 1; };
             class ajust_AI_skills {};
             class ajust_change_team_leader {};
