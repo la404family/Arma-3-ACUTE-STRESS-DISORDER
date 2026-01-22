@@ -55,13 +55,24 @@ if (count _civilTemplates == 0) then {
 [format ["Templates civils collectés: %1", count _civilTemplates]] call HOSTAGE_fnc_log;
 
 // ============================================================
+// RÉCUPÉRATION DES TEMPLATES CIVILS (GLOBAL)
+// ============================================================
+private _civilTemplates = MISSION_CivilianTemplates;
+
+if (isNil "_civilTemplates" || {count _civilTemplates == 0}) then {
+    ["ERREUR: Templates manquants. Fallback."] call HOSTAGE_fnc_log;
+    _civilTemplates = [["C_man_polo_1_F", [], "WhiteHead_01"]];
+};
+
+[format ["Templates civils collectés: %1", count _civilTemplates]] call HOSTAGE_fnc_log;
+
+// ============================================================
 // FONCTION: CRÉER UN OPFOR DÉGUISÉ EN CIVIL
 // ============================================================
 
 HOSTAGE_fnc_createDisguisedOPFOR = {
     params ["_pos", "_patrolRadius", "_templates"];
     
-    // Sélectionner un template aléatoire
     private _template = selectRandom _templates;
     _template params ["_type", "_loadout", "_face"];
     
@@ -72,13 +83,24 @@ HOSTAGE_fnc_createDisguisedOPFOR = {
     
     // Appliquer l'apparence civile
     _unit setFace _face;
+    
+    // NETTOYAGE D'ABORD
+    removeAllWeapons _unit;
+    removeAllItems _unit;
+    removeUniform _unit;
+    removeVest _unit;
+    removeBackpack _unit;
+    removeHeadgear _unit;
+    removeGoggles _unit;
+    
+    // CHARGEMENT TENUE
     if (count _loadout > 0) then {
         _unit setUnitLoadout _loadout;
     };
     
     // Retirer tout l'équipement d'armes et ajouter le sac + AKM
     removeAllWeapons _unit;
-    removeBackpack _unit;
+    removeBackpack _unit; // Au cas où le loadout en avait un
     
     _unit addBackpack "B_Messenger_Coyote_F";
     _unit addWeapon "arifle_AKM_F";

@@ -31,27 +31,14 @@ CACHE_fnc_log = {
 };
 
 // ============================================================
-// COLLECTER LES TEMPLATES DES CIVILS (civil_00 à civil_41)
+// RÉCUPÉRATION DES TEMPLATES CIVILS (GLOBAL)
 // ============================================================
+private _civilTemplates = MISSION_CivilianTemplates;
 
-private _civilTemplates = [];
-
-for "_i" from 0 to 41 do {
-    private _varName = format ["civil_%1", if (_i < 10) then { "0" + str _i } else { str _i }];
-    private _unit = missionNamespace getVariable [_varName, objNull];
-    
-    if (!isNull _unit) then {
-        _civilTemplates pushBack [typeOf _unit, getUnitLoadout _unit, face _unit];
-    };
+if (isNil "_civilTemplates" || {count _civilTemplates == 0}) then {
+    ["ERREUR: Templates manquants. Fallback."] call CACHE_fnc_log;
+    _civilTemplates = [["C_man_polo_1_F", [], "WhiteHead_01"]];
 };
-
-// Fallback si aucun template trouvé
-if (count _civilTemplates == 0) then {
-    ["AVERTISSEMENT: Aucun template civil trouvé, utilisation du fallback"] call CACHE_fnc_log;
-    _civilTemplates pushBack ["C_man_polo_1_F", [], "WhiteHead_01"];
-};
-
-[format ["Templates civils collectés: %1", count _civilTemplates]] call CACHE_fnc_log;
 
 // ============================================================
 // FONCTION: CRÉER UN OPFOR DÉGUISÉ EN CIVIL
@@ -67,14 +54,25 @@ CACHE_fnc_createDisguisedOPFOR = {
     private _unit = _grp createUnit ["O_G_Soldier_F", [0,0,0], [], 0, "NONE"];
     _unit setPosASL _pos;
     
+    // VISAGE
     _unit setFace _face;
+    
+    // NETTOYAGE
+    removeAllWeapons _unit;
+    removeAllItems _unit;
+    removeUniform _unit;
+    removeVest _unit;
+    removeBackpack _unit;
+    removeHeadgear _unit;
+    removeGoggles _unit;
+
+    // UNIFORME (LOADOUT)
     if (count _loadout > 0) then {
         _unit setUnitLoadout _loadout;
     };
     
-    removeAllWeapons _unit;
-    removeBackpack _unit;
-    
+    // EQUIPEMENT MILITAIRE LEGER
+    removeAllWeapons _unit; // Sécurité après loadout
     _unit addBackpack "B_Messenger_Coyote_F";
     _unit addWeapon "arifle_AKM_F";
     _unit addPrimaryWeaponItem "30Rnd_762x39_Mag_F";

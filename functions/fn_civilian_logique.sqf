@@ -182,7 +182,7 @@ if (!isServer) exitWith {};
 
 [] spawn {
     // 0. INIT & DATA COLLECTION
-    private _poolTemplates = []; // Templates statiques (ne sont jamais supprimés)
+    private _poolTemplates = MISSION_CivilianTemplates; // Utilise la globale définie dans initServer.sqf
     private _activeAgents = [];  // Agents spawnés
     private _spawnPoints = [];   
     private _wanderPoints = [];  
@@ -205,17 +205,12 @@ if (!isServer) exitWith {};
         if (!isNull _o) then {_presenceZones pushBack _o};
     };
 
-    // 1. HARVEST & HIDE EDITOR UNITS (00 à 41)
-    for "_i" from 0 to 41 do {
-        private _n = format ["civil_%1", if (_i<10) then {"0"+str _i} else {str _i}];
-        private _u = missionNamespace getVariable [_n, objNull];
-        if (!isNull _u) then {
-            _u hideObjectGlobal true;
-            _u enableSimulationGlobal false;
-            // Save Template
-            _poolTemplates pushBack [typeOf _u, getUnitLoadout _u, face _u];
-            deleteVehicle _u;
-        };
+    // 1. HARVEST & HIDE EDITOR UNITS (00 à 41) - DÉJÀ FAIT DANS INITSERVER.SQF
+    // On s'assure juste que poolTemplates n'est pas vide (normalement initServer s'en charge)
+    if (isNil "_poolTemplates" || {count _poolTemplates == 0}) then {
+        // Fallback ultime si initServer a échoué (ne devrait pas arriver)
+        _poolTemplates = [["C_man_polo_1_F", [], "WhiteHead_01"]];
+        if (CIV_Debug) then { systemChat "[CIV-CRITICAL] Global templates missing, using fallback."; };
     };
 
     if (CIV_Debug) then { systemChat format ["[CIV] Templates: %1. Spawns: %2. Zones: %3", count _poolTemplates, count _spawnPoints, count _presenceZones]; };

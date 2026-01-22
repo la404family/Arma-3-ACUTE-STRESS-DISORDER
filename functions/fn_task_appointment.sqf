@@ -30,28 +30,19 @@ APPOINTMENT_fnc_log = {
     if (APPOINTMENT_Debug) then { systemChat format ["[APPOINTMENT] %1", _msg]; };
 };
 
+// Attente pour initialisation
+sleep 5;
+
 // ============================================================
-// COLLECTER LES TEMPLATES DES CIVILS (civil_00 à civil_41)
+// RÉCUPÉRATION DES TEMPLATES CIVILS (GLOBAL)
 // ============================================================
+// Défini dans initServer.sqf
+private _civilTemplates = MISSION_CivilianTemplates;
 
-private _civilTemplates = [];
-
-for "_i" from 0 to 41 do {
-    private _varName = format ["civil_%1", if (_i < 10) then { "0" + str _i } else { str _i }];
-    private _unit = missionNamespace getVariable [_varName, objNull];
-    
-    if (!isNull _unit) then {
-        _civilTemplates pushBack [typeOf _unit, getUnitLoadout _unit, face _unit];
-    };
+if (isNil "_civilTemplates" || {count _civilTemplates == 0}) then {
+    ["ERREUR CRITIQUE: MISSION_CivilianTemplates vide/nil! Fallback."] call APPOINTMENT_fnc_log;
+    _civilTemplates = [["C_man_polo_1_F", [], "WhiteHead_01"]];
 };
-
-// Fallback si aucun template trouvé
-if (count _civilTemplates == 0) then {
-    ["AVERTISSEMENT: Aucun template civil trouvé, utilisation du fallback"] call APPOINTMENT_fnc_log;
-    _civilTemplates pushBack ["C_man_polo_1_F", [], "WhiteHead_01"];
-};
-
-[format ["Templates civils collectés: %1", count _civilTemplates]] call APPOINTMENT_fnc_log;
 
 // ============================================================
 // FONCTION: CRÉER UNE UNITÉ MILICE (INDÉPENDANTE, TENUE CIVILE, ARMÉE)
@@ -73,17 +64,26 @@ APPOINTMENT_fnc_createMilitia = {
     private _safePos = [_pos select 0, _pos select 1, _terrainZ + 0.7];
     _unit setPosASL _safePos;
     
-    // Appliquer l'apparence civile
+    // NETTOYAGE COMPLET (Robustesse)
+    removeAllWeapons _unit;
+    removeAllItems _unit;
+    removeUniform _unit;
+    removeVest _unit;
+    removeBackpack _unit;
+    removeHeadgear _unit;
+    removeGoggles _unit;
+    
+    // Appliquer l'apparence civile COMPLETE (Loadout + Face)
     _unit setFace _face;
+    
     if (count _loadout > 0) then {
         _unit setUnitLoadout _loadout;
+    } else {
+        _unit forceAddUniform "U_C_Poloshirt_blue"; // Fallback interne
     };
     
     // Retirer tout l'équipement militaire et ajouter arme civile
     removeAllWeapons _unit;
-    removeBackpack _unit;
-    removeHeadgear _unit;
-    removeVest _unit;
     
     // Ajouter une arme (AKM ou pistolet selon chef ou non)
     if (_isChief) then {

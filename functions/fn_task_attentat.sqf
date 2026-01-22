@@ -24,16 +24,18 @@ private _fnc_log = {
     if (_debug) then { systemChat format ["[ATTENTAT] %1", _msg]; };
 };
 
-// Récupération des templates civils (pour le déguisement)
-private _civilTemplates = [];
-for "_i" from 0 to 41 do {
-    private _varName = format ["civil_%1", if (_i < 10) then { "0" + str _i } else { str _i }];
-    private _unit = missionNamespace getVariable [_varName, objNull];
-    if (!isNull _unit) then {
-        _civilTemplates pushBack [typeOf _unit, getUnitLoadout _unit, face _unit];
-    };
+// Attente pour initialisation des objets éditeur
+sleep 5;
+
+// ============================================================
+// RÉCUPÉRATION DES TEMPLATES CIVILS (GLOBAL)
+// ============================================================
+private _civilTemplates = MISSION_CivilianTemplates;
+
+if (isNil "_civilTemplates" || {count _civilTemplates == 0}) then {
+    ["ERREUR: Templates manquants. Fallback."] call _fnc_log;
+    _civilTemplates = [["C_man_polo_1_F", [], "WhiteHead_01"]];
 };
-if (count _civilTemplates == 0) then { _civilTemplates pushBack ["C_man_polo_1_F", [], "WhiteHead_01"]; };
 
 // --- BOUCLE PRINCIPALE ---
 while {true} do {
@@ -66,18 +68,32 @@ while {true} do {
         private _spawnPos = _missionPos getPos [5 + random 10, random 360];
         private _unit = _grp createUnit ["O_G_Soldier_F", _spawnPos, [], 0, "NONE"];
         
-        // Apparence civile
-        private _template = selectRandom _civilTemplates;
-        _unit setFace (_template select 2);
-        if (count (_template select 1) > 0) then { _unit setUnitLoadout (_template select 1); };
-        
-        // Armement (AKM + Sac)
+        // NETTOYAGE COMPLET (Robustesse: on retire tout équipement militaire d'abord)
         removeAllWeapons _unit;
+        removeAllItems _unit;
+        removeUniform _unit;
+        removeVest _unit;
         removeBackpack _unit;
-        _unit addBackpack "B_Messenger_Coyote_F";
+        removeHeadgear _unit;
+        removeGoggles _unit;
+        
+        // Apparence civile (Template)
+        private _template = selectRandom _civilTemplates;
+        _template params ["_tType", "_tLoadout", "_tFace"];
+        
+        _unit setFace _tFace;
+        
+        if (count _tLoadout > 0) then {
+            _unit setUnitLoadout _tLoadout;
+        } else {
+            _unit forceAddUniform "U_C_Poloshirt_blue";
+        };
+        
+        // Armement (AKM)
+        removeAllWeapons _unit;
         _unit addWeapon "arifle_AKM_F";
         _unit addPrimaryWeaponItem "30Rnd_762x39_Mag_F";
-        for "_k" from 1 to 4 do { _unit addItemToBackpack "30Rnd_762x39_Mag_F"; };
+        for "_k" from 1 to 4 do { _unit addItem "30Rnd_762x39_Mag_F"; };
         
         // Compétences & IA
         _unit setSkill 0.4;
@@ -203,10 +219,17 @@ while {true} do {
                 
                 [format ["Attaque lancée sur civil %1", name _victim]] call _fnc_log;
                 
-                // Nettoyage cible après délai (simulation d'une rafale)
-                [_target, _victim] spawn {
-                    params ["_t", "_v"];
-                    sleep 10;
+                // Gestion de la vie de la cible invisible
+                [_target, _victim, _terrorists] spawn {
+                    params ["_t", "_v", "_terrorGroup"];
+                    
+                    // Attendre que : le civil soit mort OU plus aucun terroriste en vie
+                    waitUntil {
+                        sleep 1;
+                        !alive _v || { {alive _x} count _terrorGroup == 0 }
+                    };
+                    
+                    // Supprimer la cible
                     deleteVehicle _t;
                     if (!isNull _v) then { _v setVariable ["ATTENTAT_Target", nil]; };
                 };
@@ -217,7 +240,7 @@ while {true} do {
     // 6. NETTOYAGE FIN DE MISSION
     sleep 10;
     deleteMarker _markerName;
-    { deleteVehicle _x } forEach _targets; // Supprimer leurres restants
+    { if (!isNull _x) then { deleteVehicle _x }; } forEach _targets; // Supprimer leurres restants
     
     // Si échec (joueurs loin), supprimer les terroristes pour économiser ressources
     if ("FAILED" == ([_taskId] call BIS_fnc_taskState)) then {
