@@ -28,6 +28,9 @@ MN_fnc_AddSupportMenu = {
 // 1. Ajouter le menu au démarrage
 [player] call MN_fnc_AddSupportMenu;
 
+// Initialiser l'action de soin de groupe
+[player] call Mission_fnc_task_x_revival;
+
 // NOTE : La gestion du RESPAWN et du TEAM SWITCH est désormais faite directement
 // dans onPlayerRespawn.sqf et via l'event handler TeamSwitch ici.
 

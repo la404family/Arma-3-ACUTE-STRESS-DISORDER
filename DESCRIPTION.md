@@ -15,7 +15,7 @@ Oubliez les uniformes distincts. L'ennemi se fond dans la foule. Grâce à un sy
 [/list]
 
 [b]2. LE TERRAIN EST PIÉGÉ[/b]
-Ne baissez jamais votre garde. Le sol lui-même est votre ennemi. Des mines antipersonnel sont disséminées aléatoirement sur la carte, sans aucun marqueur. Chaque patrouille hors des sentiers battus est une partie de Roulette Russe.
+Ne baissez jamais votre garde. Le sol lui-même est votre ennemi. Des mines antipersonnel sont disséminées aléatoirement sur les routes de la carte.
 
 [b]3. LE CHAOS IMPRÉVISIBLE (Jeu sans script linéaire)[/b]
 La mission génère ses propres urgences. Vous ne choisissez pas le timing, vous subissez le chaos du champ de bataille :

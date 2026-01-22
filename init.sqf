@@ -99,6 +99,7 @@ if (hasInterface) then {
             ["INIT", [_newUnit]] call Mission_fnc_spawn_brothers_in_arms;
             ["INIT", [_newUnit]] call Mission_fnc_spawn_weather_and_time;
             ["INIT", [_newUnit]] call Mission_fnc_spawn_vehicles;
+            [_newUnit] call Mission_fnc_task_x_revival;
             
             // Réattacher la tâche de protection civile (l'état ASSIGNED/FAILED est préservé)
             if ("task_civil_protection" call BIS_fnc_taskExists) then {

@@ -100,8 +100,8 @@ diag_log format ["[LIVRAISON] Hélicoptère créé en %1, direction cible %2", _
     deleteWaypoint _wp1;
     
     // FORCER la descente avec plusieurs méthodes
-    _heli flyInHeight 20;
-    _heli flyInHeightASL [20, 20, 20];
+    _heli flyInHeight 15;
+    _heli flyInHeightASL [15, 15, 15];
     
     // Nouveau waypoint à basse altitude
     private _wp2 = _group addWaypoint [_targetPos, 0];
@@ -126,14 +126,14 @@ diag_log format ["[LIVRAISON] Hélicoptère créé en %1, direction cible %2", _
 
     // Arrêt stationnaire forcé
     doStop _heli;
-    _heli flyInHeight 10;
+    _heli flyInHeight 5;
     
     // Attendre que l'hélico soit assez bas ou timeout
     private _dropTimeout = 0;
     waitUntil {
         sleep 0.5;
         _dropTimeout = _dropTimeout + 0.8;
-        ((getPos _heli select 2) < 50) || _dropTimeout > 15
+        ((getPos _heli select 2) < 10) || _dropTimeout > 15
     };
     
     sleep 2; // Stabilisation
