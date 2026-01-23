@@ -19,7 +19,7 @@
 
 // Hélicoptère d'introduction (UH-80 Ghost Hawk)
 MISSION_var_helicopters = [
-    ["task_x_helicoptere", "B_Heli_Transport_01_F"]
+    ["task_x_helicoptere", "B_Heli_Transport_03_F"]
 ];
 publicVariable "MISSION_var_helicopters";
 

@@ -2027,5 +2027,69 @@
             <Portuguese>PONTO DE EXTRAÇÃO</Portuguese>
             <Korean>추출 지점</Korean>
         </Key>
+        <Key ID="STR_TASK_EVAC_TITLE">
+            <English>Extraction</English>
+            <French>Extraction</French>
+            <German>Extraktion</German>
+            <Spanish>Extracción</Spanish>
+            <Italian>Estrazione</Italian>
+            <Russian>Эвакуация</Russian>
+            <Polish>Ekstrakcja</Polish>
+            <Czech>Extrakce</Czech>
+            <Turkish>Tahliye</Turkish>
+            <Chinese>撤離</Chinese>
+            <Chinesesimp>撤离</Chinesesimp>
+            <Japanese>抽出</Japanese>
+            <Portuguese>Extração</Portuguese>
+            <Korean>추출</Korean>
+        </Key>
+        <Key ID="STR_TASK_EVAC_DESC">
+            <English>Evacuation pending. Proceed to LZ. A relief team is inbound to relieve you. Departure Authorised.</English>
+            <French>Évacuation en attente. Rejoignez la LZ. Une équipe de relève est en approche pour vous relever. Départ autorisé.</French>
+            <German>Evakuierung ausstehend. Zur LZ begeben. Ablösungsteam im Anflug. Abflug genehmigt.</German>
+            <Spanish>Evacuación pendiente. Proceda a la LZ. Un equipo de relevo está en camino. Salida autorizada.</Spanish>
+            <Italian>Evacuazione in corso. Procedere alla LZ. Un team di soccorso è in arrivo per darvi il cambio. Partenza autorizzata.</Italian>
+            <Russian>Ожидается эвакуация. Выдвигайтесь к ЗП. Сменная группа на подходе. Вылет разрешён.</Russian>
+            <Polish>Oczekująca ewakuacja. Udaj się do LZ. Zespół wsparcia w drodze, aby cię zmienić. Odlot autoryzowany.</Polish>
+            <Czech>Evakuace probíhá. Pokračujte na LZ. Přilétá střídající tým. Odlet povolen.</Czech>
+            <Turkish>Tahliye bekleniyor. LZ&apos;ye ilerleyin. Sizi değiştirmek için bir yardım ekibi geliyor. Kalkış Onaylandı.</Turkish>
+            <Chinese>撤離待命中。前往降落區。接替小組正在進場。准許離開。</Chinese>
+            <Chinesesimp>撤离待命中。前往降落区。接替小组正在进场。准许离开。</Chinesesimp>
+            <Japanese>撤収待機中。LZへ向かえ。交代チームが接近中。出発許可。</Japanese>
+            <Portuguese>Evacuação pendente. Prossiga para a LZ. Uma equipe de alívio está a caminho. Partida autorizada.</Portuguese>
+            <Korean>철수 대기 중. LZ로 이동하라. 교대 팀이 진입 중이다. 출발 승인됨.</Korean>
+        </Key>
+        <Key ID="STR_EVAC_PLAYER_COUNT">
+            <English>Extraction Status: Player %1 / %2 ready</English>
+            <French>Statut Extraction : Joueur %1 / %2 prêts</French>
+            <German>Extraktionsstatus: Spieler %1 / %2 bereit</German>
+            <Spanish>Estado de Extracción: Jugador %1 / %2 listos</Spanish>
+            <Italian>Stato Estrazione: Giocatore %1 / %2 pronti</Italian>
+            <Russian>Статус эвакуации: Игрок %1 / %2 готов</Russian>
+            <Polish>Status ekstrakcji: Gracz %1 / %2 gotowy</Polish>
+            <Czech>Stav extrakce: Hráč %1 / %2 připraven</Czech>
+            <Turkish>Tahliye Durumu: Oyuncu %1 / %2 hazır</Turkish>
+            <Chinese>撤離狀態：玩家 %1 / %2 就緒</Chinese>
+            <Chinesesimp>撤离状态：玩家 %1 / %2 就绪</Chinesesimp>
+            <Japanese>抽出状況：プレイヤー %1 / %2 準備完了</Japanese>
+            <Portuguese>Status da Extração: Jogador %1 / %2 pronto</Portuguese>
+            <Korean>철수 상태: 플레이어 %1 / %2 준비 완료</Korean>
+        </Key>
+        <Key ID="STR_EVAC_ALL_ABOARD">
+            <English>All units secured. Dust off immediately.</English>
+            <French>Toutes les unités sécurisées. Décollage immédiat.</French>
+            <German>Alle Einheiten gesichert. Sofortiger Abflug.</German>
+            <Spanish>Todas las unidades aseguradas. Despegue inmediato.</Spanish>
+            <Italian>Tutte le unità al sicuro. Decollo immediato.</Italian>
+            <Russian>Все подразделения в безопасности. Немедленный взлет.</Russian>
+            <Polish>Wszystkie jednostki zabezpieczone. Natychmiastowy odlot.</Polish>
+            <Czech>Všechny jednotky zajištěny. Okamžitý odlet.</Czech>
+            <Turkish>Tüm birimler güvende. Hemen kalkış.</Turkish>
+            <Chinese>所有單位已確保安全。立即起飛。</Chinese>
+            <Chinesesimp>所有单位已确保安全。立即起飞。</Chinesesimp>
+            <Japanese>全ユニット確保。直ちに離陸せよ。</Japanese>
+            <Portuguese>Todas as unidades seguras. Decolagem imediata.</Portuguese>
+            <Korean>모든 유닛 확보됨. 즉시 이륙하라.</Korean>
+        </Key>
     </Package>
 </Project>

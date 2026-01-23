@@ -3,10 +3,11 @@
     
     Description:
     Système de fin de mission avec extraction par hélicoptère.
-    - Après X minutes de jeu, message radio pour retour à la base
-    - Un hélicoptère Ghost Hawk se pose près de marker_4 (la base)
-    - Quand tous les joueurs montent, l'hélico décolle vers [0,0]
-    - Après 120 secondes de vol, la mission se termine
+    Optimisé pour le MULTIPLAYER.
+    - Création de tache "EXTRACTION"
+    - Compteur de joueurs (Joueur X / Y prêt)
+    - Hélicoptère CARELESS mais combat mode RED (défensif)
+    - Invisibilité des joueurs une fois dans l'hélicoptère
 */
 
 if (!isServer) exitWith {};
@@ -15,7 +16,7 @@ diag_log "[FIN_MISSION] === Démarrage du système de fin de mission ===";
 
 // --- CONFIGURATION ---
 private _delayBeforeMessage = 1800 + floor(random 900); // 30 à 45 minutes
-private _heliClass = "B_Heli_Transport_01_F"; // UH-80 Ghost Hawk
+private _heliClass = "B_Heli_Transport_03_F"; // CH-67 Huron
 private _flyTime = 120; // 120 secondes de vol avant fin de mission
 
 // Position d'atterrissage - objet invisible heli_fin
@@ -61,13 +62,28 @@ diag_log format ["[FIN_MISSION] Extraction dans %1 secondes (%2 minutes)", _dela
     diag_log "[FIN_MISSION] === Délai écoulé - Lancement extraction ===";
     
     // ============================================================
-    // MESSAGE RADIO POUR TOUS LES JOUEURS
+    // CRÉATION DE LA TÂCHE D'EXTRACTION
     // ============================================================
-    // (localize "STR_FIN_MESSAGE_EXTRACTION") remoteExec ["systemChat", 0];
-    (localize "STR_FIN_MESSAGE_EXTRACTION") remoteExec ["hint", 0];
+    // Jargon militaire : Evacuation pending. Proceed to LZ.
     
-    sleep 3;
-    
+    [
+        true,                                     // Visible pour tout le monde
+        "task_evacuation",                        // ID de la tâche
+        [
+            localize "STR_TASK_EVAC_DESC",        // Description
+            localize "STR_TASK_EVAC_TITLE",       // Titre
+            "EXTRACTION"                          // Marqueur HUD
+        ],
+        _landingPos,                              // Position de la tâche
+        "CREATED",                                // État initial
+        10,                                       // Priorité
+        true,                                     // Notification
+        "takeoff",                                // Type d'icône (héli décollant)
+        true                                      // Toujours visible 3D
+    ] call BIS_fnc_taskCreate;
+
+    sleep 5;
+
     // ============================================================
     // SPAWN DE L'HÉLICOPTÈRE D'EXTRACTION
     // ============================================================
@@ -89,34 +105,26 @@ diag_log format ["[FIN_MISSION] Extraction dans %1 secondes (%2 minutes)", _dela
     _heli setFuel 1;
     
     // Créer l'équipage
-    private _group = createGroup [WEST, true];
-    private _crew = [];
-    
-    private _pilot = _group createUnit ["B_Helipilot_F", [0,0,0], [], 0, "NONE"];
-    _pilot moveInDriver _heli;
-    _crew pushBack _pilot;
-    
-    private _copilot = _group createUnit ["B_Helipilot_F", [0,0,0], [], 0, "NONE"];
-    _copilot moveInTurret [_heli, [0]];
-    _crew pushBack _copilot;
+    createVehicleCrew _heli;
+    private _group = group driver _heli;
+    private _crew = crew _heli;
     
     diag_log format ["[FIN_MISSION] Équipage créé: %1 membres", count _crew];
     
-    // Configuration IA - Indestructible
+    // Configuration IA - CARELESS MAIS COMBAT MODE RED
+    // L'hélico suit sa route (CARELESS) mais tire sur les ennemis (RED)
     _group setBehaviour "CARELESS";
-    _group setCombatMode "BLUE";
+    _group setCombatMode "RED";
     
     {
-        _x disableAI "AUTOCOMBAT";
-        _x disableAI "AUTOTARGET";
-        _x setCaptive true;
-        _x allowDamage false;
+        _x setCaptive true;       // L'équipage ne se fait pas tirer dessus en priorité (optionnel)
+        _x allowDamage false;     // Invulnérable pour garantir l'extraction
     } forEach _crew;
     
-    _heli allowDamage false;
+    _heli allowDamage false;      // Hélico invulnérable
     
-    // Message: hélico en approche
-    // (localize "STR_FIN_HELI_INBOUND") remoteExec ["systemChat", 0];
+    // Message radio via hint ou sous-titre
+    // (localize "STR_FIN_HELI_INBOUND") remoteExec ["hint", 0];
     
     // ============================================================
     // VOL VERS LA BASE ET ATTERRISSAGE
@@ -129,17 +137,13 @@ diag_log format ["[FIN_MISSION] Extraction dans %1 secondes (%2 minutes)", _dela
     // Attendre l'approche
     waitUntil { sleep 1; (_heli distance2D _landingPos) < 200 || !alive _heli };
     
-    if (!alive _heli) exitWith {
-        diag_log "[FIN_MISSION] ERREUR: Hélicoptère détruit!";
-    };
-    
     diag_log "[FIN_MISSION] Hélico proche - Début atterrissage";
     
     // Forcer l'atterrissage
     _heli flyInHeight 0;
     _heli land "GET IN";
     
-    waitUntil { sleep 2; (_heli distance2D _landingPos) < 80 || !alive _heli };
+    waitUntil { sleep 2; (_heli distance2D _landingPos) < 80 };
     
     _heli setFuel 0; // Couper le carburant pour forcer l'atterrissage
     
@@ -152,20 +156,20 @@ diag_log format ["[FIN_MISSION] Extraction dans %1 secondes (%2 minutes)", _dela
     };
     
     doStop _heli;
+    _heli setVehicleLock "UNLOCKED"; // Déverrouiller pour être sûr
+    
+    // Ouvrir la rampe arrière (Huron)
+    _heli animateSource ["door_rear_source", 1];
+    _heli animateDoor ["door_rear_source", 1];
     
     diag_log "[FIN_MISSION] Hélicoptère posé - En attente des joueurs";
     
-    // Message: hélico en attente
-    // (localize "STR_FIN_HELI_WAITING") remoteExec ["systemChat", 0];
-    
-    // Créer un marqueur sur l'hélico
-    private _marker = createMarker ["extraction_heli", getPos _heli];
-    _marker setMarkerType "mil_pickup";
-    _marker setMarkerColor "ColorBLUFOR";
-    _marker setMarkerText (localize "STR_FIN_MARKER_EXTRACTION");
+     // Mettre à jour la tâche pour indiquer d'embarquer / Marker sur l'hélico
+    ["task_evacuation", _landingPos] call BIS_fnc_taskSetDestination;
+    ["task_evacuation", "ASSIGNED"] call BIS_fnc_taskSetState;
     
     // ============================================================
-    // ATTENDRE QUE TOUS LES JOUEURS MONTENT
+    // BOUCLE D'ATTENTE ET COMPTEUR JOUEURS (Multiplayer Optimized)
     // ============================================================
     
     diag_log "[FIN_MISSION] En attente que tous les joueurs montent...";
@@ -173,50 +177,68 @@ diag_log format ["[FIN_MISSION] Extraction dans %1 secondes (%2 minutes)", _dela
     private _allPlayersInHeli = false;
     
     while {!_allPlayersInHeli} do {
-        sleep 2;
+        sleep 3;
         
-        // Récupérer tous les joueurs vivants
-        private _allPlayers = allPlayers select { alive _x && isPlayer _x };
+        // Récupérer les joueurs réellement connectés et vivants
+        private _activePlayers = allPlayers select { alive _x && isPlayer _x };
+        private _totalPlayers = count _activePlayers;
         
-        if (count _allPlayers == 0) then { continue };
+        if (_totalPlayers == 0) then { continue }; // Pas de joueurs ? On attend.
         
-        // Vérifier si tous sont dans l'hélico
-        private _playersInHeli = { (vehicle _x) == _heli } count _allPlayers;
+        // Compter combien sont dans l'hélico
+        private _playersInHeli = { (vehicle _x) == _heli } count _activePlayers;
         
-        diag_log format ["[FIN_MISSION] Joueurs dans hélico: %1/%2", _playersInHeli, count _allPlayers];
+        // Afficher le statut à tous les joueurs
+        // Format: "Extraction Status: Player X / Y ready"
+        private _msg = format [localize "STR_EVAC_PLAYER_COUNT", _playersInHeli, _totalPlayers];
+        _msg remoteExec ["hintSilent", 0];
         
-        if (_playersInHeli == count _allPlayers && count _allPlayers > 0) then {
+        // Condition de départ : Tout le monde est là ou (si plus de 1 joueur) 100% sont là
+        if (_playersInHeli >= _totalPlayers && _totalPlayers > 0) then {
             _allPlayersInHeli = true;
-            diag_log format ["[FIN_MISSION] Tous les joueurs à bord (%1)", count _allPlayers];
+            diag_log format ["[FIN_MISSION] Tous les joueurs à bord (%1)", _totalPlayers];
         };
     };
     
     // ============================================================
-    // DÉCOLLAGE VERS [0,0] ET FIN DE MISSION
+    // TOUT LE MONDE EST LÀ - INVISIBILITÉ ET DÉCOLLAGE
     // ============================================================
     
-    diag_log "[FIN_MISSION] Décollage vers extraction";
+    // Message final
+    (localize "STR_EVAC_ALL_ABOARD") remoteExec ["hint", 0]; // "All units secured. Dust off immediately."
+    ["task_evacuation", "SUCCEEDED"] call BIS_fnc_taskSetState;
+    
+    // Rendre les joueurs invisibles une fois à l'intérieur
+    {
+        if (isPlayer _x && (vehicle _x) == _heli) then {
+            // Rendre invisible (globalement) pour éviter les glitches visuels ou tirs
+            [_x, true] remoteExec ["hideObjectGlobal", 2]; 
+            _x allowDamage false;
+        };
+    } forEach allPlayers;
+    
+    diag_log "[FIN_MISSION] Joueurs sécurisés et cachés. Décollage.";
     
     // Annuler le mode atterrissage et stop
     _heli land "NONE";
+    
+    // Fermer la rampe arrière
+    _heli animateSource ["door_rear_source", 0];
+    _heli animateDoor ["door_rear_source", 0];
+    sleep 2;
     
     // Restaurer le carburant et allumer le moteur
     _heli setFuel 1;
     _heli engineOn true;
     
-    // Message: décollage
-    // (localize "STR_FIN_TAKEOFF") remoteExec ["systemChat", 0];
-    
     sleep 5; // Laisser le temps au moteur de démarrer
     
-    // Supprimer le marqueur
-    deleteMarker "extraction_heli";
-    
-    // Destination: point 0,0 de la carte
+    // Destination: point 0,0 de la carte pour disparaitre
     private _exitPos = [0, 0, 0];
     
     _heli flyInHeight 200;
     _heli doMove _exitPos;
+    _heli limitspeed 300;
     
     // Attendre le temps de vol
     diag_log format ["[FIN_MISSION] Vol vers extraction - %1 secondes restantes", _flyTime];
@@ -230,6 +252,7 @@ diag_log format ["[FIN_MISSION] Extraction dans %1 secondes (%2 minutes)", _dela
     diag_log "[FIN_MISSION] === MISSION TERMINÉE - SUCCÈS ===";
     
     // Terminer la mission avec succès
+    // "End1" est souvent une fin standard définie dans description.ext
     ["END1", true] remoteExec ["BIS_fnc_endMission", 0];
 };
 
