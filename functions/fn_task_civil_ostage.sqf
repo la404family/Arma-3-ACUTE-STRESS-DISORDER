@@ -458,8 +458,25 @@ while {true} do {
         deleteMarker _markerName;
         [localize "STR_HOSTAGE_FAILED"] remoteExec ["hint", 0];
         
-        { if (alive _x) then { deleteVehicle _x }; } forEach _opforUnits;
-        if (!isNull _hostage) then { deleteVehicle _hostage; };
+        // NE PAS SUPPRIMER l'otage ou les OPFOR (géré par fn_nettoyage plus tard)
+        // Mais on nettoie l'hélico s'il a eu le temps de spawn
+        
+        if (!isNull _heli) then {
+            // Faire repartir l'hélico pour qu'il ne reste pas planté là
+            _heli setFuel 1;
+            _heli engineOn true;
+            _heli land "NONE";
+            _heli flyInHeight 150;
+            _heli doMove [0,0,1000];
+            
+            // Suppression différée de l'hélico
+             [_heli, _heliCrew] spawn {
+                params ["_h", "_c"];
+                sleep 140; 
+                { if (!isNull _x) then { deleteVehicle _x }; } forEach _c;
+                if (!isNull _h) then { deleteVehicle _h };
+            };
+        };
         
         continue;
     };
@@ -553,10 +570,22 @@ while {true} do {
         deleteMarker _markerName;
         deleteMarker _lzMarker;
         deleteVehicle _helipad;
-        { if (!isNull _x) then { deleteVehicle _x }; } forEach _opforUnits;
-        { if (!isNull _x) then { deleteVehicle _x }; } forEach _heliCrew;
-        if (!isNull _heli) then { deleteVehicle _heli; };
-        if (!isNull _hostage) then { deleteVehicle _hostage; };
+        if (!isNull _heli) then {
+             // Faire repartir l'hélico
+            _heli setFuel 1;
+            _heli engineOn true;
+            _heli land "NONE";
+            _heli flyInHeight 150;
+            _heli doMove [0,0,1000];
+            
+             [_heli, _heliCrew] spawn {
+                params ["_h", "_c"];
+                sleep 140; 
+                { if (!isNull _x) then { deleteVehicle _x }; } forEach _c;
+                if (!isNull _h) then { deleteVehicle _h };
+            };
+        };
+        
         continue;
     };
     
@@ -593,10 +622,21 @@ while {true} do {
         deleteMarker _markerName;
         deleteMarker _lzMarker;
         deleteVehicle _helipad;
-        { if (!isNull _x) then { deleteVehicle _x }; } forEach _opforUnits;
-        { if (!isNull _x) then { deleteVehicle _x }; } forEach _heliCrew;
-        if (!isNull _heli) then { deleteVehicle _heli; };
-        if (!isNull _hostage) then { deleteVehicle _hostage; };
+        if (!isNull _heli) then {
+             // Faire repartir l'hélico
+            _heli setFuel 1;
+            _heli engineOn true;
+            _heli land "NONE";
+            _heli flyInHeight 150;
+            _heli doMove [0,0,1000];
+            
+             [_heli, _heliCrew] spawn {
+                params ["_h", "_c"];
+                sleep 140; 
+                { if (!isNull _x) then { deleteVehicle _x }; } forEach _c;
+                if (!isNull _h) then { deleteVehicle _h };
+            };
+        };
         continue;
     };
     
@@ -681,10 +721,22 @@ while {true} do {
         deleteMarker _markerName;
         deleteMarker _lzMarker;
         deleteVehicle _helipad;
-        { if (!isNull _x) then { deleteVehicle _x }; } forEach _opforUnits;
-        { if (!isNull _x) then { deleteVehicle _x }; } forEach _heliCrew;
-        if (!isNull _heli) then { deleteVehicle _heli; };
-        if (!isNull _hostage) then { deleteVehicle _hostage; };
+        if (!isNull _heli) then {
+             // Faire repartir l'hélico
+            _heli setFuel 1;
+            _heli engineOn true;
+            _heli land "NONE";
+            _heli flyInHeight 150;
+            _heli doMove [0,0,1000];
+            
+             [_heli, _heliCrew] spawn {
+                params ["_h", "_c"];
+                sleep 140; 
+                { if (!isNull _x) then { deleteVehicle _x }; } forEach _c;
+                if (!isNull _h) then { deleteVehicle _h };
+            };
+        };
+        
         continue;
     };
     
@@ -730,12 +782,17 @@ while {true} do {
     // Nettoyage
     deleteMarker _markerName;
     
-    { if (alive _x) then { deleteVehicle _x }; } forEach _opforUnits;
+    // Nettoyage: NE PAS SUPPRIMER Otage / OPFOR
+    // { if (alive _x) then { deleteVehicle _x }; } forEach _opforUnits;
+    // if (!isNull _hostage) then { deleteVehicle _hostage; };
     
-    // Supprimer hélico et équipage
-    { if (!isNull _x) then { deleteVehicle _x }; } forEach _heliCrew;
-    if (!isNull _heli) then { deleteVehicle _heli; };
-    if (!isNull _hostage) then { deleteVehicle _hostage; };
+    // Supprimer hélico et équipage APRÈS DÉLAI
+    [_heli, _heliCrew] spawn {
+        params ["_h", "_c"];
+        sleep 140; // Délai étendu pour laisser l'hélico partir au loin
+        { if (!isNull _x) then { deleteVehicle _x }; } forEach _c;
+        if (!isNull _h) then { deleteVehicle _h };
+    };
     
     [format ["Mission #%1 terminée. Prochaine dans 200-1500s...", _missionCounter]] call HOSTAGE_fnc_log;
     
