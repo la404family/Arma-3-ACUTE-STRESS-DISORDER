@@ -10,8 +10,8 @@
 CIV_DistanceFuite   = 35;
 CIV_DistanceTir     = 50; // Distance de réaction aux tirs
 CIV_VitesseFuite    = 45;
-CIV_SpawnRadius     = 400; // Rayon autour du joueur pour choisir les points de spawn
-CIV_DespawnRadius   = 800; // Distance de suppression
+CIV_SpawnRadius     = 1200; // Rayon autour du joueur pour choisir les points de spawn
+CIV_DespawnRadius   = 1500; // Distance de suppression (doit être > SpawnRadius)
 CIV_MaxCivilians    = 45;  // Nombre TOTAL de civils actifs simultanément
 CIV_Debug           = false;
 

@@ -98,22 +98,23 @@ while {true} do {
         
         // Compétences & IA
         _unit setSkill 0.4;
+        _unit setUnitPos "UP"; // Force debout
         _unit setBehaviour "SAFE";
         _unit setSpeedMode "LIMITED";
         
         _terrorists pushBack _unit;
     };
     
-    // Patrouille aléatoire (5-15m)
+    // Patrouille aléatoire (5-15m, plus fluide)
     [_grp, _missionPos] spawn {
         params ["_group", "_center"];
         while { ({alive _x} count units _group) > 0 } do {
             {
-                if (unitReady _x && alive _x) then {
-                    _x doMove (_center getPos [5 + random 10, random 360]);
+                if (alive _x && {behaviour _x == "SAFE"} && {unitReady _x}) then {  // Seulement si SAFE et prêt
+                    _x doMove (_center getPos [5 + random 15, random 360]);
                 };
             } forEach units _group;
-            sleep 10;
+            sleep 15;  // Cycle plus long pour fluidité
         };
     };
     
@@ -154,7 +155,7 @@ while {true} do {
     private _startTime = time;
     private _maxDuration = 600; // 10 minutes
     private _lastAttackTime = time;
-    private _targets = []; // Liste des leurres invisibles
+    private _targets = []; // Victimes attaquées (pour cleanup variable)
     
     private _missionEnded = false;
     
@@ -183,57 +184,106 @@ while {true} do {
         
         if (_missionEnded) exitWith {};
         
-        // B. Attaque des civils (toutes les 35 secondes)
-        if (time - _lastAttackTime > 35) then {
+        // B. Attaque des civils (toutes les 45 secondes, forçage sur TOUS les terroristes vivants)
+        if (time - _lastAttackTime > 45) then {
             _lastAttackTime = time;
             
-            // Trouver un civil proche des terroristes
-            private _potentialVictims = _missionPos nearEntities ["Civilian", 100];
-            // Filtrer: Vivant, pas un otage, pas un des terroristes (si side fail)
-            _potentialVictims = _potentialVictims select { 
+            // Trouver tous les civils à proximité (agents ou units, non-armés, non-véhiculés)
+            private _potentialVictims = (_missionPos nearEntities ["CAManBase", 150]) select { 
                 alive _x && 
-                !(_x in _terrorists) && 
-                isNil {_x getVariable "ATTENTAT_Target"} 
+                {side _x == civilian} && 
+                {!(_x in _terrorists)} &&
+                {isNil {_x getVariable "ATTENTAT_Victim"}} &&  // Pas déjà attaqué récemment
+                {primaryWeapon _x == ""} &&  // Non-armé (vrai civil)
+                {isNull objectParent _x}  // Pas en véhicule
             };
             
+            [format ["[ATTENTAT] Potentielles victimes trouvées: %1", count _potentialVictims]] call _fnc_log;
+            
             if (count _potentialVictims > 0) then {
-                private _victim = selectRandom _potentialVictims;
+                private _aliveTerrorists = _terrorists select {alive _x};
                 
-                // Créer cible BLUFOR invisible attachée au civil
-                private _target = createVehicle ["B_Soldier_F", [0,0,0], [], 0, "NONE"]; // Soldier basique
-                _target hideObjectGlobal true;
-                _target allowDamage false; // Invincible pour durer un peu, mais capte l'aggro
-                _target attachTo [_victim, [0,0,1]]; // Attaché au torse/tête
-                
-                _victim setVariable ["ATTENTAT_Target", _target];
-                _targets pushBack _target; // Stocker pour suppression
-                
-                // Forcer les terroristes à engager cette cible
-                _grp reveal [_target, 4];
+                // Pour CHAQUE terroriste vivant, assigner une victime proche (si disponible)
                 {
-                    if (alive _x) then {
-                        _x doTarget _target;
-                        _x doFire _target;
-                        _x setBehaviour "COMBAT";
+                    private _shooter = _x;
+                    if (count _potentialVictims > 0) then {
+                        // Trier par distance au shooter et prendre le plus proche
+                        _potentialVictims = [_potentialVictims, [], {_shooter distance2D _x}, "ASCEND"] call BIS_fnc_sortBy;
+                        private _victim = _potentialVictims deleteAt 0;  // Prend et retire pour éviter doublons
+                        
+                        if (!isNull _victim) then {
+                            _victim setVariable ["ATTENTAT_Victim", true];
+                            _targets pushBack _victim;
+                            
+                            [format ["[ATTENTAT] %1 attaque %2", name _shooter, name _victim]] call _fnc_log;
+                            
+                            // Spawn thread d'attaque par terroriste
+                            [_shooter, _victim, _grp, _missionPos] spawn {
+                                params ["_attacker", "_target", "_group", "_center"];
+                                
+                                if (!alive _attacker || !alive _target) exitWith {};
+                                
+                                // 1. Mode combat agressif
+                                _attacker setBehaviour "COMBAT";
+                                _attacker setSpeedMode "FULL";
+                                _attacker setCombatMode "RED";  // Engage tout
+                                _attacker reveal [_target, 4];  // Détection max
+                                _attacker doTarget _target;
+                                
+                                // 2. Déplacement forcé vers cible
+                                _attacker doMove (getPosATL _target);
+                                
+                                // Attendre proximité (20m, timeout 30s pour plus d'action)
+                                private _timeout = time + 30;
+                                waitUntil {
+                                    sleep 0.5;
+                                    !alive _attacker || !alive _target || _attacker distance2D _target < 20 || time > _timeout
+                                };
+                                
+                                if (!alive _attacker || !alive _target) exitWith {
+                                    // Reset groupe si avorté
+                                    { if (alive _x) then { _x setBehaviour "SAFE"; _x setSpeedMode "LIMITED"; }; } forEach units _group;
+                                };
+                                
+                                // 3. Tirs forcés répétés (rafales + boucle pour insister)
+                                for "_burst" from 1 to 3 do {  // 3 rafales pour tuer
+                                    if (!alive _attacker || !alive _target) exitWith {};
+                                    _attacker lookAt _target;
+                                    _attacker doFire _target;
+                                    private _weapon = primaryWeapon _attacker;
+                                    private _modes = getArray (configFile >> "CfgWeapons" >> _weapon >> "modes");
+                                    private _mode = if (count _modes > 0) then { _modes #0 } else { "Single" };
+                                    for "_shot" from 1 to (3 + floor random 3) do {
+                                        if (!alive _attacker || !alive _target) exitWith {};
+                                        _attacker forceWeaponFire [_weapon, _mode];
+                                        sleep 0.15;
+                                    };
+                                    sleep 1;  // Pause entre rafales
+                                };
+                                
+                                // 4. Attendre mort ou timeout (insister si vivant)
+                                private _deathTimeout = time + 10;
+                                waitUntil { sleep 0.5; !alive _target || time > _deathTimeout };
+                                if (alive _target && alive _attacker) then {
+                                    _attacker doFire _target;  // Tir final
+                                    sleep 2;
+                                };
+                                
+                                // 5. Retour forcé à patrouille près du spawn
+                                sleep 2;
+                                if (alive _attacker) then {
+                                    _attacker setBehaviour "SAFE";
+                                    _attacker setSpeedMode "LIMITED";
+                                    _attacker setCombatMode "GREEN";  // Hold fire
+                                    _attacker doMove (_center getPos [5 + random 10, random 360]);  // Retour proche spawn
+                                };
+                                
+                                // Reset variable victime
+                                if (!isNull _target) then { _target setVariable ["ATTENTAT_Victim", nil]; };
+                            };
+                        };
                     };
-                } forEach _terrorists;
-                
-                [format ["Attaque lancée sur civil %1", name _victim]] call _fnc_log;
-                
-                // Gestion de la vie de la cible invisible
-                [_target, _victim, _terrorists] spawn {
-                    params ["_t", "_v", "_terrorGroup"];
-                    
-                    // Attendre que : le civil soit mort OU plus aucun terroriste en vie
-                    waitUntil {
-                        sleep 1;
-                        !alive _v || { {alive _x} count _terrorGroup == 0 }
-                    };
-                    
-                    // Supprimer la cible
-                    deleteVehicle _t;
-                    if (!isNull _v) then { _v setVariable ["ATTENTAT_Target", nil]; };
-                };
+                } forEach _aliveTerrorists;
             };
         };
     };
@@ -241,11 +291,14 @@ while {true} do {
     // 6. NETTOYAGE FIN DE MISSION
     sleep 10;
     deleteMarker _markerName;
-    { if (!isNull _x) then { deleteVehicle _x }; } forEach _targets; // Supprimer leurres restants
     
-    // Si échec (joueurs loin), supprimer les terroristes pour économiser ressources
+    // Cleanup decoys + reset (plus de decoys, juste reset variables)
+    { 
+        if (!isNull _x && alive _x) then { _x setVariable ["ATTENTAT_Victim", nil]; }; 
+    } forEach _targets;
+    
     if ("FAILED" == ([_taskId] call BIS_fnc_taskState)) then {
-        { deleteVehicle _x } forEach _terrorists;
+        { if (!isNull _x) then { deleteVehicle _x; }; } forEach _terrorists;
     };
     
     // La boucle continue pour la prochaine mission

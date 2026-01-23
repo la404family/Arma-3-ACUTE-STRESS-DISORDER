@@ -13,7 +13,7 @@ if (!isServer) exitWith {};
 // --- CONFIGURATION ---
 CIVIL_CHANGE_IntervalMin  = 100;    // Intervalle minimum en secondes
 CIVIL_CHANGE_IntervalMax  = 400;   // Intervalle maximum en secondes
-CIVIL_CHANGE_MinDistance  = 50;    // Distance minimum du joueur pour être éligible
+CIVIL_CHANGE_MinDistance  = 600;    // Distance minimum du joueur pour être éligible
 CIVIL_CHANGE_RequiredCount = 3;    // Nombre de civils requis
 CIVIL_CHANGE_Debug        = false; // Mode debug
 
