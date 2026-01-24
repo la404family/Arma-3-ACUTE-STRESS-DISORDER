@@ -135,6 +135,126 @@ HOSTAGE_fnc_createDisguisedOPFOR = {
 };
 
 // ============================================================
+// FONCTION: LIBÉRATION OTAGE (SERVEUR)
+// ============================================================
+
+HOSTAGE_fnc_liberate = {
+    params ["_captive", "_caller"];
+
+    if (!isServer) exitWith {}; // Sécurité
+
+    diag_log format ["[HOSTAGE] Libération demandée par %1", name _caller];
+
+    // 1. Gérer l'état captif
+    _captive setVariable ["HOSTAGE_isCaptive", false, true];
+    
+    // 2. Animation et Messages
+    [_captive, "Acts_ExecutionVictim_Unbow"] remoteExec ["switchMove", 0];
+    [localize "STR_HOSTAGE_FREED"] remoteExec ["hint", 0];
+    
+    sleep 8.5; // Attendre fin animation
+
+    // 3. Réactiver IA (Côté Serveur = Autorité)
+    _captive setCaptive false;
+    
+    // On réactive tout ce qui est nécessaire pour le mouvement
+    _captive enableAI "FSM";
+    _captive enableAI "MOVE";
+    _captive enableAI "ANIM";
+    _captive enableAI "PATH";
+    
+    // On désactive le combat pour qu'il soit docile
+    _captive disableAI "TARGET";
+    _captive disableAI "AUTOTARGET";
+    _captive disableAI "AUTOCOMBAT";
+    _captive disableAI "SUPPRESSION";
+    _captive disableAI "COVER";
+    
+    // Stats
+    _captive enableStamina false;
+    _captive setFatigue 0;
+    _captive setBehaviour "CARELESS";
+    _captive setUnitPos "UP";
+    _captive setSkill ["courage", 1];
+    _captive setSkill ["commanding", 1];
+    _captive setSkill ["spotDistance", 0]; 
+    _captive forceSpeed -1;
+
+    // 4. Boucle de suivi (Exécutée sur le SERVEUR)
+    [_captive] spawn {
+        params ["_captive"];
+        
+        diag_log "[HOSTAGE] Début boucle suivi (Serveur)";
+        
+        while { alive _captive && !(_captive getVariable ["HOSTAGE_inHeli", false]) } do {
+            
+            // Maintenance comportement
+            _captive setUnitPos "UP";
+            _captive setBehaviour "CARELESS";
+            _captive setCombatMode "BLUE";
+            _captive setSkill ["courage", 1];
+
+            // Trouver joueur le plus proche
+            private _nearestPlayer = objNull;
+            private _minDist = 99999;
+            
+            {
+                if (alive _x && isPlayer _x) then {
+                    private _d = _captive distance _x;
+                    if (_d < _minDist) then {
+                        _minDist = _d;
+                        _nearestPlayer = _x;
+                    };
+                };
+            } forEach allPlayers;
+            
+            if (!isNull _nearestPlayer) then {
+                _captive doMove (getPos _nearestPlayer);
+            };
+            
+            sleep 5;
+        };
+        
+        diag_log "[HOSTAGE] Fin boucle suivi";
+    };
+};
+
+// ============================================================
+// FONCTION: AJOUTER ACTION (CLIENT via PublicVariable)
+// ============================================================
+
+HOSTAGE_fnc_addHoldAction = {
+    params ["_captive", "_taskId"];
+    
+    if (!hasInterface) exitWith {};
+    if (isNull _captive) exitWith {};
+    
+    [_captive, 
+        localize "STR_HOSTAGE_ACTION_FREE",
+        "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_unbind_ca.paa",
+        "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_unbind_ca.paa",
+        "alive _target && _target distance _this < 2 && _target getVariable ['HOSTAGE_isCaptive', true]",
+        "true",
+        { hint (localize "STR_HOSTAGE_FREEING"); },
+        {},
+        {
+            params ["_target", "_caller", "_actionId", "_arguments"];
+            
+            // APPEL SERVEUR UNIQUEMENT
+            [_target, _caller] remoteExec ["HOSTAGE_fnc_liberate", 2];
+            
+            // Nettoyage action local
+            removeAllActions _target;
+        },
+        {},
+        [], 8, 0, false, false
+    ] call BIS_fnc_holdActionAdd;
+};
+
+// Diffuser la fonction aux clients pour qu'ils puissent l'exécuter via remoteExec ou spawn local
+publicVariable "HOSTAGE_fnc_addHoldAction";
+
+// ============================================================
 // COMPTEUR DE MISSIONS POUR ID UNIQUE
 // ============================================================
 
@@ -277,137 +397,9 @@ while {true} do {
     
     [_hostage, _taskId] remoteExec ["HOSTAGE_fnc_addHoldAction", 0, true];
     
-    // Définir la fonction si pas déjà définie
-    if (isNil "HOSTAGE_fnc_addHoldAction") then {
-        HOSTAGE_fnc_addHoldAction = {
-            params ["_captive", "_taskId"];
-            
-            if (!hasInterface) exitWith {};
-            if (isNull _captive) exitWith {};
-            
-            [_captive, 
-                localize "STR_HOSTAGE_ACTION_FREE",
-                "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_unbind_ca.paa",
-                "\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_unbind_ca.paa",
-                "alive _target && _target distance _this < 2 && _target getVariable ['HOSTAGE_isCaptive', true]",
-                "true",
-                { hint (localize "STR_HOSTAGE_FREEING"); },
-                {},
-                {
-                    params ["_target", "_caller", "_actionId", "_arguments"];
-                    
-                    // Lancer la logique de suivi (comme fn_task_4_launch L125-170)
-                    [_target] spawn {
-                        params ["_captive"];
-                        
-                        _captive setVariable ["HOSTAGE_isCaptive", false, true];
-                        removeAllActions _captive;
-                        
-                        // Animation de libération
-                        [_captive, "Acts_ExecutionVictim_Unbow"] remoteExec ["switchMove", 0];
-                        sleep 8.5;
-                        
-                        // Notification
-                        [localize "STR_HOSTAGE_FREED"] remoteExec ["hint", 0];
-                        
-                        // L'otage n'est plus captif
-                        _captive setCaptive false;
-                        { [_captive, _x] remoteExec ["enableAI", 0]; } forEach ["ANIM", "MOVE", "AUTOTARGET", "TARGET"];
-                        
-                        // --- Logique Suivre le joueur le plus proche (AMÉLIORÉE) ---
-                        // Désactiver TOUTES les réactions IA qui pourraient le bloquer
-                        _captive disableAI "FSM";
-                        _captive disableAI "SUPPRESSION";
-                        _captive disableAI "COVER";
-                        _captive disableAI "AUTOCOMBAT";
-                        _captive disableAI "MINEDETECTION";
-                        
-                        _captive setBehaviour "CARELESS";
-                        _captive setUnitPos "UP";
-                        _captive allowFleeing 0;
-                        _captive setSkill ["courage", 1];
-                        _captive setSkill ["commanding", 1];
-                        _captive forceSpeed -1; // Vitesse maximale autorisée
-                        
-                        // Boucle de suivi - INJECTION CHAQUE SECONDE
-                        while { alive _captive && !(_captive getVariable ["HOSTAGE_inHeli", false]) } do {
-                            
-                            // FORCER le comportement à chaque itération (anti-blocage)
-                            _captive setUnitPos "UP";
-                            _captive setBehaviour "CARELESS";
-                            _captive setCombatMode "BLUE"; // Ne jamais engager
-                            _captive allowFleeing 0;
-                            _captive setSkill ["courage", 1];
-                            _captive forceSpeed -1;
-                            
-                            // Annuler toute animation de peur/couverture
-                            if (animationState _captive find "down" >= 0 || animationState _captive find "prone" >= 0) then {
-                                _captive switchMove "";
-                            };
-                            
-                            // Trouver le joueur le plus proche
-                            private _nearestPlayer = objNull;
-                            private _minDist = 99999;
-                            
-                            {
-                                if (alive _x && !(_x isKindOf "HeadlessClient_F")) then {
-                                    private _d = _captive distance _x;
-                                    if (_d < _minDist) then {
-                                        _minDist = _d;
-                                        _nearestPlayer = _x;
-                                    };
-                                };
-                            } forEach allPlayers;
-                            
-                            if (!isNull _nearestPlayer) then {
-                                private _blockedTime = _captive getVariable ["HOSTAGE_blockedSince", 0];
-                                private _isStuck = (_minDist > 5 && speed _captive < 0.5);
-                                
-                                if (_isStuck) then {
-                                    // Début du blocage
-                                    if (_blockedTime == 0) then {
-                                        _captive setVariable ["HOSTAGE_blockedSince", time];
-                                        _blockedTime = time;
-                                    };
-                                    
-                                    private _stuckDuration = time - _blockedTime;
-                                    
-                                    if (_stuckDuration >= 20) then {
-                                        // Bloqué 20+ secondes - TÉLÉPORTATION en dernier recours
-                                        private _tpPos = (getPos _nearestPlayer) getPos [3, random 360];
-                                        _captive setPos _tpPos;
-                                        _captive setVariable ["HOSTAGE_blockedSince", 0];
-                                        diag_log "[HOSTAGE] Otage bloqué 20s - téléportation de secours";
-                                    } else {
-                                        if (_stuckDuration >= 5) then {
-                                            // Bloqué 5-20 secondes - CONTOURNEMENT
-                                            // Changer de direction (gauche ou droite aléatoire)
-                                            private _detourDir = (getDir _captive) + (selectRandom [-90, 90]);
-                                            private _detourPos = _captive getPos [8, _detourDir];
-                                            _captive doMove _detourPos;
-                                            diag_log format ["[HOSTAGE] Otage bloqué %1s - contournement", round _stuckDuration];
-                                        } else {
-                                            // Bloqué moins de 5 secondes - continuer à essayer
-                                            _captive doMove (getPos _nearestPlayer);
-                                        };
-                                    };
-                                } else {
-                                    // Pas bloqué - reset et mouvement normal
-                                    _captive setVariable ["HOSTAGE_blockedSince", 0];
-                                    _captive doMove (getPos _nearestPlayer);
-                                    _captive setSpeedMode "FULL";
-                                };
-                            };
-                            
-                            sleep 1; // Vérification chaque seconde
-                        };
-                    };
-                },
-                {},
-                [], 8, 0, false, false
-            ] call BIS_fnc_holdActionAdd;
-        };
-    };
+    // Fonctions définies plus haut + publicVariable
+    // Appel pour tous les clients (JIP compatible via true)
+    [_hostage, _taskId] remoteExec ["HOSTAGE_fnc_addHoldAction", 0, true];
     
     // Appeler aussi localement pour le serveur
     [_hostage, _taskId] call HOSTAGE_fnc_addHoldAction;
@@ -445,6 +437,9 @@ while {true} do {
     // ============================================================
     // SURVEILLANCE: ATTENTE LIBÉRATION OTAGE
     // ============================================================
+    
+    private _heli = objNull;
+    private _heliCrew = [];
     
     waitUntil {
         sleep 2;
@@ -792,6 +787,22 @@ while {true} do {
         sleep 140; // Délai étendu pour laisser l'hélico partir au loin
         { if (!isNull _x) then { deleteVehicle _x }; } forEach _c;
         if (!isNull _h) then { deleteVehicle _h };
+    };
+
+    // Nettoyage différé des unités de la mission (Opfor et Otage)
+    // Pour éviter qu'ils ne disparaissent instantanément si les joueurs sont encore à côté
+    [_opforUnits, _hostage] spawn {
+        params ["_opfor", "_univ"];
+        
+        sleep 300; // 5 minutes de persistance avant nettoyage
+        
+        { 
+            if (!isNull _x) then { deleteVehicle _x }; 
+        } forEach _opfor;
+        
+        if (!isNull _univ) then { deleteVehicle _univ };
+        
+        diag_log "[HOSTAGE] Nettoyage fin de mission terminé";
     };
     
     [format ["Mission #%1 terminée. Prochaine dans 200-1500s...", _missionCounter]] call HOSTAGE_fnc_log;
