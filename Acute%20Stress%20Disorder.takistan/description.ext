@@ -1,0 +1,126 @@
+#include "dialogs\defines.hpp"
+#include "dialogs\recruit_menu.hpp"
+#include "dialogs\vehicle_menu.hpp"
+#include "dialogs\weather_time_menu.hpp"
+#include "dialogs\missions_menu.hpp"
+#include "dialogs\enemies_menu.hpp"
+
+// ============================================================
+// INFORMATIONS PRINCIPALES (Visible dans le menu scénario)
+// ============================================================
+author = "Kevin [la404family]";
+onLoadName = "Acute Stress Disorder";
+onLoadMission = "Votre capacité à distinguer un civil d'un insurgé déterminera votre survie.";
+loadScreen = ""; // Image de chargement (ex: "images\loadScreen.jpg")
+
+class Header
+{
+    gameType = COOP; // Type de jeu (Coop, DM, TDM, etc.)
+    minPlayers = 1;  // Min joueurs (1 = Compatible Solo)
+    maxPlayers = 14; // Max joueurs
+};
+
+// ============================================================
+// MENU DE COMMUNICATION (0-8) - SUPPORT LOGISTIQUE
+// ============================================================
+class CfgCommunicationMenu
+{
+    class DemandeVehicule
+    {
+        text = "$STR_LIVRAISON_MENU_TEXT";
+        submenu = "";
+        expression = "execVM 'client_request_vehicule.sqf'";
+        icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\supplydrop_ca.paa";
+        cursor = "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";
+        enable = "1";
+        removeAfterExpressionCall = 1;
+    };
+};
+
+// ============================================================
+// DESCRIPTION DE LA MISSION (écran de sélection)
+// ============================================================
+overviewText = "$STR_CIVIL_PROTECTION_DESC";
+
+// ============================================================
+// CONFIGURATION RESPAWN MULTIJOUEUR OPTIMISÉE
+// ============================================================
+
+// Type de respawn: BASE = Réapparition sur marqueur "respawn_west" ou module
+respawn = "BASE";
+
+// Délai en secondes avant de réapparaître
+respawnDelay = 5;
+
+// Respawn activé dès le début, y compris en SOLO (-1)
+respawnOnStart = -1;
+
+// Note: La restauration d'équipement est gérée manuellement dans onPlayerRespawn.sqf
+// via getUnitLoadout/setUnitLoadout (plus fiable)
+
+// Dialogue de respawn désactivé (pas de menu de choix)
+respawnDialog = 0;
+
+
+class CfgFunctions
+{
+    class Mission
+    {
+        class Main
+        {
+            file = "functions";
+            class ezan {};
+            class mine {}; // New mine function
+            class civilian_logic {}; // Nouvelle logique comportementale
+            class civilian_logique { postInit = 1; };
+            class ajust_AI_skills {};
+            class ajust_change_team_leader {};
+            class lang_marker_name {};
+            class spawn_arsenal {};
+            class spawn_brothers_in_arms {};
+            class spawn_vehicles {};
+            class spawn_weather_and_time {};
+            class civil_change {}; // Conversion civils -> insurgés OPFOR
+            class task_civil_protection {}; // Tâche de protection civile
+            class task_x_revival {}; // Soins de groupe après respawn
+            class task_bomb {}; // Mission de désamorçage de bombe
+            class task_civil_ostage {}; // Mission de sauvetage d'otage
+            class task_cache_armes {}; // Mission de destruction de cache d'armes
+            class nettoyage {}; // Nettoyage OPFOR distants (optimisation)
+            class task_appointment {}; // Mission RDV avec milices locales
+            class task_intro {}; // Introduction cinématique
+            class task_x_briefing {}; // Briefing général de la mission
+            class task_attentat {}; // Mission "Attaque Terroriste"
+            class livraison_vehicule {}; // Livraison véhicule par hélicoptère
+            class fin {}; // Fin de mission avec extraction
+        };
+    };
+};
+
+class CfgSounds
+{
+    sounds[] = {ezan};
+    class ezan
+    {
+        name = "ezan";
+        sound[] = {"music\ezan.ogg", db+7, 1.0, 2000}; // Increased max distance
+        titles[] = {};
+    };
+};
+
+class CfgMusic
+{
+    tracks[] = {ezan, 00intro};
+
+    class ezan
+    {
+        name = "ezan";
+        sound[] = {"music\ezan.ogg", db+7, 1.0};
+    };
+    
+    class 00intro
+    {
+        name = "Intro";
+        sound[] = {"music\intro.ogg", db+15, 1.0};
+    };
+};
